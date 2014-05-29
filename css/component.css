@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+/*
+ * component.css
+ * + Link Color
+ * + Layout Block
+ * + Sidebar
+ * + Navigation
+ * + Heading 
+ * + Form Elenments
+ * + Util
+ * + Clear
+*/
+
+/************************************************
+
+ Link Color
+
+************************************************/
+
+a:link {
+}
+
+a:visited {
+}
+
+a:hover {
+}
+
+a:active {
+}
+
+/************************************************
+
+ Layout Block
+
+************************************************/
+
+/*--------------------
+ Section
+--------------------*/
+.section {
+	clear: both;
+}
+
+/*--------------------
+ Unit
+--------------------*/
+.unit,
+.unit-col {
+	clear: both;
+}
+
+/*--------------------
+ table
+--------------------*/
+/*tables*/
+.table-a {
+	border-bottom: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+}
+
+	.table-a th,.table-a td {
+		padding: 6px 8px;
+		border-top: 1px solid #CCC;
+		border-right: 1px solid #CCC;
+	}
+
+	.table-a thead th {
+		background-color: #DDD;
+	}
+
+	.table-a tbody th {
+		background-color: #F1F1F1;
+	}
+
+/************************************************
+
+ Sidebar
+
+************************************************/
+
+/************************************************
+
+ Navigation
+
+************************************************/
+
+#local-nav {
+}
+
+	#local-nav .current {
+	}
+
+.fragment-nav {
+}
+
+.to-top {
+  text-align: right;
+}
+
+/*--------------------
+ Pagination
+--------------------*/
+.pagination {
+	margin: 1em 0;
+}
+
+/************************************************
+
+ Heading
+
+************************************************/
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 1em 0;
+}
+
+.heading-a {
+}
+
+/************************************************
+
+ Form Elenments
+
+************************************************/
+
+/************************************************
+
+ Util
+
+************************************************/
+
+#alpha-block ol {
+	margin-left: 30px;
+}
+
+.sentence p {
+	margin-bottom: 1em;
+}
+
+.lead {
+}
+
+.description {
+}
+
+.caption {
+}
+
+.alert {
+}
+
+.note {
+}
+
+.time {
+}
+
+.mark {
+	background-color: #FF9;
+}
+
+/*banner（サイト内）*/
+.banner {
+}
+
+/*banner（外部リンク）*/
+.aside {
+}
+
+/************************************************
+
+ Clear
+
+************************************************/
+
+.section, .inner, .unit, .unit-col, .box {
+	zoom: 1;
+}
+
+.section:after, .inner:after, .unit:after, .unit-col:after, .box:after {
+	content: ''; display: block; clear: both; overflow: hidden;
+}
