@@ -5,7 +5,7 @@
  *+ Reset
  *+ Font
  *+ Base Layout
- *+ Clear Fix
+ *+ Clearfix
 */
 
 /************************************************
@@ -14,9 +14,9 @@
 
 *************************************************/
 html,body { width: 100%; }
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dt, dd, form, fieldset { margin: 0;padding: 0; }
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dt, dd, form, fieldset { margin: 0; padding: 0; }
 ul { list-style: none; }
-img { border: 0;vertical-align: top; } td img { vertical-align: baseline; }
+img { border: 0; vertical-align: top; } td img { vertical-align: baseline; }
 table { border-collapse: collapse; border-spacing: 0; } fieldset { border: 0; }
 sup { margin: 0; padding: 0; font-size: 60%; line-height: 110%; vertical-align: top; }
 
@@ -44,6 +44,14 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.2;
+}
+
+small {
+	font-size: 10px;
+}
+
+.smaller {
+	font-size: 80%;
 }
 
 /************************************************
@@ -141,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /************************************************
 
- Clear Fix
+ Clearfix
 
 ************************************************/
 

@@ -1,4 +1,4 @@
 skeleton
 ========
 
-HTMl CSS Skeleton
+HTML CSS Skeleton

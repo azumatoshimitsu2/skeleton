@@ -9,7 +9,7 @@
  * + Heading 
  * + Form Elenments
  * + Util
- * + Clear
+ * + Clearfix
 */
 
 /************************************************
@@ -46,9 +46,19 @@ a:active {
 /*--------------------
  Unit
 --------------------*/
-.unit,
-.unit-col {
+.unit, .unit-col {
 	clear: both;
+}
+
+/*--------------------
+ Box
+--------------------*/
+.unit-col .box {
+	float: left;
+}
+
+.unit-col .last {
+	float: right;
 }
 
 /*--------------------
@@ -161,17 +171,36 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #FF9;
 }
 
-/*banner（サイト内）*/
+/* banner サイト内 */
 .banner {
 }
 
-/*banner（外部リンク）*/
+/* banner 外部リンク */
 .aside {
 }
 
+/*--------------------
+ Single property style
+--------------------*/
+
+/* width */
+body .set-w-200 { width: 200px; }
+
+/* margin top */
+body .set-mt-50 { margin-top: 50px; }
+
+/* margin right */
+body .set-mr-50 { margin-right: 50px; }
+
+/* margin bottom */
+body .set-mb-50 { margin-bottom: 50px; }
+
+/* margin left */
+body .set-ml-50 { margin-left: 50px; }
+
 /************************************************
 
- Clear
+ Clearfix
 
 ************************************************/
 
