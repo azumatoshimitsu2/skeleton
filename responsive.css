@@ -2,17 +2,25 @@
 
 /*****************************************
 
- Default Common
+ Default Screen
 
 *****************************************/
 
-#test-unit p {
-	display: none;
+#test-unit p { display: none; }
+#test-unit .other { display: block; }
+	
+/*---------------
+ Utility
+---------------*/
+.full-width {
+	width: 100%;
+	height: auto;
 }
 
-#test-unit .other {
-	display: block;
-}
+.sm-br { display: inline; }
+.lg-br { display: block; }
+.lg-screen-only { display: block !important; }
+.sm-screen-only { display: none !important; }
 
 /*****************************************
 
@@ -24,16 +32,10 @@
        only screen and (min-device-width: 1536px) and (max-device-width: 2048px) and (-webkit-min-device-pixel-ratio: 2),
        only screen and (min-width:768px) and (max-width:900px) {
 
-	#test-unit .other {
-		display: none;
-	}
-
-	#test-unit .medium {
-		display: block;
-	}
+	#test-unit .other { display: none; }
+	#test-unit .medium { display: block; }
 
 }
-
 
 /*****************************************
 
@@ -44,13 +46,23 @@
 @media only screen and (max-width:767px),
        only screen and (min-device-width:767px) and (max-device-width:960px) and (-webkit-min-device-pixel-ratio:2) {
 
-	#test-unit .other,
-	#test-unit .medium {
-		display: none;
+	#test-unit .other, #test-unit .medium { display: none; }
+	#test-unit .small { display: block; }
+	
+	/*---------------
+	 Small Screen Reset
+	---------------*/
+	img {
+		max-width: 100%;
+		height: auto;
 	}
- 
-	#test-unit .small {
-		display: block;
-	}
- 
+	
+	/*---------------
+	 Small Screen Utility
+	---------------*/
+	.sm-screen-only { display: block !important; }
+	.lg-screen-only { display: none !important; }
+	.sm-br { display: block; }
+	.lg-br { display: inline; }
+
 }
