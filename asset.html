@@ -1,10 +1,16 @@
 <!DOCTYPE HTML>
 <html lang="ja" itemscope itemtype="http://schema.org/WebPage">
-<head>
+<head prefix="og: http://ogp.me/ns#">
 	<meta charset="UTF-8">
 	<meta name="robots" content="index,follow">
 	<meta name="keywords" content="">
 	<meta name="description" content="">
+	<meta property="og:title" content="ページタイトル">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://example.com/">
+	<meta property="og:site_name" content="サイト名">
+	<meta property="og:image" content="http://example.com/facebook.png">
+	<meta property="og:description" content="">
 	<title>title</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -51,7 +57,7 @@
 							<main role="main">
 								<!--  section  -->
 								<div class="section">
-									<h1>Heading Level 1</h1>
+									<h1 itemprop="name">Page title</h1>
 									<h2>Heading Level 2</h2>
 									<h3>Heading Level 3</h3>
 									<h4>Heading Level 4</h4>
@@ -70,7 +76,7 @@
 								<!--  //section  --> 
 								<!--  section  -->
 								<div class="section"> 
-								<!--  button  -->
+									<!--  button  -->
 									<div class="button">
 										<input type="button" name="button" value="ボタン">
 										<input type="button" name="btn" value="ボタン">

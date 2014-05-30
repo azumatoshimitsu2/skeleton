@@ -4,38 +4,11 @@
 <meta charset="UTF-8">
 <title>Documentation</title>
 <style>
-body {
-	background: #EFEFEF;
-	margin: 10px 0;
-	padding: 0;
-	font-family: Helvetica, sans-serif; 
-}
-
-h1, h2, h3, h4, h5, h6 {
-	color: #333333;
-	font-weight: normal;
-}
-
-#container {
-	background: #FFF;
-	margin: 0 auto;
-	padding: 10px 30px;
-	max-width: 800px;
-	border-radius: 10px;
-}
-
-section {
-	margin-bottom: 2em;
-}
-
-section section {
-	margin-left: 1em;
-}
-
-li p {
-	margin: .5em 0;
-	font-size: 0.8rem;
-}
+body { background: #EFEFEF; margin: 10px 0; padding: 0; font-family: Helvetica, sans-serif;  }
+h1, h2, h3, h4, h5, h6 { color: #333333; font-weight: normal; }
+#container { background: #FFF; margin: 0 auto; padding: 10px 30px; max-width: 800px; border-radius: 10px; }
+section { margin-bottom: 2em; } section section { margin-left: 1em; }
+li { margin-bottom: 0.5em; } li p { margin: .5em 0; font-size: 0.8rem; }
 </style>
 </head>
 <body>
@@ -49,16 +22,30 @@ li p {
 			<ul>
 				<li>style.css
 				<p>下記の CSS をインポート</p>
+					<ul>
+						<li>base.css
+						<p>ブラウザスタイルのリセット、フォントサイズの設定、ヘッダ・フッタ等のベースレイアウトスタイル</p>
+						</li>
+						<li>component.css
+						<p>共通で使用するコンポーネントスタイル</p>
+						</li>
+						<li>page-unique.css
+						<p>ページ固有のスタイル</p>
+						</li>
+					</ul>
 				</li>
-				<li>base.css
-				<p>ブラウザスタイルのリセット、フォントサイズの設定、ヘッダ・フッタ等のベースレイアウトスタイル</p>
+				<li>responsive.css
+				<p>レスポンシブデザインの時のみ使用</p>
 				</li>
-				<li>component.css
-				<p>共通で使用するコンポーネントスタイル</p>
-				</li>
-				<li>page-unique.css
-				<p>ページ固有のスタイル</p>
-				</li>
+			</ul>
+		</section>
+		<section>
+			<h3>responsive.css</h3>
+			<ul>
+				<li>.sm-screen-only　でスモールスクリーン（スマホ用）のみ表示</li>
+				<li>.lg-screen-only　でラージスクリーン（PC用）のみ表示</li>
+				<li>.sm-br　でスモールスクリーン（スマホ用）のみ改行</li>
+				<li>.lg-br　でラージスクリーン（PC用）のみ改行</li>
 			</ul>
 		</section>
 	</section>
