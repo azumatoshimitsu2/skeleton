@@ -111,7 +111,7 @@ small { font-size: 10px; }
 /*--------------------
  Breadcrumb
 --------------------*/
-#breadcrumb {}
+.breadcrumb {}
 
 /*--------------------
  Alpha
