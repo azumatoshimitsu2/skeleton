@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>コーディングマナー</title>
+<style>
+	
+body {
+	background: #EFEFEF;
+	margin: 10px 0;
+	padding: 0;
+	font-family: Helvetica, Meiryo, メイリオ, sans-serif;
+	line-height: 1.6;
+	height: 100%;
+}
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+#container {
+	background: #FFF;
+	margin: 0 auto;
+	padding: 10px 30px;
+	max-width: 800px;
+	border-radius: 10px;
+}
+section { margin-bottom: 2em; }
+section section { margin-left: 3em; font-size: 100%; }
+#container > section > section { margin-bottom: 4em; }
+p { font-size: 0.9rem; }
+code { display: block; white-space: pre; background: #333; color: #fff; padding: 10px 20px; border-radius: 6px; }
+</style>
+</head>
+<body>
+
+<div id="container">
+<h1>コーディングマナー</h1>
+<nav>
+	<ul>
+		<li><a href="#concept">コンセプト</a></li>
+		<li><a href="#doctype">文書型等</a></li>
+		<li><a href="#name">ID Class の名前の付け方</a></li>
+		<li><a href="#js">JavaScript で振る舞いを指定する ID Class には極力スタイルを付けない</a></li>
+		<li><a href="#mediaquery">メディアクエリ</a></li>
+		<li><a href="#directory">ディレクトリ構造</a></li>
+		<li><a href="#etc">その他</a></li>
+	</ul>
+</nav>
+
+<section>
+<h2 id="concept">コンセプト</h2>
+<p>メンテナンス性、効率を意識したコーディング</p>
+<ol>
+	<li>再利用可能な形でつくる</li>
+	<li>同じ構造の同じスタイルのものは全ファイルで同じ構造の HTML CSS を利用</li>
+	<li>柔軟性を意識する</li>
+	<li>要素の追加・削除のし易さを意識する</li>
+</ol>
+</section>
+
+<section>
+<h2 id="doctype">文書型等</h2>
+<p>デフォルトの文書型は HTML5</p>
+<p>デフォルトの文字コードは UTF-8</p>
+<p>ターゲットブラウザに IE8 など HTML5 未対応のブラウザが含まれる場合には新要素をスタイルのために使用しない<br />
+※アウトラインなど純粋にセマンティクスを行うためには使用可</p>
+</section>
+
+<section>
+<h2 id="name">ID Class の名前の付け方</h2>
+<ul>
+<li>コンテンツに依存した名前は使用せず（例：× .company-title）、文書構造や UI 上の意味的な名前を付ける（例：○ .title  #nav）</li>
+<li>同様に特定の色や形に依存した名前も、色や形が変更になった場合に名前と整合性がなくなるので極力避ける</li>
+<li>同じ意味の要素がページ毎に異なる場合は共通のスタイルは継承し、クラスを追加して必要な部分のみ上書きする（例：..title.title-**** のように継承元のクラス名前を先にし、ハイフンつなぎで文字列を追加）</li>
+<li>意味の判断のつかないものに関しては一般的な名前や意味の広い名前を付ける（例：.box .heading-a）
+<p>上記の理由からクラス名の中で</p>
+<ul>
+<li>.section</li>
+<li>.unit</li>
+<li>.box</li>
+<li>.inner</li>
+<li>.item</li>
+<li>.heading</li>
+<li>.more</li>
+</ul>
+<p>は汎用的なクラスとして使用するため、直接スタイルを指定しない。</p>
+<p><code>× .box { color: #000; }
+○ .unit-2col .box { color: #000; }</code></p>
+</li>
+</ul>
+</section>
+
+<section>
+<h2 id="js">JavaScript で振る舞いを指定する ID Class には極力スタイルを付けない</h2>
+<p>装飾が異なるが振る舞いが同じことがあるため、装飾で使用する名前と振る舞いで利用する名前は極力分離する。</p>
+
+<h2>ソースフォーマット</h2>
+<dl>
+<dt>HTML CSS 共通</dt>
+<dd>インデントはタブを使用</dd>
+</dl>
+<dl>
+<dt>CSS フォーマット</dt>
+<dd>
+<p>プロパティがひとつのものは一行で。二行以上のものは改行。</p>
+<p><code>selector { property: value; }
+
+selector child-element {
+	property: value;
+	property: value;
+}</code></p></dd>
+</dl>
+</section>
+
+<section>
+<h2 id="mediaquery">メディアクエリ</h2>
+<p>メディアクエリは後で指定が変更しても柔軟に対応できるよう CSS ファイルにインラインで指定</p>
+<p><code>× &lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (min-device-width:768px&quot; 
+○ @media only screen and (min-device-width:768px){}</code></p>
+
+
+<h2 id="directory">ディレクトリ構造</h2>
+<ul>
+	<li>index.html</li>
+	<li>css</li>
+	<li>js</li>
+	<li>images<ul>
+		<li>common<ul>
+			<li>header</li>
+			<li>footer</li>
+			<li>content</li>
+		</ul></li>
+		<li>home</li>
+		<li>***（コンテンツ毎の画像）</li>
+	</ul></li>
+</ul>
+</section>
+
+<section>
+<h2 id="etc">その他</h2>
+<ul>
+<li>CSS3 が使用可能な場合（レガシーブラウザの対応が不要な場合）はグラデーションなど CSS で対応可能なスタイルに画像を使用しない。</li>
+<li>使用していないプロパティは削除する</li>
+<li>フォントサイズの指定は共通管理</li>
+</ul>
+
+<section>
+</div>
+	
+</body>
+</html>

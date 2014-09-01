@@ -21,26 +21,40 @@ li { margin-bottom: 0.5em; } li p { margin: .5em 0; font-size: 0.8rem; }
 			<h3>ファイル構成</h3>
 			<ul>
 				<li>style.css</li>
-				<li>responsive.css
-				<p>レスポンシブデザインの時のみ使用</p>
-				</li>
+				<li>responsive.css</li>
 			</ul>
 		</section>
 		<section>
-			<h3>responsive.css</h3>
-			<ul>
-				<li>.sm-screen-only　でスモールスクリーン（スマホ用）のみ表示</li>
-				<li>.lg-screen-only　でラージスクリーン（PC用）のみ表示</li>
-				<li>.sm-br　でスモールスクリーン（スマホ用）のみ改行</li>
-				<li>.lg-br　でラージスクリーン（PC用）のみ改行</li>
-			</ul>
+			<h3>汎用スタイルの意味とクラスの対応</h3>
+			<section>
+				<h4>style.css</h4>
+				<ul>
+					<li>.unit-col は n カラムの直接の親要素として指定することで clearfix がかかり、子要素の .box を float: left; にし
+						、子要素の .last を float: right; にする</li>
+				</ul>
+			</section>
+			<section>
+				<h4>responsive.css</h4>
+				<ul>
+					<li>.sm-screen-only はスモールスクリーン（スマホ用）のみ表示</li>
+					<li>.lg-screen-only はラージスクリーン（PC用）のみ表示</li>
+					<li>.sm-br はスモールスクリーン（スマホ用）のみ改行</li>
+					<li>.lg-br はラージスクリーン（PC用）のみ改行</li>
+				</ul>
+			</section>
 		</section>
 	</section>
 
 	<section>
 		<h2>JavaScript</h2>
 		<section>
-			<h3>Functions</h3>
+			<h3>ファイル構成</h3>
+			<ul>
+				<li>add-event.js</li>
+			</ul>
+		</section>
+		<section>
+			<h3>関数</h3>
 			<ul>
 				<li>
 				rollover()
