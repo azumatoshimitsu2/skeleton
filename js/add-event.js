@@ -1,7 +1,6 @@
-$(document).ready(function(){
+$(document).ready(function() {
 	rollover();
 	
-	//************************
 	//ロールオーバー
 	function rollover() {
 		$('img').bind('mouseover', function() {

@@ -50,7 +50,7 @@
 	#test-unit .small { display: block; }
 	
 	/*---------------
-	 Small Screen Reset
+	 Reset
 	---------------*/
 	img {
 		max-width: 100%;
@@ -58,7 +58,7 @@
 	}
 	
 	/*---------------
-	 Small Screen Utility
+	 Utility
 	---------------*/
 	.sm-screen-only { display: block !important; }
 	.lg-screen-only { display: none !important; }
