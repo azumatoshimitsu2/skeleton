@@ -26,6 +26,9 @@ section section { margin-left: 3em; font-size: 100%; }
 #container > section > section { margin-bottom: 4em; }
 p { font-size: 0.9rem; }
 code { display: block; white-space: pre; background: #333; color: #fff; padding: 10px 20px; border-radius: 6px; }
+table { border-bottom: 1px solid #CCC; border-left: 1px solid #CCC; }
+table th, table td { padding: 6px 8px; border-top: 1px solid #CCC; border-right: 1px solid #CCC; }
+th { background: #dfdfdf; }
 </style>
 </head>
 <body>
@@ -40,7 +43,8 @@ code { display: block; white-space: pre; background: #333; color: #fff; padding:
 		<li><a href="#js">JavaScript で振る舞いを指定する ID Class には極力スタイルを付けない</a></li>
 		<li><a href="#mediaquery">メディアクエリ</a></li>
 		<li><a href="#directory">ディレクトリ構造</a></li>
-		<li><a href="#etc">その他</a></li>
+		<li><a href="#etc">備考</a></li>
+		<li><a href="example">ID Class の名前の例</a></li>
 	</ul>
 </nav>
 
@@ -134,14 +138,284 @@ selector child-element {
 </section>
 
 <section>
-<h2 id="etc">その他</h2>
+<h2 id="etc">備考</h2>
 <ul>
 <li>CSS3 が使用可能な場合（レガシーブラウザの対応が不要な場合）はグラデーションなど CSS で対応可能なスタイルに画像を使用しない。</li>
 <li>使用していないプロパティは削除する</li>
 <li>フォントサイズの指定は共通管理</li>
 </ul>
+</section>
 
 <section>
+<h2 id="example">ID Class の名前の例</h2>
+<p>入れ子構造になる場合は、親要素の名前 + &quot;<strong>-inner</strong>&quot; にする。</p>
+<table><thead>
+<tr>
+<th>コンテナ</th>
+<th>id/class名</th>
+<th>備考</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>全体コンテナ</td>
+<td>#container</td>
+<td>body要素の直下</td>
+</tr>
+<tr>
+<td>ページヘッダ</td>
+<td>#page-header</td>
+<td></td>
+</tr>
+<tr>
+<td>ページフッタ</td>
+<td>#page-footer</td>
+<td></td>
+</tr>
+<tr>
+<td>コンテンツ</td>
+<td>#content</td>
+<td></td>
+</tr>
+<tr>
+<td>第1汎用コンテナ</td>
+<td>#alpha-block</td>
+<td rowspan="5">マルチカラム用など</td>
+</tr>
+<tr>
+<td>第2汎用コンテナ</td>
+<td>#beta-block</td>
+</tr>
+<tr>
+<td>第3汎用コンテナ</td>
+<td>#gamma-block</td>
+</tr>
+<tr>
+<td>第4汎用コンテナ</td>
+<td>#delta-block</td>
+</tr>
+<tr>
+<td>第5汎用コンテナ</td>
+<td>#zeta-block</td>
+</tr>
+<tr>
+<td>ポップアップコンテナ</td>
+<td>#popup-block</td>
+<td></td>
+</tr></tbody>
+</table>
+
+<h3>ナビゲーション</h3>
+<table>
+<thead><tr>
+<th>id/class名</th>
+<th>備考</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>#nav</td>
+<td>メイン（グローバル）ナビゲーション</td>
+</tr>
+<tr>
+<td>.local-nav</td>
+<td>ローカルナビゲーション</td>
+</tr>
+<tr>
+<td>.header-nav</td>
+<td>ヘッダ部分のナビゲーション</td>
+</tr>
+<tr>
+<td>.footer-nav</td>
+<td>フッタ部分のナビゲーション</td>
+</tr>
+<tr>
+<td>.fragment-nav</td>
+<td>ページ内リンク</td>
+</tr>
+<tr>
+<td>.breadcrumb</td>
+<td>パンくずナビ</td>
+</tr>
+<tr>
+<td>.current</td>
+<td>現在置</td>
+</tr>
+<tr>
+<td>.to-top</td>
+<td>ページ上部へリンク</td>
+</tr>
+<tr>
+<td>.pagination</td>
+<td>ページ送り</td>
+</tr>
+<tr>
+<td>.more</td>
+<td>詳細ページへのリンク</td>
+</tr>
+<tr>
+<td>.blank</td>
+<td>外部へのリンク</td>
+</tr>
+<tr>
+<td>.pdf</td>
+<td>PDFへのリンク</td>
+</tr>
+<tr>
+<td>.mail</td>
+<td>メールへのリンク</td>
+</tr>
+<tr>
+<td>.tel</td>
+<td>電話番号</td>
+</tr>
+</tbody>
+</table>
+
+<h3>レイアウト</h3>
+<table>
+<thead><tr>
+<th>id/class名</th>
+<th>備考</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>.section</td>
+<td>ページ内にある情報のひと固まり</td>
+</tr>
+<tr>
+<td>.unit</td>
+<td>ページ内にある情報のひと固まり .section の子要素</td>
+</tr>
+<tr>
+<td>.unit-col</td>
+<td>複数カラムレイアウトの共通スタイルを管理<br> .unit-col .box には float:left;  .unit-col .last には float:right; が適用される</td>
+</tr>
+<tr>
+<td>.unit-[n]col</td>
+<td>n カラムレイアウト</td>
+</tr>
+<tr>
+<td>.box</td>
+<td>汎用 unit-[n]col の子要素</td>
+</tr>
+<td>.item</td>
+<td>子要素</td>
+</tr>
+</tbody></table>
+
+<h3>見出し</h3>
+<table>
+<thead><tr>
+<th>id/class名</th>
+<th>備考</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>#page-title</td>
+<td>大見出し</td>
+</tr>
+<tr>
+<td>.heading-[alphabet]</td>
+<td>見出し</td>
+</tr>
+</tbody></table>
+
+<h3>テキスト</h3>
+<table>
+<thead><tr>
+<th>id/class名</th>
+<th>備考</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>.copy</td>
+<td>コピーライト</td>
+</tr>
+<tr>
+<td>.description</td>
+<td>サイトの要約 ヘッダーに SEO 対策で置くテキストなど</td>
+</tr>
+<tr>
+<td>.lead</td>
+<td>リード文</td>
+</tr>
+<tr>
+<td>.caption</td>
+<td>キャプション（写真や画像を補完するテキスト）</td>
+</tr>
+<tr>
+<td>.note</td>
+<td>注意</td>
+</tr>
+<tr>
+<td>.alert</td>
+<td>警告</td>
+</tr>
+<tr>
+<td>.time</td>
+<td>日時</td>
+</tr>
+<tr>
+<td>.mark</td>
+<td>文章中でハイライトさせたい部分</td>
+</tr>
+<tr>
+<td>.sentence</td>
+<td>汎用</td>
+</tr>
+</tbody></table>
+
+<h3>フォーム</h3>
+<table>
+<thead><tr>
+<th>id/class名</th>
+<th>備考</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>.search</td>
+<td>検索窓</td>
+</tr>
+<tr>
+<td>.button</td>
+<td>ボタン</td>
+</tr>
+<tr>
+<td>.login</td>
+<td>ログイン</td>
+</tr>
+<tr>
+<td>.require</td>
+<td>必須</td>
+</tr>
+<tr>
+<td>.error</td>
+<td>エラー</td>
+</tr>
+</tbody></table>
+
+<h3>その他</h3>
+<table>
+<thead><tr>
+<th>id/class名</th>
+<th>備考</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>#site-id</td>
+<td>サイトのロゴ</td>
+</tr>
+<tr>
+<td>.first</td>
+<td>複数個並んだ最初の要素</td>
+</tr>
+<tr>
+<td>.last</td>
+<td>複数個並んだ最後の要素</td>
+</tr>
+</tbody>
+</table>
+<section>
+
 </div>
 	
 </body>
