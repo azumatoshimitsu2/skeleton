@@ -1,0 +1,85 @@
+
+
+/************************************************
+
+ Base Layout
+
+************************************************/
+
+/*--------------------
+ Container
+--------------------*/
+#container {
+	margin: 0 auto;
+	width: 960px;
+
+	#container-inner {}
+}
+
+
+/*--------------------
+ Header
+--------------------*/
+#site-header {
+
+	#site-header-inner {
+
+		#site-id { float: left; }
+
+		.site-header-section { float: right; }
+	}
+}
+
+
+/*--------------------
+ Nav
+--------------------*/
+#nav {
+
+	li {
+		float: left;
+	}
+}
+
+/*--------------------
+ Footer
+--------------------*/
+#site-footer {
+	clear: both;
+
+	#site-footer-inner {}
+}
+
+
+/*--------------------
+ Content
+--------------------*/
+#content {
+
+	#content-inner {}
+}
+
+/*--------------------
+ Breadcrumb
+--------------------*/
+.breadcrumb {}
+
+/*--------------------
+ Alpha
+--------------------*/
+#alpha-block {
+	float: left;
+	width: 700px;
+
+	#alpha-block-inner {}
+}
+
+/*--------------------
+ Beta
+--------------------*/
+#beta-block {
+	float: right;
+	width: 220px;
+
+	#beta-block-inner {}
+}

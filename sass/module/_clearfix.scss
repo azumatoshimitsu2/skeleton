@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/************************************************
+
+ Clearfix
+
+************************************************/
+
+#nav ul, #content-inner, #site-header-inner,　.section, .inner, .unit, .unit-col, .box {
+	zoom: 1;
+}
+
+#nav ul:after, #content-inner:after, #site-header-inner:after,　.section:after, .inner:after, .unit:after, .unit-col:after, .box:after {
+	content: ''; display: block; clear: both; overflow: hidden;
+}

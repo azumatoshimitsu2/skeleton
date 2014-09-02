@@ -8,7 +8,8 @@ body { background: #EFEFEF; margin: 10px 0; padding: 0; font-family: Helvetica, 
 h1, h2, h3, h4, h5, h6 { color: #333333; font-weight: normal; }
 #container { background: #FFF; margin: 0 auto; padding: 10px 30px; max-width: 800px; border-radius: 10px; }
 section { margin-bottom: 2em; } section section { margin-left: 1em; }
-li { margin-bottom: 0.5em; } li p { margin: .5em 0; font-size: 0.8rem; }
+li { margin-bottom: 0.9em; } li p { margin: .5em 0; font-size: 0.8rem; }
+ul ul { margin-top: 0.9em; }
 </style>
 </head>
 <body>
@@ -17,24 +18,63 @@ li { margin-bottom: 0.5em; } li p { margin: .5em 0; font-size: 0.8rem; }
 
 	<section>
 		<h2>CSS</h2>
+
 		<section>
-			<h3>ファイル構成</h3>
+			<h3>SASS</h3>
+			<p>通常は SASS を使用してコーディング</p>
+			<section>
+				<h3>ファイル構成</h3>
+				<ul>
+					<li>sass/style.scss
+						<p>(SCSS をまとめて import するファイル)</p>
+					</li>
+					<li>
+						sass/module/
+						<ul>
+							<li>_config.scss
+								<p>(SCSS をまとめて import するファイル)</p>
+							</li>
+							<li>_mixin.scss
+								<p>(Mixin をまとめて管理するファイル)</p>
+							</li>
+							<li>_variables.scss
+								<p>(変数をまとめて管理するファイル)</p>
+							</li>
+							<li>_reset.scss
+								<p>(ブラウザデフォルトのスタイルをリセットするファイル)</p>
+							</li>
+							<li>_baselayout.scss
+								<p>(サイトのベースレイアウトを管理するファイル)</p>
+							</li>
+							<li>_parts.scss
+								<p>(パーツを管理するファイル)</p>
+							</li>
+							<li>_utilities.scss
+								<p>(ひとつのプロパティのみの特定の用途に限定したスタイルを管理するファイル)</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</section>
+
+		<section>
+			<h3>SASS から出力されるファイル</h3>
 			<ul>
-				<li>style.css</li>
-				<li>responsive.css</li>
+				<li>css/style.css</li>
 			</ul>
 		</section>
 		<section>
 			<h3>汎用スタイルの意味とクラスの対応</h3>
 			<section>
-				<h4>style.css</h4>
+				<h4>sass/module/_parts.scss</h4>
 				<ul>
 					<li>.unit-col は n カラムの直接の親要素として指定することで clearfix がかかり、子要素の .box を float: left; にし
 						、子要素の .last を float: right; にする</li>
 				</ul>
 			</section>
 			<section>
-				<h4>responsive.css</h4>
+				<h4>responsive-example.css</h4>
 				<ul>
 					<li>.sm-screen-only はスモールスクリーン（スマホ用）のみ表示</li>
 					<li>.lg-screen-only はラージスクリーン（PC用）のみ表示</li>
@@ -50,7 +90,7 @@ li { margin-bottom: 0.5em; } li p { margin: .5em 0; font-size: 0.8rem; }
 		<section>
 			<h3>ファイル構成</h3>
 			<ul>
-				<li>add-event.js</li>
+				<li>js/add-event.js</li>
 			</ul>
 		</section>
 		<section>

@@ -1,34 +1,47 @@
-@charset "utf-8";
-
-/*
- * Reset
- * Font
- * Base Layout
- * Sidebar
- * Layout
- * Navigation
- * Heading 
- * Form Elenments
- * Util
- * Clearfix
- * Page Unique
-*/
-
+@charset "UTF-8";
 /************************************************
 
  Reset
 
 *************************************************/
-html,body { width: 100%; }
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dt, dd, form, fieldset { margin: 0; padding: 0; }
-ul { list-style: none; }
-img { border: 0; vertical-align: top; } td img { vertical-align: baseline; }
-table { border-collapse: collapse; border-spacing: 0; } fieldset { border: 0; }
-sup { margin: 0; padding: 0; font-size: 60%; line-height: 110%; vertical-align: top; }
-a:link {}
-a:visited {}
-a:hover {}
-a:active {}
+html, body {
+  width: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dt, dd, form, fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: top;
+}
+
+td img {
+  vertical-align: baseline;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset {
+  border: 0;
+}
+
+sup {
+  margin: 0;
+  padding: 0;
+  font-size: 60%;
+  line-height: 110%;
+  vertical-align: top;
+}
 
 /************************************************
 
@@ -36,273 +49,314 @@ a:active {}
 
 ************************************************/
 body {
-	font-family: "Meiryo", "メイリオ", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	line-height: 1.7; font-size: 62.5%;
+  font-family: "Meiryo", "メイリオ", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  line-height: 1.7;
+  font-size: 62.5%;
 }
 
-table, ul ul, ul p, ol ol, td ul, td p, td dt, td dd { font-size: 100%;/* nesting element */ }
+table, ul ul, ul p, ol ol, td ul, td p, td dt, td dd {
+  font-size: 100%;
+  /* nesting element */
+}
 
-ul, ol, p, dt, dd, caption, th, td, select, input, textarea, button { font-size: 130%;/* default 13px */ }
+ul, ol, p, dt, dd, caption, th, td, select, input, textarea, button {
+  font-size: 130%;
+  /* default 13px */
+}
 
-h1, h2, h3, h4, h5, h6 { font-size: 160%; }
+h1, h2, h3, h4, h5, h6 {
+  font-size: 160%;
+}
 
-small { font-size: 10px; }
-.smaller { font-size: 80%; }
-
-h1, h2, h3, h4, h5, h6 { line-height: 1.2; }
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
 
 /************************************************
 
  Base Layout
 
 ************************************************/
-
 /*--------------------
  Container
 --------------------*/
 #container {
-	margin: 0 auto;
-	width: 960px;
-	text-align: left;
+  margin: 0 auto;
+  width: 960px;
+  text-align: left;
 }
-
-#container-inner {}
 
 /*--------------------
  Header
 --------------------*/
-#site-header {}
+#site-id {
+  float: left;
+}
 
-#site-header-inner {}
-
-#site-id { float: left; }
- 
-.site-header-section { float: right; }
+.site-header-section {
+  float: right;
+}
 
 /*--------------------
  Nav
 --------------------*/
-#nav {}
-
 #nav li {
-	float: left;
-	width: 20%;
+  float: left;
+  width: 20%;
 }
 
 /*--------------------
  Footer
 --------------------*/
-#site-footer { clear: both; }
-
-#site-footer-inner {}
+#site-footer {
+  clear: both;
+}
 
 /*--------------------
  Content
 --------------------*/
-#content {}
-
-#content-inner {}
-
 /*--------------------
  Breadcrumb
 --------------------*/
-.breadcrumb {}
-
 /*--------------------
  Alpha
 --------------------*/
 #alpha-block {
-	float: left;
-	width: 700px;
+  float: left;
+  width: 700px;
 }
-
-#alpha-block-inner {}
 
 /*--------------------
  Beta
 --------------------*/
 #beta-block {
-	float: right;
-	width: 220px;
+  float: right;
+  width: 220px;
 }
-
-#beta-block-inner {}
 
 /************************************************
 
  Sidebar
 
 ************************************************/
-
 /************************************************
 
  Layout
 
 ************************************************/
+.section {
+  clear: both;
+}
 
-.section { clear: both; }
+.unit, .unit-col {
+  clear: both;
+}
 
-.unit, .unit-col { clear: both; }
+.unit-col .box {
+  float: left;
+}
 
-.unit-col .box { float: left; }
-.unit-col .last { float: right; }
+.unit-col .last {
+  float: right;
+}
 
 /*--------------------
  table
 --------------------*/
 /*tables*/
 .table-a {
-	width: 100%;
-	border-bottom: 1px solid #CCC;
-	border-left: 1px solid #CCC;
+  width: 100%;
+  border-bottom: 1px solid #CCC;
+  border-left: 1px solid #CCC;
 }
 
-.table-a th,.table-a td {
-	padding: 6px 8px;
-	border-top: 1px solid #CCC;
-	border-right: 1px solid #CCC;
+.table-a th, .table-a td {
+  padding: 6px 8px;
+  border-top: 1px solid #CCC;
+  border-right: 1px solid #CCC;
 }
-
-.table-a thead th {}
-
-.table-a tbody th {}
 
 /************************************************
 
  Navigation
 
 ************************************************/
-
-.local-nav {}
-
-.local-nav .current {}
-
-.fragment-nav {}
-
-.to-top { }
-
-.pagination { }
-
 /************************************************
 
  Heading
 
 ************************************************/
-
-.heading-a {}
-
 /************************************************
 
  Form Elenments
 
 ************************************************/
+/*text align*/
+.center {
+  text-align: center;
+}
 
-/************************************************
+.right {
+  text-align: right;
+}
 
- Util
+.left {
+  text-align: left;
+}
 
-************************************************/
-
-.center { text-align: center; }
-.right  { text-align: right; }
-.left   { text-align: left; }
-
-.sentence p {}
-
-.description {}
-
-.caption {}
-
-.alert {}
-
-.lead {}
-
-.note {}
-
-.time {}
-
-.mark {}
-
-.banner {}
-
-.aside {}
-
-/*--------------------
- Single property style
---------------------*/
 /* width */
-body .set-w-200 { width: 200px; }
-body .set-w-250 { width: 250px; }
-body .set-w-300 { width: 300px; }
-body .set-w-350 { width: 350px; }
-body .set-w-400 { width: 400px; }
+body .set-w-200 {
+  width: 200px;
+}
+
+body .set-w-250 {
+  width: 250px;
+}
+
+body .set-w-300 {
+  width: 300px;
+}
+
+body .set-w-350 {
+  width: 350px;
+}
+
+body .set-w-400 {
+  width: 400px;
+}
 
 /* margin top */
-body .set-mt-10  { margin-top: 10px; }
-body .set-mt-20  { margin-top: 20px; }
-body .set-mt-50  { margin-top: 50px; }
-body .set-mt-100 { margin-top: 100px; }
+body .set-mt-10 {
+  margin-top: 10px;
+}
+
+body .set-mt-20 {
+  margin-top: 20px;
+}
+
+body .set-mt-50 {
+  margin-top: 50px;
+}
+
+body .set-mt-100 {
+  margin-top: 100px;
+}
 
 /* margin right */
-body .set-mr-10  { margin-right: 10px; }
-body .set-mr-20  { margin-right: 20px; }
-body .set-mr-50  { margin-right: 50px; }
-body .set-mr-100 { margin-right: 100px; }
+body .set-mr-10 {
+  margin-right: 10px;
+}
+
+body .set-mr-20 {
+  margin-right: 20px;
+}
+
+body .set-mr-50 {
+  margin-right: 50px;
+}
+
+body .set-mr-100 {
+  margin-right: 100px;
+}
 
 /* margin bottom */
-body .set-mb-10  { margin-bottom: 10px; }
-body .set-mb-20  { margin-bottom: 20px; }
-body .set-mb-50  { margin-bottom: 50px; }
-body .set-mb-100 { margin-bottom: 100px; }
+body .set-mb-10 {
+  margin-bottom: 10px;
+}
+
+body .set-mb-20 {
+  margin-bottom: 20px;
+}
+
+body .set-mb-50 {
+  margin-bottom: 50px;
+}
+
+body .set-mb-100 {
+  margin-bottom: 100px;
+}
 
 /* margin left */
-body .set-ml-10  { margin-left: 10px; }
-body .set-ml-20  { margin-left: 20px; }
-body .set-ml-50  { margin-left: 50px; }
-body .set-ml-100 { margin-left: 100px; }
+body .set-ml-10 {
+  margin-left: 10px;
+}
+
+body .set-ml-20 {
+  margin-left: 20px;
+}
+
+body .set-ml-50 {
+  margin-left: 50px;
+}
+
+body .set-ml-100 {
+  margin-left: 100px;
+}
 
 /* padding top */
-body .set-pt-10  { padding-top: 10px; }
-body .set-pt-20  { padding-top: 20px; }
-body .set-pt-50  { padding-top: 50px; }
-body .set-pt-100 { padding-top: 100px; }
+body .set-pt-10 {
+  padding-top: 10px;
+}
+
+body .set-pt-20 {
+  padding-top: 20px;
+}
+
+body .set-pt-50 {
+  padding-top: 50px;
+}
+
+body .set-pt-100 {
+  padding-top: 100px;
+}
 
 /* padding right */
-body .set-pr-10  { padding-right: 10px; }
-body .set-pr-20  { padding-right: 20px; }
-body .set-pr-50  { padding-right: 50px; }
-body .set-pr-100 { padding-right: 100px; }
+body .set-pr-10 {
+  padding-right: 10px;
+}
+
+body .set-pr-20 {
+  padding-right: 20px;
+}
+
+body .set-pr-50 {
+  padding-right: 50px;
+}
+
+body .set-pr-100 {
+  padding-right: 100px;
+}
 
 /* padding bottom */
-body .set-pb-10  { padding-bottom: 10px; }
-body .set-pb-20  { padding-bottom: 20px; }
-body .set-pb-50  { padding-bottom: 50px; }
-body .set-pb-100 { padding-bottom: 100px; }
+body .set-pb-10 {
+  padding-bottom: 10px;
+}
+
+body .set-pb-20 {
+  padding-bottom: 20px;
+}
+
+body .set-pb-50 {
+  padding-bottom: 50px;
+}
+
+body .set-pb-100 {
+  padding-bottom: 100px;
+}
 
 /* padding left */
-body .set-pl-10  { padding-left: 10px; }
-body .set-pl-20  { padding-left: 20px; }
-body .set-pl-50  { padding-left: 50px; }
-body .set-pl-100 { padding-left: 100px; }
-
-/************************************************
-
- Clearfix
-
-************************************************/
-
-#nav ul, #content-inner, #site-header-inner,
-.section, .inner, .unit, .unit-col, .box {
-	zoom: 1;
+body .set-pl-10 {
+  padding-left: 10px;
 }
 
-#nav ul:after, #content-inner:after, #site-header-inner:after,
-.section:after, .inner:after, .unit:after, .unit-col:after, .box:after {
-	content: ''; display: block; clear: both; overflow: hidden;
+body .set-pl-20 {
+  padding-left: 20px;
 }
 
-/************************************************
+body .set-pl-50 {
+  padding-left: 50px;
+}
 
- Page Unique
-
-************************************************/
+body .set-pl-100 {
+  padding-left: 100px;
+}
