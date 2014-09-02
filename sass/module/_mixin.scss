@@ -12,3 +12,15 @@
 	height: 0;
 	line-height: 1.7;
 }
+
+// text-indentを大きくとる従来方式
+@mixin img-replace2( $width: 0, $padding-top: 0 , $display: normal) {
+	@if $display != normal {
+		display: $display;
+	}
+	overflow: hidden;
+	height: $padding-top;
+	width: $width;
+	text-indent: -9999px;
+	line-height: 1.7;
+}
