@@ -1,0 +1,44 @@
+/*****************************************
+
+ List
+
+*****************************************/
+
+/*list view*/
+.view-list {
+	border-top: 1px solid #CCC;
+
+	li { 
+		border-bottom: 1px solid #CCC;
+		position: relative;
+	}
+
+	a {
+		display: block;
+		padding: 12px;
+		text-decoration: none;
+	}
+}
+
+.view-list-has-thumb {
+
+	li {
+		position: relative;
+		display: table;
+		width: 100%;
+		border-bottom: 1px solid #ccc;
+	}
+
+	 a {
+		display: table-row;
+		text-decoration: none;
+	}
+
+	.thumb,
+	.desc {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	
+	.thumb { width: 100px; }
+}
