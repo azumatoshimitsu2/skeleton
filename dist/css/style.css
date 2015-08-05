@@ -83,18 +83,18 @@ hr {
  Header
 
 ************************************************/
-/************************************************
-
- Footer
-
-************************************************/
-.site-header #site-id {
+.site-header .logo {
   float: left;
 }
 .site-header .site-header-section {
   float: right;
 }
 
+/************************************************
+
+ Footer
+
+************************************************/
 /************************************************
 
  Heading
@@ -168,7 +168,7 @@ hr {
   transform: rotate(45deg);
 }
 
-.circle-arrow {
+.icon-circle-arrow {
   display: inline-block;
   position: relative;
   background: #333;
@@ -176,7 +176,7 @@ hr {
   width: 22px;
   height: 22px;
 }
-.circle-arrow:after {
+.icon-circle-arrow:after {
   content: "";
   display: block;
   position: absolute;
@@ -190,21 +190,21 @@ hr {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.circle-arrow.v-top:after {
+.icon-circle-arrow.v-top:after {
   left: 6px;
   top: 8px;
   -moz-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.circle-arrow.v-bottom:after {
+.icon-circle-arrow.v-bottom:after {
   left: 6px;
   top: 5px;
   -moz-transform: rotate(-225deg);
   -webkit-transform: rotate(-225deg);
   transform: rotate(-225deg);
 }
-.circle-arrow.h-left:after {
+.icon-circle-arrow.h-left:after {
   left: 7px;
   -moz-transform: rotate(-130deg);
   -webkit-transform: rotate(-130deg);
@@ -239,13 +239,13 @@ body .set-float-l {
 body .set-float-r {
   float: right;
 }
-body .set-align-center {
+body .set-align-c {
   text-align: center;
 }
-body .set-align-right {
+body .set-align-r {
   text-align: right;
 }
-body .set-align-left {
+body .set-align-l {
   text-align: left;
 }
 body .fixed-w-base {

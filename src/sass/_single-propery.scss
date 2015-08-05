@@ -16,20 +16,20 @@ body {
 	.set-float-r { float: right; }
 
 	/*text align*/
-	.set-align-center { text-align: center; }
-	.set-align-right  { text-align: right; }
-	.set-align-left   { text-align: left; }
+	.set-align-c { text-align: center; }
+	.set-align-r { text-align: right; }
+	.set-align-l { text-align: left; }
 
 	/* width */
 	.fixed-w-base { max-width: 960px; margin: 0 auto; }
 
 	.set-w-full { width: 100%; }
 	.set-w-half { width: 50%; }
-	.set-w-200 { width: 200px; }
-	.set-w-250 { width: 250px; }
-	.set-w-300 { width: 300px; }
-	.set-w-350 { width: 350px; }
-	.set-w-400 { width: 400px; }
+	.set-w-200  { width: 200px; }
+	.set-w-250  { width: 250px; }
+	.set-w-300  { width: 300px; }
+	.set-w-350  { width: 350px; }
+	.set-w-400  { width: 400px; }
 
 	/* margin top */
 	.set-mt-10  { margin-top: 10px; }
