@@ -106,35 +106,35 @@ hr {
 
 *****************************************/
 /*list view*/
-.view-list {
+.list {
   border-top: 1px solid #CCC;
 }
-.view-list li {
+.list li {
   border-bottom: 1px solid #CCC;
   position: relative;
 }
-.view-list a {
+.list a {
   display: block;
   padding: 12px;
   text-decoration: none;
 }
 
-.view-list-has-thumb li {
+.list-has-thumb li {
   position: relative;
   display: table;
   width: 100%;
   border-bottom: 1px solid #ccc;
 }
-.view-list-has-thumb a {
+.list-has-thumb a {
   display: table-row;
   text-decoration: none;
 }
-.view-list-has-thumb .thumb,
-.view-list-has-thumb .desc {
+.list-has-thumb .thumb,
+.list-has-thumb .desc {
   display: table-cell;
   vertical-align: middle;
 }
-.view-list-has-thumb .thumb {
+.list-has-thumb .thumb {
   width: 100px;
 }
 
@@ -440,14 +440,21 @@ body .set-pl-100 {
 
 /************************************************
 
- Clearfix
+ Common layout
 
 ************************************************/
-.unit, .unit-col {
+.col .box {
+  float: left;
+}
+.col .last {
+  float: right;
+}
+
+.unit, .col {
   zoom: 1;
 }
 
-.unit:after, .unit-col:after {
+.unit:after, .col:after {
   content: '';
   display: block;
   clear: both;
