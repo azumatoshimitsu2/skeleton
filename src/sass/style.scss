@@ -26,10 +26,23 @@ td, th { line-height: 1.4; } hr { background: none; height: 0; border: 0; border
 
 /************************************************
 
- Clearfix
+ Common layout
 
 ************************************************/
-.unit, .unit-col { zoom: 1; }
-.unit:after, .unit-col:after { content: ''; display: block; clear: both; overflow: hidden; }
+
+.col {
+	
+		.box {
+			float: left;
+		}
+		
+		.last {
+			float: right;
+		}
+	
+}
+
+.unit, .col { zoom: 1; }
+.unit:after, .col:after { content: ''; display: block; clear: both; overflow: hidden; }
 
 @import "_mediaquery";

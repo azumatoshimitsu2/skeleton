@@ -7,13 +7,7 @@
     "gulp": "^3.8.11"
   },
   "devDependencies": {
-    "browser-sync": "^2.7.6",
-    "gulp-compass": "^2.1.0",
-    "gulp-jsdoc": "^0.1.4"
+    "gulp-compass": "^2.1.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  "author": ""
 }
