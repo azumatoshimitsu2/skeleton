@@ -20,7 +20,7 @@ td, th { line-height: 1.4; } hr { background: none; height: 0; border: 0; border
 @import "_compo-heading";
 @import "_compo-list";
 @import "_compo-table";
-@import "_compo-other";
+@import "_compo";
 @import "_single-propery";
 @import "_animation";
 
@@ -32,13 +32,13 @@ td, th { line-height: 1.4; } hr { background: none; height: 0; border: 0; border
 
 .col {
 	
-		.box {
-			float: left;
-		}
-		
-		.last {
-			float: right;
-		}
+	.box {
+		float: left;
+	}
+	
+	.last {
+		float: right;
+	}
 	
 }
 
