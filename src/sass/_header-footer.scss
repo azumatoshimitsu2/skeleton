@@ -14,6 +14,9 @@
 
 }
 
+@media screen and (max-width: $break_point) {
+}
+
 /************************************************
 
  Footer
@@ -21,5 +24,8 @@
 ************************************************/
 
 .site-footer {
+}
+
+@media screen and (max-width: $break_point) {
 }
 
