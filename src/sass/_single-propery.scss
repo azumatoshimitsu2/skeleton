@@ -8,20 +8,18 @@
 
 body {
 	
-	/* display */
+	// display
 	.set-disp-cell { display: table-cell; }
+	.set-disp-iblock { display: inline-block; }
 
-	/* float*/
+	// floa
 	.set-float-l { float: left; }
 	.set-float-r { float: right; }
 
-	/*text align*/
+	//text align
 	.set-align-c { text-align: center; }
 	.set-align-r { text-align: right; }
 	.set-align-l { text-align: left; }
-
-	/* width */
-	.fixed-w-base { max-width: 960px; margin: 0 auto; }
 
 	.set-w-full { width: 100%; }
 	.set-w-half { width: 50%; }
@@ -31,49 +29,49 @@ body {
 	.set-w-350  { width: 350px; }
 	.set-w-400  { width: 400px; }
 
-	/* margin top */
+	// margin top
 	.set-mt-10  { margin-top: 10px; }
 	.set-mt-20  { margin-top: 20px; }
 	.set-mt-50  { margin-top: 50px; }
 	.set-mt-100 { margin-top: 100px; }
 
-	/* margin right */
+	// margin right
 	.set-mr-10  { margin-right: 10px; }
 	.set-mr-20  { margin-right: 20px; }
 	.set-mr-50  { margin-right: 50px; }
 	.set-mr-100 { margin-right: 100px; }
 
-	/* margin bottom */
+	// margin bottom
 	.set-mb-10  { margin-bottom: 10px; }
 	.set-mb-20  { margin-bottom: 20px; }
 	.set-mb-50  { margin-bottom: 50px; }
 	.set-mb-100 { margin-bottom: 100px; }
 
-	/* margin left */
+	// margin left
 	.set-ml-10  { margin-left: 10px; }
 	.set-ml-20  { margin-left: 20px; }
 	.set-ml-50  { margin-left: 50px; }
 	.set-ml-100 { margin-left: 100px; }
 
-	/* padding top */
+	// padding top
 	.set-pt-10  { padding-top: 10px; }
 	.set-pt-20  { padding-top: 20px; }
 	.set-pt-50  { padding-top: 50px; }
 	.set-pt-100 { padding-top: 100px; }
 
-	/* padding right */
+	// padding right
 	.set-pr-10  { padding-right: 10px; }
 	.set-pr-20  { padding-right: 20px; }
 	.set-pr-50  { padding-right: 50px; }
 	.set-pr-100 { padding-right: 100px; }
 
-	/* padding bottom */
+	// padding bottom
 	.set-pb-10  { padding-bottom: 10px; }
 	.set-pb-20  { padding-bottom: 20px; }
 	.set-pb-50  { padding-bottom: 50px; }
 	.set-pb-100 { padding-bottom: 100px; }
 
-	/* padding left */
+	// padding left
 	.set-pl-10  { padding-left: 10px; }
 	.set-pl-20  { padding-left: 20px; }
 	.set-pl-50  { padding-left: 50px; }
