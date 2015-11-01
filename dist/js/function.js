@@ -23,9 +23,13 @@ $(document).ready(function () {
 	 * @return {undefined}
 	 */
 	var smoothScroll = function () {
-		$('.totop a').click( function (e) {
-			e.preventDefault();
-			$('html, body').animate({ scrollTop: $($(this).attr("href")).offset().top }, 'fast');
+		$('a').click( function (e) {
+
+			var href = $(this).attr('href');
+			if(href.match(/^#/) && $(href).length > 0) {
+				e.preventDefault();
+				$('html, body').animate({ scrollTop: $(href).offset().top }, 'fast');
+			}
 		});
 	}
 
