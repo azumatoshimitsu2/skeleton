@@ -40,15 +40,18 @@ main, section, aside { display: block; }
 //************************************************
 
 .fixed-width {
+	margin: 0 auto;
 	width: $base_width;
 }
 
 .col {
 	
+	.main,
 	.box {
 		float: left;
 	}
-	
+
+	.sidebar,
 	.last {
 		float: right;
 	}

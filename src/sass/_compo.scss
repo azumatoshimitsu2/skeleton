@@ -10,11 +10,12 @@
 
 .has-arrow {
 	position: relative;
+	padding-right: 10px;
 
 	&:after {
 		display: block;
 		position: absolute;
-		right: 10px;
+		right: 0;
 		top: 50%;
 		margin-top: -7px;
 		width: 8px;
