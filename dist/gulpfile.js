@@ -2,16 +2,16 @@ var gulp    = require('gulp');
 var compass = require('gulp-compass');
  
 gulp.task('compass', function(){
-    gulp.src('./src/sass/*.scss').pipe(compass({
+    gulp.src('sass/*.scss').pipe(compass({
         config_file: 'config.rb',
         comments: false,
-        css: './dist/css/',
-        sass: './src/sass/'
+        css: '../dist/css/',
+        sass: 'sass/'
     }));
 });
 
 gulp.task('watch', function(){
-    gulp.watch('./src/sass/*.scss', function(event) {
+    gulp.watch('sass/*.scss', function(event) {
         gulp.run('compass');
     });
 });
