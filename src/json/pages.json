@@ -1,0 +1,13 @@
+{
+  "pages": [
+    {  "dir" : "dir1", "page" : "page1",  "title" : "タイトル1",  "imageSrc" : "000001"},
+    {  "dir" : "dir2", "page" : "page2",  "title" : "タイトル2",  "imageSrc" : "000002"},
+    {  "dir" : "dir3", "page" : "page2",  "title" : "タイトル3",  "imageSrc" : "000003"},
+    {  "dir" : "dir4", "page" : "page2",  "title" : "タイトル4",  "imageSrc" : "000004"},
+    {  "dir" : "dir5", "page" : "page2",  "title" : "タイトル5",  "imageSrc" : "000005"},
+    {  "dir" : "dir6", "page" : "page2",  "title" : "タイトル6",  "imageSrc" : "000006"},
+    {  "dir" : "dir7", "page" : "page2",  "title" : "タイトル7",  "imageSrc" : "000007"},
+    {  "dir" : "dir8", "page" : "page2",  "title" : "タイトル8",  "imageSrc" : "000008"},
+    {  "dir" : "dir9", "page" : "page2",  "title" : "タイトル9",  "imageSrc" : "000009"}
+   ]
+}
