@@ -3,6 +3,8 @@ var compass = require('gulp-compass');
 var rename = require('gulp-rename');
 var ejs = require("gulp-ejs");
 var fs = require("fs");
+var uglify = require("gulp-uglify");
+var concat = require("gulp-concat");
  
 gulp.task('compass', function(){
     gulp.src('sass/*.scss').pipe(compass({
@@ -11,6 +13,25 @@ gulp.task('compass', function(){
         css: '../dist/css/',
         sass: 'sass/'
     }));
+});
+
+gulp.task('concat', function() {
+    return gulp.src('./js/*.js')
+        .pipe(concat('lib.js'))
+        .pipe(gulp.dest('./js'));
+});
+gulp.task('minify', function() {
+    return gulp.src('./js/lib.js')
+        .pipe(uglify('lib.min.js'))
+        .pipe(gulp.dest('../dist/js/'));
+});
+
+gulp.task('js', ['concat', 'minify']);
+
+gulp.task('watch', function(){
+    gulp.watch('sass/*.scss', function(event) {
+        gulp.run('compass');
+    });
 });
 
 gulp.task('ejs', function(){
