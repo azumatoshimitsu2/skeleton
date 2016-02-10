@@ -22,7 +22,8 @@ gulp.task('concat', function() {
 });
 gulp.task('minify', function() {
     return gulp.src('./js/lib.js')
-        .pipe(uglify('lib.min.js'))
+        .pipe(uglify())
+        .pipe(rename('lib.min.js')) 
         .pipe(gulp.dest('../dist/js/'));
 });
 
@@ -38,7 +39,6 @@ gulp.task('ejs', function(){
     var jsonData = require('./json/pages.json');
     
     jsonData.pages.forEach(function (data, index) {
-        console.log(data.title);
         //PC
         gulp.src("./ejs/template.ejs")
            .pipe(ejs({
@@ -47,8 +47,8 @@ gulp.task('ejs', function(){
                     imageSrc: data.imageSrc,
                 }
             }))
-            .pipe(rename(data.page+".html")) //出力ファイル名を指定
-            .pipe(gulp.dest("../dist/"+data.dir)); //ファイル出力先を設定
+            .pipe(rename(data.page+".html"))
+            .pipe(gulp.dest("../dist/"+data.dir));
     });
 });
 
