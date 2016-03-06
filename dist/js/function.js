@@ -1,10 +1,5 @@
 $(document).ready(function () {
 
-	/**
-	 * @画像名の末尾に -off がつくものをマウスオーバーで末尾 -on の画像に切り替え
-	 *
-	 * @return {undefined}
-	 */
 	var rollover = function () {
 		$('img').mouseover( function () {
 			var src = $(this).attr('src').replace('-off.', '-on.');
@@ -17,11 +12,6 @@ $(document).ready(function () {
 		});
 	}
 
-	/**
-	 * @ページ内リンクをアニメーション
-	 *
-	 * @return {undefined}
-	 */
 	var smoothScroll = function () {
 		$('a').click( function (e) {
 
@@ -33,9 +23,20 @@ $(document).ready(function () {
 		});
 	}
 
+	var toggleNav = function() {
+
+		$(".toggle-nav").click(function(e) {
+			e.preventDefault();
+			$(".toggle-nav").toggleClass("open");
+			$(".nav").slideToggle(250);
+
+		});
+	}
+
 	function initialize () {
 		rollover();
 		smoothScroll();
+		toggleNav();
 	}
 
 	initialize();
