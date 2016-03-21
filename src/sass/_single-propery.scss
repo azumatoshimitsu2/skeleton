@@ -30,6 +30,7 @@ body {
 	.set-w-400  { width: 400px; }
 
 	// margin top
+	.set-mt-5   { margin-top: 5px; }
 	.set-mt-10  { margin-top: 10px; }
 	.set-mt-20  { margin-top: 20px; }
 	.set-mt-30  { margin-top: 30px; }
@@ -42,6 +43,7 @@ body {
 	.set-mt-100 { margin-top: 100px; }
 
 	// margin right
+	.set-mr-5   { margin-right: 5px; }
 	.set-mr-10  { margin-right: 10px; }
 	.set-mr-20  { margin-right: 20px; }
 	.set-mr-30  { margin-right: 30px; }
@@ -54,6 +56,7 @@ body {
 	.set-mr-100 { margin-right: 100px; }
 
 	// margin bottom
+	.set-mb-5   { margin-bottom: 5px; }
 	.set-mb-10  { margin-bottom: 10px; }
 	.set-mb-20  { margin-bottom: 20px; }
 	.set-mb-30  { margin-bottom: 30px; }
@@ -66,6 +69,7 @@ body {
 	.set-mb-100 { margin-bottom: 100px; }
 
 	// margin left
+	.set-ml-5   { margin-left: 5px; }
 	.set-ml-10  { margin-left: 10px; }
 	.set-ml-20  { margin-left: 20px; }
 	.set-ml-30  { margin-left: 30px; }
@@ -78,6 +82,7 @@ body {
 	.set-ml-100 { margin-left: 100px; }
 
 	// padding top
+	.set-pt-5   { padding-top: 5px; }
 	.set-pt-10  { padding-top: 10px; }
 	.set-pt-20  { padding-top: 20px; }
 	.set-pt-30  { padding-top: 30px; }
@@ -90,6 +95,7 @@ body {
 	.set-pt-100 { padding-top: 100px; }
 
 	// padding right
+	.set-pr-5   { padding-right: 5px; }
 	.set-pr-10  { padding-right: 10px; }
 	.set-pr-20  { padding-right: 20px; }
 	.set-pr-30  { padding-right: 30px; }
@@ -102,6 +108,7 @@ body {
 	.set-pr-100 { padding-right: 100px; }
 
 	// padding bottom
+	.set-pb-5   { padding-bottom: 5px; }
 	.set-pb-10  { padding-bottom: 10px; }
 	.set-pb-20  { padding-bottom: 20px; }
 	.set-pb-30  { padding-bottom: 30px; }
@@ -114,6 +121,7 @@ body {
 	.set-pb-100 { padding-bottom: 100px; }
 
 	// padding left
+	.set-pl-5   { padding-left: 5px; }
 	.set-pl-10  { padding-left: 10px; }
 	.set-pl-20  { padding-left: 20px; }
 	.set-pl-30  { padding-left: 30px; }
@@ -126,3 +134,22 @@ body {
 	.set-pl-100 { padding-left: 100px; }
 	
 }
+
+@media screen and (max-width: $break_point) {
+	
+	#container {
+
+		.reset-sp-mt { margin-top: 0; }
+		.reset-sp-mr { margin-right: 0; }
+		.reset-sp-mb { margin-bottom: 0; }
+		.reset-sp-ml { margin-left: 0; }
+
+		.set-w {
+			width: auto;
+		}
+
+
+	}
+}
+
+
