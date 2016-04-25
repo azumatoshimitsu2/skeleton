@@ -15,6 +15,7 @@
 
 //************************************************
 
+.sp-only-ib,
 .sp-only { display: none; }
 
 .fixed-width {
@@ -97,6 +98,13 @@ td img {
 
 fieldset {
 	border: 0;
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+	-webkit-appearance: none;
 }
 
 sup {
