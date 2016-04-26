@@ -107,6 +107,22 @@ input[type="reset"] {
 	-webkit-appearance: none;
 }
 
+
+input,
+select {
+ 	line-height: 1.42857143;
+}
+
+select {
+ 	background: #FFF;
+}
+
+input,
+select,
+textarea {
+	border: 1px solid #d6d6d6
+}
+
 sup {
 	font-size: 10px;
 	line-height: 1.1;
