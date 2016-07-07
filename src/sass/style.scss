@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import "compass";
 
 @import "_var";
 @import "_header-footer";
@@ -20,7 +21,7 @@
 
 .fixed-width {
 	margin: 0 auto;
-	width: $base_width;
+	max-width: $base_width;
 }
 
 .col {
@@ -51,7 +52,7 @@
 
 		.col {
 			
-			.box, .last {
+			.box, .last, .main, .sidebar {
 				float: none;
 			}
 			
@@ -80,7 +81,7 @@ body,
 h1, h2, h3, h4, h5, h6,
 p, ul, ol, dl, dt, dd,
 form, fieldset,
-hr, sup {
+hr, sup, figure {
 	margin: 0; padding: 0;
 }
 
@@ -163,8 +164,12 @@ hr {
 	border-top: 1px solid #ccc;
 }
 
-main, section, aside {
+main, section, aside, figure, header, footer {
 	display: block;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 
