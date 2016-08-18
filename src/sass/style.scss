@@ -20,7 +20,8 @@
 .sp-only { display: none; }
 
 .fixed-width {
-	margin: 0 auto;
+	margin-right: auto;
+	margin-left: auto;
 	max-width: $base_width;
 }
 
