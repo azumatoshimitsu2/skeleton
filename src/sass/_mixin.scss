@@ -1,0 +1,6 @@
+@mixin new_pseudo() {
+	display: block;
+	content: "";
+	position: absolute;
+}
+

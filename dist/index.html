@@ -29,10 +29,11 @@
 		
 		<div class="toggle-nav sp-only"><span></span><span></span><span></span></div>
 
-		<nav class="nav" role="navigation">
+		<nav class="nav">
 			<ul>
 				<li>navigation</li>
-				<li><img src="images/dummy-off.gif" alt=""></li>
+				<li>navigation</li>
+				<li>navigation</li>
 			</ul>
 		</nav>
 		<!--  breadcrumb  -->
@@ -43,29 +44,35 @@
 		<!--  wrapper  -->
 		<div class="wrapper col">
 			<!--  main  -->
-			<main class="main" role="main">
+			<main class="main">
 				<header>
 					<h1 class="set-mt-20 set-mb-20" itemprop="name">Component</h1>
 				</header>
-
-				<div class="set-pb-100 linear-gradient"></div>
 				
 				<div class="set-mb-20">
-					<span class="icon icon--circle-arrow"></span>
-					<span class="icon icon--circle-arrow v-top"></span>
-					<span class="icon icon--circle-arrow v-bottom"></span>
-					<span class="icon icon--circle-arrow h-left"></span>
+					<p>グラデーション</p>
+					<div class="set-pb-100 linear-gradient"></div>
+				</div>
+				
+				<div class="set-mb-20">
+					<p>アイコン</p>
+					<div class="set-mb-20">
+						<span class="icon icon--circle-arrow"></span>
+						<span class="icon icon--circle-arrow v-top"></span>
+						<span class="icon icon--circle-arrow v-bottom"></span>
+						<span class="icon icon--circle-arrow h-left"></span>
+					</div>
 				</div>
 
 				<div class="set-mb-20">
 					<ul class="view-list">
-						<li><a href="#"><span class="icon icon--arrow"></span>リスト</a></li>
-						<li><a href="#"><span class="icon icon--arrow"></span>リスト</a></li>
+						<li><a href="#"><span class="icon icon--arrow"></span> リスト</a></li>
+						<li><a href="#"><span class="icon icon--arrow"></span> リスト</a></li>
 					</ul>
 				</div>
 
 				<div class="set-mb-20">
-					<ul class="view-list-has-thumb">
+					<ul class="list-has-thumb">
 						<li>
 							<a href="#" class="has-arrow">
 								<div class="thumb"><img src="images/dummy.png" width="80" alt=""></div>
@@ -81,10 +88,26 @@
 					</ul>
 				</div>
 					
-				<div class="unit-col">
+				<p>Float</p>
+				<div class="col set-mb-20">
 					<div class="set-float-l">左</div>
 					<div class="set-float-r">右</div>
 				</div>
+
+					
+				<p>Float</p>
+				<div class="col col--2 set-mb-20">
+					<div class="box" style="background: #CCC; height:100px;"></div>
+					<div class="box" style="background: #CCC; height:100px;"></div>
+				</div>
+
+				
+				<p>Flex</p>
+				<div class="flex flex--col-2">
+					<div class="flex__item" style="background: #CCC; height:100px;"></div>
+					<div class="flex__item" style="background: #CCC; height:100px;"></div>
+				</div>
+
 				<p class="animation">ホバーで CSS アニメーション</p>
 				<p class="keyframe">キーフレーム CSS アニメーション</p>
 			</main>
@@ -98,7 +121,7 @@
 		<!--  //wrapper  --> 
 		<p><a href="#container">ページ上部へ</a></p>
 		<!--  footer  -->
-		<div class="site-footer" role="contentinfo">
+		<div class="site-footer">
 			<div class="copy">&copy; copyright</div>
 		</div>
 		<!--  //footer  --> 

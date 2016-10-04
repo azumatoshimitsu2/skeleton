@@ -9,13 +9,15 @@
 .icon {
 	position: relative;
 	display: inline-block;
+	vertical-align: top;
+	line-height: 1.1;
 
 	&.icon--arrow {
+		top: 8px;
 		width: 6px;
 		height: 6px;
 		border-top: 2px solid #999;
 		border-right: 2px solid #999;
-		content: "";
 		-moz-transform: rotate(45deg);
 		-webkit-transform: rotate(45deg);
 		transform: rotate(45deg);
@@ -29,9 +31,7 @@
 		height: 16px;
 
 		&:after {
-			content: "";
-			display: block;
-			position: absolute;
+			@include new_pseudo();
 			left: 4px;
 			top: 5px;
 			width: 4px;
@@ -65,6 +65,18 @@
 			-webkit-transform: rotate(-130deg);
 			transform: rotate(-130deg);
 		}
+	}
+
+}
+
+.button {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	line-height: 1.1;
+
+	&.button--default {
+
 	}
 
 }
