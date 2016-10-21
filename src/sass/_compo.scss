@@ -9,6 +9,8 @@
 .icon {
 	position: relative;
 	display: inline-block;
+	background: 0 0 no-repeat;
+	background-size: 100% auto;
 	vertical-align: top;
 	line-height: 1.1;
 
@@ -31,7 +33,7 @@
 		height: 16px;
 
 		&:after {
-			@include new_pseudo();
+			@include new_ghost();
 			left: 4px;
 			top: 5px;
 			width: 4px;
@@ -70,10 +72,13 @@
 }
 
 .button {
+	cursor: pointer;
 	position: relative;
 	display: inline-block;
+	padding: 10px;
 	vertical-align: top;
 	line-height: 1.1;
+	text-decoration: none;
 
 	&.button--default {
 
@@ -86,4 +91,7 @@
 }
 
 @media screen and (max-width: $break_point) {
+
+	#container {
+	}
 }

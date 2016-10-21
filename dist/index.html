@@ -38,7 +38,7 @@
 		</nav>
 		<!--  breadcrumb  -->
 		<div class="breadcrumb" itemprop="breadcrumb" itemscope itemtype="http://schema.org/Breadcrumb">
-			<p><a href="#" itemprop="url">パンくずリスト</a> 現在地</p>
+			<p><a href="#" itemprop="url">breadcrumb</a> page title</p>
 		</div>
 		<!--  //breadcrumb  --> 
 		<!--  wrapper  -->
@@ -46,70 +46,101 @@
 			<!--  main  -->
 			<main class="main">
 				<header>
-					<h1 class="set-mt-20 set-mb-20" itemprop="name">Component</h1>
+					<h1 class="set-mt-20 set-mb-20 set-fs-24" itemprop="name">Component</h1>
 				</header>
 				
-				<div class="set-mb-20">
-					<p>グラデーション</p>
-					<div class="set-pb-100 linear-gradient"></div>
-				</div>
+				<section class="set-mb-20">
+					<h2 class="set-mb-10 set-fs-20">Button</h2>
+					<a href="#" class="button">a tag button</a>
+					<button class="button">button element button</button>
+				</section>
 				
-				<div class="set-mb-20">
-					<p>アイコン</p>
+				<section class="set-mb-20">
+					<h2 class="set-mb-10 set-fs-20">Gradient</h2>
+					<div class="set-pb-100 linear-gradient"></div>
+				</section>
+				
+				<section class="set-mb-20">
+					<h2 class="set-mb-10 set-fs-20">Icon</h2>
 					<div class="set-mb-20">
 						<span class="icon icon--circle-arrow"></span>
 						<span class="icon icon--circle-arrow v-top"></span>
 						<span class="icon icon--circle-arrow v-bottom"></span>
 						<span class="icon icon--circle-arrow h-left"></span>
 					</div>
-				</div>
-
-				<div class="set-mb-20">
-					<ul class="view-list">
-						<li><a href="#"><span class="icon icon--arrow"></span> リスト</a></li>
-						<li><a href="#"><span class="icon icon--arrow"></span> リスト</a></li>
-					</ul>
-				</div>
-
-				<div class="set-mb-20">
-					<ul class="list-has-thumb">
-						<li>
-							<a href="#" class="has-arrow">
-								<div class="thumb"><img src="images/dummy.png" width="80" alt=""></div>
-								<p class="desc">リスト画像付</p>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="has-arrow">
-								<div class="thumb"><img src="images/dummy.png" width="80" alt=""></div>
-								<p class="desc">リスト画像付</p>
-							</a>
-						</li>
-					</ul>
-				</div>
-					
-				<p>Float</p>
-				<div class="col set-mb-20">
-					<div class="set-float-l">左</div>
-					<div class="set-float-r">右</div>
-				</div>
-
-					
-				<p>Float</p>
-				<div class="col col--2 set-mb-20">
-					<div class="box" style="background: #CCC; height:100px;"></div>
-					<div class="box" style="background: #CCC; height:100px;"></div>
-				</div>
-
+				</section>
 				
-				<p>Flex</p>
-				<div class="flex flex--col-2">
-					<div class="flex__item" style="background: #CCC; height:100px;"></div>
-					<div class="flex__item" style="background: #CCC; height:100px;"></div>
-				</div>
+				<section>
+				<h2 class="set-mb-10 set-fs-20">List</h2>
 
-				<p class="animation">ホバーで CSS アニメーション</p>
-				<p class="keyframe">キーフレーム CSS アニメーション</p>
+					<div class="set-mb-20">
+						<ul class="list-has-thumb">
+							<li>
+								<a href="#" class="has-arrow">
+									<div class="thumb"><img src="images/dummy.png" width="80" alt=""></div>
+									<p class="desc">list</p>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="has-arrow">
+									<div class="thumb"><img src="images/dummy.png" width="80" alt=""></div>
+									<p class="desc">list</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="set-mb-20">
+					<h2 class="set-mb-10 set-fs-20">Float</h2>
+
+					<h3>Static float</h3>
+					<div class="col set-mb-20">
+						<div class="set-float-l" style="background: #CCC; height:100px; width: 48%;"><p>set-float-l</p></div>
+						<div class="set-float-r" style="background: #CCC; height:100px; width: 48%;"><p>set-float-r</p></div>
+					</div>
+					
+					<h3>Responsive float</h3>
+					<div class="col">
+						<div class="box set-w set-w-200 set-mb-10" style="background: #CCC; height:100px;"><p>box</p></div>
+						<div class="last set-w  set-w set-w-200 set-mb-10" style="background: #CCC; height:100px;"><p>box</p></div>
+					</div>
+				</section>
+				
+				<section class="set-mb-20">
+					<h2 class="set-mb-10 set-fs-20">Flex</h2>
+					<div class="flex flex--col-2">
+						<div class="flex__item" style="background: #CCC; height:100px;"></div>
+						<div class="flex__item" style="background: #CCC; height:100px;"></div>
+					</div>
+				</section>
+
+				<section class="set-mb-20">
+					<h2 class="set-mb-10 set-fs-20">Responsive Table</h2>
+					<table class="table-a table-responsive">
+						<tbody>
+							<tr>
+								<th>table head</th>
+								<td>table data</td>
+							</tr>
+							<tr>
+								<th>table head</th>
+								<td>table data</td>
+							</tr>
+							<tr>
+								<th>table head</th>
+								<td>table data</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				
+				<section>
+					<h2 class="set-mb-10 set-fs-20">CSS Animation</h2>
+					<p class="animation set-mb-20">Hover animation</p>
+					<p class="keyframe">Keyframe animation</p>
+				</section>
+
 			</main>
 			<!--  //main  --> 
 			<!--  sidebar  -->
