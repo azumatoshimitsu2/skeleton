@@ -4,18 +4,9 @@
 
 //*****************************************
 
-.list {
-	border-top: 1px solid #CCC;
+.list-default {
 
 	li { 
-		border-bottom: 1px solid #CCC;
-		position: relative;
-	}
-
-	a {
-		display: block;
-		padding: 12px;
-		text-decoration: none;
 	}
 }
 
@@ -43,4 +34,7 @@
 }
 
 @media screen and (max-width: $break_point) {
+
+	#container {
+	}
 }

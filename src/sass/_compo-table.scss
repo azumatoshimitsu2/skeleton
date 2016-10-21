@@ -6,6 +6,23 @@
 
 //************************************************
 
+.table-default {
+	width: 100%;
+	
+	th,
+	td {
+		padding: 10px;
+		border: 1px solid #CCC;
+	}
+
+	th {
+		background: #DEDEDE;
+	}
+
+	td {}
+
+}
+
 .table-a {
 	
 	th,
@@ -18,4 +35,27 @@
 }
 
 @media screen and (max-width: $break_point) {
+
+	#container {
+
+		.table-responsive {
+
+			tr, th, td {
+				display: block;
+				padding-top: 5px;
+				border-bottom: 0;
+			}
+
+			th {
+				padding-bottom: 5px;
+				width: auto;
+				text-align: left;
+			}
+
+			td {
+				padding-bottom: 10px;
+			}
+
+		}
+	}
 }
