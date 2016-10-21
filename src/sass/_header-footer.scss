@@ -110,7 +110,21 @@
 	}
 }
 
+
+@media screen and (min-width: $break_point) {
+
+	.nav {
+		display: block !important;
+	}
+}
+
 @media screen and (max-width: $break_point) {
+
+	#container {
+
+		.site-header {
+		}
+	}
 }
 
 //************************************************
@@ -123,5 +137,11 @@
 }
 
 @media screen and (max-width: $break_point) {
+
+	#container {
+
+		.site-footer {
+		}
+	}
 }
 
