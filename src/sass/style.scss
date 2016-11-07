@@ -73,6 +73,7 @@
 }
 
 .flex {
+	-js-display: flex;
 	display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
@@ -95,8 +96,8 @@
     }
 }
 
-.unit, .col { zoom: 1; }
-.unit:after, .col:after { content: ''; display: block; clear: both; overflow: hidden; }
+.col { zoom: 1; }
+.col:after { content: ''; display: block; clear: both; overflow: hidden; }
 
 
 @media screen and (max-width: $break_point) {

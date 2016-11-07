@@ -28,6 +28,8 @@
 	.set-disp-cell { display: table-cell; }
 	.set-disp-ib { display: inline-block; }
 
+	.set-hide { display: none; }
+
 	.set-valign-m { vertical-align: middle; }
 
 	// floa
@@ -168,6 +170,8 @@
 	.reset-mr { margin-right: 0; }
 	.reset-mb { margin-bottom: 0; }
 	.reset-ml { margin-left: 0; }
+	
+	.reset-max-w { max-width: none; }
 	
 }
 

@@ -8,29 +8,37 @@
 
 .table-default {
 	width: 100%;
+
+	tr {
 	
-	th,
-	td {
-		padding: 10px;
-		border: 1px solid #CCC;
-	}
+		th,
+		td {
+			padding: 10px;
+			border: 1px solid #CCC;
+		}
 
-	th {
-		background: #DEDEDE;
-	}
+		th {
+			background: #DEDEDE;
+		}
 
-	td {}
+		td {}
+
+	}
 
 }
 
 .table-a {
-	
-	th,
-	td {}
 
-	th {}
+	tr {
+		
+		th,
+		td {}
 
-	td {}
+		th {}
+
+		td {}
+
+	}
 
 }
 
