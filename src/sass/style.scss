@@ -203,6 +203,7 @@ input[type="button"],
 input[type="reset"] {
 	-webkit-appearance: none;
 	cursor: pointer;
+	border: 0;
 }
 
 
@@ -239,7 +240,7 @@ iframe {
 
 ul, ol, p, dt, dd,
 caption, th, td,
-select, input, textarea, button {
+select,input, textarea, button {
 	font-size: 1.4rem;
 }
 
@@ -271,5 +272,3 @@ main, section, aside, figure, header, footer {
 * {
 	box-sizing: border-box;
 }
-
-

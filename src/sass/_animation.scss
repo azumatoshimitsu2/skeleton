@@ -4,11 +4,8 @@
 
 //*****************************************
 
-// CSS Animation
 .animation {
-	-moz-transition: background 1s ease;
-	-webkit-transition: background 1s ease;
-	transition: background 1s ease;
+	@include transition(background 1s ease);
 
 	&:hover {
 		background-color: #F00;
@@ -17,25 +14,19 @@
 
 @-moz-keyframes anim {
 	0% {
-		-moz-transform: rotate(360deg);
-		-webkit-transform: rotate(360deg);
-		transform: rotate(360deg);
+		-moz-transform: rotate(-130deg);
 	}
 	100% {
 		-moz-transform: rotate(0deg);
-		-webkit-transform: rotate(0deg);
-		transform: rotate(0deg);
 	}
 }
 
 @-webkit-keyframes anim {
 	0% {
-		-moz-transform: rotate(360deg);
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
 	}
 	100% {
-		-moz-transform: rotate(0deg);
 		-webkit-transform: rotate(0deg);
 		transform: rotate(0deg);
 	}
@@ -43,24 +34,9 @@
 
 @keyframes anim {
 	0% {
-		-moz-transform: rotate(-130deg);
-		-webkit-transform: rotate(-130deg);
 		transform: rotate(-130deg);
 	}
 	100% {
-		-moz-transform: rotate(0deg);
-		-webkit-transform: rotate(0deg);
 		transform: rotate(0deg);
 	}
-}
-
-.keyframe {
-	background: #000;
-	margin: 20px;
-	width: 100px;
-	height: 100px;
-	color: #FFF;
-	-webkit-animation: anim 6s linear infinite;
-	-moz-animation: anim 6s linear infinite;
-	animation: anim 6s linear infinite;
 }
