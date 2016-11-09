@@ -104,17 +104,21 @@
 	
 	#container {
 
-		.pc-only { display: none; }
-		.sp-only { display: block; }
+		.pc-only    { display: none; }
+		.sp-only    { display: block; }
 		.sp-only-ib { display: inline-block; }
 
 		.col {
 			
-			.box, .last, .main, .sidebar {
+			.box,
+			.last,
+			.main,
+			.sidebar {
 				float: none;
 			}
 			
-			.main, .sidebar {
+			.main,
+			.sidebar {
 				width: auto;
 			}
 
