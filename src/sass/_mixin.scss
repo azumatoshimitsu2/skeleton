@@ -4,6 +4,14 @@
 	position: absolute;
 }
 
+@mixin transition($prop) {
+	   -moz-transition: $prop;
+	     -o-transition: $prop;
+	    -ms-transition: $prop;
+	-webkit-transition: $prop;
+            transition: $prop;
+}
+
 @mixin transform($transforms) {
 	   -moz-transform: $transforms;
 	     -o-transform: $transforms;
