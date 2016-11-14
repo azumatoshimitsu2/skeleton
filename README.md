@@ -25,7 +25,7 @@
                └──_compo.scss
                └──_single-propery.scss
                └──_animation.scss
-
+    
 ##基本ルール
 
 ###命名規則
@@ -34,7 +34,6 @@
 - スタイルをオーバーライドする場合は（要素のクラス名--クラス名）とする（※例2参照）
   
 例1:
-````
 
     <div class="myclass">
      <div class="myclass__header></div>
