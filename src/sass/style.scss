@@ -66,6 +66,7 @@
 
 			&:nth-child(3n) {
 				float: right;
+				margin-right: 0;
 			}
 		}
 	}
@@ -162,11 +163,14 @@
 html, body {
 	width: 100%;
 	font-size: 10px;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
 }
 
 body {
 	font-family: $sans_serif;
 	line-height: 1.7;
+	font-feature-settings : "palt" 1;
 }
 
 body,
