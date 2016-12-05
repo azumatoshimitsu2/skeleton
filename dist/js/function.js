@@ -28,7 +28,7 @@ $(document).ready(function () {
 		$(".toggle-nav").click(function(e) {
 			e.preventDefault();
 			$(".toggle-nav").toggleClass("open");
-			$(".nav").slideToggle(250);
+			$(".nav-main").slideToggle(250);
 
 		});
 	}
