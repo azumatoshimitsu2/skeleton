@@ -1,10 +1,22 @@
-@charset "UTF-8";
-
-//************************************************
 
 // Table
+//
+// Styleguide 4.0.0
 
-//************************************************
+//
+// table.table-default
+//
+// markup:
+// <table class="table-default">
+// 	<tbody>
+// 	 <tr>
+// 	 	<th>header</th>
+// 	 	<td>data</td>
+// 	 <tr>
+//  </tbody>
+// </table>
+//
+// Styleguide 4.1.0
 
 .table-default {
 	width: 100%;
@@ -26,6 +38,20 @@
 	}
 
 }
+//
+// table.table-a
+//
+// markup:
+// <table class="table-a">
+// 	<tbody>
+// 	 <tr>
+// 	 	<th>header</th>
+// 	 	<td>data</td>
+// 	 <tr>
+//  </tbody>
+// </table>
+//
+// Styleguide 4.2.0
 
 .table-a {
 
@@ -42,6 +68,11 @@
 
 }
 
+//
+// Mediaquery
+//
+// Styleguide 4.100.0
+
 @media screen and (max-width: $break_point) {
 
 	#container {
@@ -50,17 +81,18 @@
 
 			tr, th, td {
 				display: block;
-				padding-top: 5px;
 				border-bottom: 0;
 			}
 
 			th {
+				padding-top: 5px;
 				padding-bottom: 5px;
 				width: auto;
 				text-align: left;
 			}
 
 			td {
+				padding-top: 5px;
 				padding-bottom: 10px;
 			}
 

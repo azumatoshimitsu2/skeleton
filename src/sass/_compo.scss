@@ -76,7 +76,7 @@
 }
 
 .linear-gradient {
-	@include background-image(linear-gradient(white, #fff 0, #000 100%));
+	@include background-image(linear-gradient(#fff 0, #000 100%));
 }
 
 @media screen and (max-width: $break_point) {
