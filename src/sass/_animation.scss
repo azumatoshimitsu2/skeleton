@@ -5,11 +5,15 @@
 //*****************************************
 
 .animation {
-	@include transition(background 1s ease);
+	@include transition(background 0.5s ease);
 
 	&:hover {
 		background-color: #F00;
 	}
+}
+
+.animset {
+	@include animation(anim 1.5s ease-in-out infinite alternate);
 }
 
 @-moz-keyframes anim {
@@ -23,12 +27,10 @@
 
 @-webkit-keyframes anim {
 	0% {
-		-webkit-transform: rotate(360deg);
-		transform: rotate(360deg);
+		-webkit-transform: rotate(-130deg);
 	}
 	100% {
 		-webkit-transform: rotate(0deg);
-		transform: rotate(0deg);
 	}
 }
 

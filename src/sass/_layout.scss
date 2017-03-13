@@ -1,0 +1,137 @@
+
+
+// Layout
+//
+// Styleguide 1.0.0
+
+//
+// .col
+//
+// markup:
+// <div class="col col--2">
+// 	<div class="box"><p style="height: 100px; background: #CCC;">.col--2</p></div>
+// 	<div class="box"><p style="height: 100px; background: #CCC;">.col--2</p></div>
+// </div>
+// <br>
+// <div class="col col--3">
+// 	<div class="box"><p style="height: 100px; background: #CCC;">.col--3</p></div>
+// 	<div class="box"><p style="height: 100px; background: #CCC;">.col--3</p></div>
+// 	<div class="box"><p style="height: 100px; background: #CCC;">.col--3</p></div>
+// </div>
+//
+// Styleguide 1.1.0
+
+.col {
+	zoom: 1;
+
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+		overflow: hidden;
+	}
+
+	.box {
+		float: left;
+	}
+
+	.last {
+		float: right;
+	}
+
+	&.col--2 {
+
+		.box {
+			width: 49%;
+
+			&:nth-child(2n) {
+				float: right;
+			}
+		}
+	}
+
+	&.col--3 {
+
+		.box {
+			margin-right: 2%;
+			width: 32%;
+
+			&:nth-child(3n) {
+				float: right;
+				margin-right: 0;
+			}
+		}
+	}
+	
+}
+
+.flex {
+	-js-display: flex;
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-box-pack:justify;
+    -ms-flex-pack:justify;
+    -webkit-justify-content:space-between;
+    justify-content: space-between;
+
+    &.flex--col-2 {
+
+	    .flex__item {
+    		width: 48%;
+	    }
+    }
+}
+
+//
+// Mediaquery
+//
+// Styleguide 1.100.0
+
+@media screen and (max-width: $break_point) {
+	
+	#container {
+
+		.col {
+			
+			.box,
+			.last {
+				float: none;
+			}
+
+			&.col--2 {
+
+				.box {
+					margin-bottom: 20px;
+					width: auto;
+
+					&:nth-child(2n) {
+						float: none;
+					}
+				}
+			}
+
+			&.col--3 {
+
+				.box {
+					margin-right: 0;
+					margin-bottom: 20px;
+					width: auto;
+
+					&:nth-child(3n) {
+						float: none;
+					}
+				}
+			}
+			
+		}
+
+	}
+
+}
