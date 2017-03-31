@@ -68,6 +68,7 @@
 	vertical-align: top;
 	line-height: 1.1;
 	text-decoration: none;
+	user-select: none;
 
 	&.button--default {
 
@@ -77,6 +78,20 @@
 
 .linear-gradient {
 	@include background-image(linear-gradient(#fff 0, #000 100%));
+}
+
+.wrap-resposive-iframe {
+	position: relative;
+	width: 100%;
+	padding-top: 56.25%;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100% !important;
+		height: 100% !important;
+	}
 }
 
 @media screen and (max-width: $break_point) {
