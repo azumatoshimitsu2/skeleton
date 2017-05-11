@@ -17,12 +17,13 @@ gulp.task('compass', function(){
 });
 
 gulp.task('concat', function() {
-    return gulp.src('./js/*.js')
-        .pipe(concat('lib.js'))
-        .pipe(gulp.dest('./js'));
+    return gulp.src('./js/libs/*.js')
+        .pipe(concat('./js/libs.js'))
+        .pipe(gulp.dest('./'));
 });
+
 gulp.task('minify', ['concat'], function() {
-    return gulp.src('./js/lib.js')
+    return gulp.src('./js/libs.js')
         .pipe(uglify())
         .pipe(rename('lib.min.js')) 
         .pipe(gulp.dest('../dist/js/'));
