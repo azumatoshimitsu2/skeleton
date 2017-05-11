@@ -25,47 +25,48 @@
 	
 }
 
+
 .toggle-nav {
-	position: absolute;
-	right: 14px;
-	top: 26px;
+	position: fixed;
+	right: 0;
+	top: 0;
 	z-index: 200;
-	width: 28px;
-	height: 25px;
+	width: 36px;
+	height: 36px;
+	background: #000;
 	@include transform(rotate(0deg));
 	cursor: pointer;
 
 	span {
 		display: block;
 		position: absolute;
-		height: 4px;
-		width: 100%;
-		background: #000;
+		height: 2px;
+		width: 80%;
+		background: #FFF;
 		border-radius: 9px;
 		opacity: 1;
-		left: 0;
+		left: 10%;
 		@include transform(rotate(0deg));
 		@include transition(.25s ease-in-out);
 
 		&:nth-child(1) {
-		  top: 0px;
-		}
-
-		&:nth-child(2) {
 		  top: 9px;
 		}
 
+		&:nth-child(2) {
+		  top: 17px;
+		}
+
 		&:nth-child(3) {
-		  top: 18px;
+		  top: 25px;
 		}
 	}
-
 
 	&.open {
 		span {
 
 			&:nth-child(1) {
-			  top: 10px;
+			  top: 17px;
 			  @include transform(rotate(135deg));
 			}
 
@@ -75,7 +76,7 @@
 			}
 
 			&:nth-child(3) {
-			  top: 10px;
+			  top: 17px;
 			  @include transform(rotate(-135deg));
 			}
 		}

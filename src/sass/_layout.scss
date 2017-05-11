@@ -114,6 +114,10 @@
 					&:nth-child(2n) {
 						float: none;
 					}
+
+					&:last-child {
+						margin-bottom: 0;
+					}
 				}
 			}
 
@@ -126,6 +130,10 @@
 
 					&:nth-child(3n) {
 						float: none;
+					}
+
+					&:last-child {
+						margin-bottom: 0;
 					}
 				}
 			}
