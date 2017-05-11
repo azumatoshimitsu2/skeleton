@@ -73,4 +73,5 @@ clearfix の処理は全て .col を使用 .col 以外で clearfix は行わな�
 #### デフォルトで設定してあるコマンド
 - compass /src/sass のファイルをコンパイル
 - concat /src/libs/*.js の複数ファイルを /src/js/libs.js 一枚にまとめる
-- minify /src/libs/libs.js をミニファイして /dist/js/lib.min.js して書き出す
+- minify /src/libs/libs.js をミニファイして /dist/js/lib.min.js として書き出す
+- js concat 後 minify
