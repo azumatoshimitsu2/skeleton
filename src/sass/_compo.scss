@@ -1,96 +1,21 @@
-@charset "UTF-8";
-
-//************************************************
-
-// Other
-
-//************************************************
-
-.icon {
-	position: relative;
-	display: inline-block;
-	background: 0 0 no-repeat;
-	background-size: 100% auto;
-	vertical-align: top;
-	line-height: 1.1;
-
-	&.icon--arrow {
-		top: 8px;
-		width: 6px;
-		height: 6px;
-		border-top: 2px solid #999;
-		border-right: 2px solid #999;
-		@include transform(rotate(45deg));
-	}
-
-	&.icon--circle-arrow {
-		background: #333;
-		border-radius: 100px;
-		width: 16px;
-		height: 16px;
-
-		&:after {
-			@include object();
-			left: 4px;
-			top: 5px;
-			width: 4px;
-			height: 4px;
-			border-top: 2px solid #fff;
-			border-right: 2px solid #fff;
-			@include transform(rotate(45deg));
-		}
-
-		&.v-top:after {
-			left: 5px;
-			top: 6px;
-			@include transform(rotate(-45deg));
-		}
-
-		&.v-bottom:after {
-			left: 5px;
-			top: 4px;
-			@include transform(rotate(-225deg));
-		}
-
-		&.h-left:after {
-			left: 6px;
-			@include transform(rotate(-130deg));
-		}
-	}
-
-}
-
-.button {
-	cursor: pointer;
-	position: relative;
-	display: inline-block;
-	padding: 10px;
-	vertical-align: top;
-	line-height: 1.1;
-	text-decoration: none;
-	user-select: none;
-
-	&.button--default {
-
-	}
-
-}
-
 .linear-gradient {
 	@include background-image(linear-gradient(#fff 0, #000 100%));
 }
 
-.wrap-resposive-iframe {
-	position: relative;
-	width: 100%;
-	padding-top: 56.25%;
+.compo {
 
-	iframe {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 100% !important;
-		height: 100% !important;
+	&.compo--wrap-resposive-iframe {
+		position: relative;
+		width: 100%;
+		padding-top: 56.25%;
+
+		iframe {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100% !important;
+			height: 100% !important;
+		}
 	}
 }
 
