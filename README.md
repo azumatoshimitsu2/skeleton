@@ -25,6 +25,8 @@
                └──_compo.scss
                └──_single-propery.scss
                └──_animation.scss
+    package.json
+    webpack.config.js
     
 ## 基本ルール
 
@@ -50,9 +52,9 @@
 
 - 継承を利用して、共通の意味を持ったコンポーネントで共有するスタイルを複数箇所に書かないようにする（参考 : _compo.scss）
 - 全体で共有する値は _var.scss に変数として記述して使用する
-- イレギュラーなスタイルに対応する場合は都度スタイルを追加せず _single-propery.scss にある .set-\* クラスの組み合わせで対応（二回以上再利用されたものは、.set-\* の組み合わせではなくコンポーネントとして再定義するほうがよい）
+- イレギュラーなスタイルに対応する場合は CSS の肥大化を防ぐため、都度スタイルを追加せず _single-propery.scss にある .set-\* クラスの組み合わせで対応（二回以上再利用されたものは、.set-\* の組み合わせではなくコンポーネントとして再定義するほうがよい）
 
-##デフォルトで定義された汎用クラスの使い方
+## デフォルトで定義された汎用クラスの使い方
 
 ### .col
 clearfix の処理は全て .col を使用 .col 以外で clearfix は行わない。また、.col 自体に直接スタイルを追加するのは不可
@@ -64,14 +66,10 @@ clearfix の処理は全て .col を使用 .col 以外で clearfix は行わな�
 - .sp-only .pc-only のふたつのクラスは、ブレイクポイント毎に表示を切り替える場合に使用。直接スタイルの追加は不可。また、このクラスを持った要素への display プロパティの追加は**いかなる方法も不可**。
 
 ## その他
+- タスクランナーなどを使用する場合、運用や修正に必要な手順があれば箇条書きなどで文書化する
+- node モジュールを仕様する場合 package.json の納品は必須
 
-### タスクランナー
+### webpack
+- npm start で /src/js/entry.js の変更を /dist/js/bundle.js に出力
+- webpack.config.js の plugins UglifyJsPlugin() のコメントアウト解除で公開用ファイルとして最小化
 
-- タスクランナーを使用する場合、運用や修正に必要な手順があれば箇条書きなどで文書化する
-- タスクランナーを使用する場合、package.json の納品は必須
-
-#### デフォルトで設定してあるコマンド
-- compass /src/sass のファイルをコンパイル
-- concat /src/libs/*.js の複数ファイルを /src/js/libs.js 一枚にまとめる
-- minify /src/libs/libs.js をミニファイして /dist/js/lib.min.js として書き出す
-- js concat 後 minify
