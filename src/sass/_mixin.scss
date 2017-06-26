@@ -20,18 +20,18 @@
             transform: $transforms;
 }
 
-@mixin prefix($prop, $value) {
-    -webkit#{$prop}: $value;
-    -o-#{$prop}: $value;
-    -ms-#{$prop}: $value;
-    -moz-#{$prop}: $value;
-    #{$prop}: $value;
-}
-
 @mixin animation($animations) {
     -webkit-animation: $animations;
     -o-animation: $animations;
     -ms-animation: $animations;
     -moz-animation: $animations;
     animation: $animations;
+}
+
+$set-prefix: -moz- , -webkit-, -o-, -ms-, '';
+
+@mixin prefix($prop, $value) {
+    @each $prefix in $set-prefix {
+        #{'$prefix'}#{'$prop'}: $value;
+    }
 }
