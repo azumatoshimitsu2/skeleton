@@ -1,25 +1,11 @@
-
-
 // Layout
 //
-// Styleguide 1.0.0
 
-//
-// .col
-//
-// markup:
-// <div class="col col--2">
-// 	<div class="box"><p style="height: 100px; background: #CCC;">.col--2</p></div>
-// 	<div class="box"><p style="height: 100px; background: #CCC;">.col--2</p></div>
-// </div>
-// <br>
-// <div class="col col--3">
-// 	<div class="box"><p style="height: 100px; background: #CCC;">.col--3</p></div>
-// 	<div class="box"><p style="height: 100px; background: #CCC;">.col--3</p></div>
-// 	<div class="box"><p style="height: 100px; background: #CCC;">.col--3</p></div>
-// </div>
-//
-// Styleguide 1.1.0
+.fixed-width {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: $base_width;
+}
 
 .col {
 	zoom: 1;

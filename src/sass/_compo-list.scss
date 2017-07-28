@@ -1,18 +1,5 @@
 
 // List
-//
-// Styleguide 3.0.0
-
-//
-// .list-default
-//
-// Markup:
-// <ul class="list-default">
-// 	<li>リスト</li>
-// 	<li>リスト</li>
-// </ul>
-//
-// Styleguide 3.1.0
 
 .list-default {
 
@@ -20,19 +7,15 @@
 	}
 }
 
-// .list-has-thumb
-//
-// Markup:
-// <ul class="list-has-thumb">
-// 	<li>
-// 	 <a>
-// 	  <div class="thumb">image</div>
-// 	  <div class="desc">desc</div>
-// 	 </a>
-// 	</li>
-// </ul>
-//
-// Styleguide 3.2.0
+.list-inlie {
+
+	li {
+		display: inline-block;
+		margin-right: 10px;
+		vertical-align: top;
+	}
+}
+
 .list-has-thumb {
 
 	li {
@@ -59,7 +42,6 @@
 //
 // Mediaquery
 //
-// Styleguide 3.100.0
 
 @media screen and (max-width: $break_point) {
 

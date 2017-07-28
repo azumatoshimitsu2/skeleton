@@ -25,13 +25,6 @@
 .sp-only-ib,
 .sp-only { display: none; }
 
-
-.fixed-width {
-	margin-right: auto;
-	margin-left: auto;
-	max-width: $base_width;
-}
-
 @media screen and (max-width: $break_point) {
 	
 	#container {
@@ -55,7 +48,6 @@ html, body {
 	font-size: 10px;
 }
 
-.section-markup-wrapper,
 body {
 	font-family: $sans_serif;
 	line-height: 1.7;

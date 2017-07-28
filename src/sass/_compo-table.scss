@@ -2,25 +2,6 @@
 	overflow: auto;	
 }
 
-// Table
-//
-// Styleguide 4.0.0
-
-//
-// table.table-default
-//
-// markup:
-// <table class="table-default">
-// 	<tbody>
-// 	 <tr>
-// 	 	<th>header</th>
-// 	 	<td>data</td>
-// 	 <tr>
-//  </tbody>
-// </table>
-//
-// Styleguide 4.1.0
-
 .table-default {
 	width: 100%;
 
@@ -41,20 +22,6 @@
 	}
 
 }
-//
-// table.table-a
-//
-// markup:
-// <table class="table-a">
-// 	<tbody>
-// 	 <tr>
-// 	 	<th>header</th>
-// 	 	<td>data</td>
-// 	 <tr>
-//  </tbody>
-// </table>
-//
-// Styleguide 4.2.0
 
 .table-a {
 
@@ -84,7 +51,8 @@
 
 			tr, th, td {
 				display: block;
-				border-bottom: 0;
+				padding-right: 0;
+				padding-left: 0;
 			}
 
 			th {
