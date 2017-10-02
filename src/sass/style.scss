@@ -109,8 +109,10 @@ select {
  	line-height: 1.42857143;
 }
 
-select {
- 	background: #FFF;
+@media screen and (min-width: $break_point) {
+	select {
+	 	background: #FFF;
+	}
 }
 
 input,
@@ -137,7 +139,7 @@ iframe {
 
 ul, ol, p, dt, dd,
 caption, th, td,
-select,input, textarea, button {
+select,input, textarea, button, figcaption {
 	font-size: 1.4rem;
 }
 

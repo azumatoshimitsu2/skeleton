@@ -94,15 +94,10 @@
 			&.col--2 {
 
 				.box {
-					margin-bottom: 20px;
 					width: auto;
 
 					&:nth-child(2n) {
 						float: none;
-					}
-
-					&:last-child {
-						margin-bottom: 0;
 					}
 				}
 			}
@@ -111,15 +106,10 @@
 
 				.box {
 					margin-right: 0;
-					margin-bottom: 20px;
 					width: auto;
 
 					&:nth-child(3n) {
 						float: none;
-					}
-
-					&:last-child {
-						margin-bottom: 0;
 					}
 				}
 			}
