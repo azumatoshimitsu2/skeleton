@@ -11,9 +11,10 @@
     root/
     ├── dist/
         └── index.html
-        └──css/
-        └──js/
-        └──images/
+        └──assets/
+               └──css/
+               └──js/
+               └──images/
     └── src/
         └──sass/
                └──style.scss

@@ -5,7 +5,7 @@ module.exports = {
         js: __dirname + "/src/js/entry.js"
     },
     output: {
-        path : __dirname + '/dist/js',
+        path : __dirname + '/dist/assets/js',
         filename: 'bundle.js'
     },
     resolve: {
@@ -21,6 +21,9 @@ module.exports = {
         ]
     },
     plugins: [
-        //new webpack.optimize.UglifyJsPlugin()//minify
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        })
     ]
 };
