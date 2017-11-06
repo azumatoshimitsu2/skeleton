@@ -83,6 +83,10 @@
 @media screen and (max-width: $break_point) {
 	
 	#container {
+		
+		.fixed-width {
+			width: auto;
+		}
 
 		.col {
 			

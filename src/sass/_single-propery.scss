@@ -7,8 +7,13 @@
 ************************************************/
 
 #container {
+
+	.set-block-c { margin-left: auto; margin-right: auto; }
 	
 	.set-nowrap { white-space: nowrap; }
+	
+	.set-min-line { line-height: 1; }
+	.set-low-line { line-height: 1.4; }
 
 	.set-pos-rel { position: relative; }
 	.set-pos-abs { position: absolute; }
@@ -42,6 +47,12 @@
 	.set-fs-22 { font-size: 2.2rem; }
 	.set-fs-23 { font-size: 2.3rem; }
 	.set-fs-24 { font-size: 2.4rem; }
+	.set-fs-25 { font-size: 2.5rem; }
+	.set-fs-26 { font-size: 2.6rem; }
+	.set-fs-27 { font-size: 2.7rem; }
+	.set-fs-28 { font-size: 2.8rem; }
+	.set-fs-29 { font-size: 2.9rem; }
+	.set-fs-30 { font-size: 3.0rem; }
 
 	.set-w-full { width: 100%; }
 	.set-w-half,
@@ -56,14 +67,17 @@
 	.set-w-90   { width: 90%; }
 
 	.set-w-100px  { width: 100px; }
+	.set-w-150px  { width: 150px; }
 	.set-w-200px  { width: 200px; }
 	.set-w-250px  { width: 250px; }
 	.set-w-300px  { width: 300px; }
 	.set-w-350px  { width: 350px; }
 	.set-w-400px  { width: 400px; }
+	.set-w-500px  { width: 500px; }
 
 	.set-mt-5   { margin-top: 5px;  }
 	.set-mt-10  { margin-top: 10px; }
+	.set-mt-15  { margin-top: 15px; }
 	.set-mt-20  { margin-top: 20px; }
 	.set-mt-30  { margin-top: 30px; }
 	.set-mt-40  { margin-top: 40px; }
@@ -77,6 +91,7 @@
 	// margin right
 	.set-mr-5   { margin-right: 5px;  }
 	.set-mr-10  { margin-right: 10px; }
+	.set-mr-15  { margin-right: 15px; }
 	.set-mr-20  { margin-right: 20px; }
 	.set-mr-30  { margin-right: 30px; }
 	.set-mr-40  { margin-right: 40px; }
@@ -102,6 +117,7 @@
 
 	.set-ml-5   { margin-left: 5px;  }
 	.set-ml-10  { margin-left: 10px; }
+	.set-ml-15  { margin-left: 15px; }
 	.set-ml-20  { margin-left: 20px; }
 	.set-ml-30  { margin-left: 30px; }
 	.set-ml-40  { margin-left: 40px; }
@@ -114,6 +130,7 @@
 
 	.set-pt-5   { padding-top: 5px;  }
 	.set-pt-10  { padding-top: 10px; }
+	.set-pt-15  { padding-top: 15px; }
 	.set-pt-20  { padding-top: 20px; }
 	.set-pt-30  { padding-top: 30px; }
 	.set-pt-40  { padding-top: 40px; }
@@ -126,6 +143,7 @@
 
 	.set-pr-5   { padding-right: 5px;  }
 	.set-pr-10  { padding-right: 10px; }
+	.set-pr-15  { padding-right: 15px; }
 	.set-pr-20  { padding-right: 20px; }
 	.set-pr-30  { padding-right: 30px; }
 	.set-pr-40  { padding-right: 40px; }
@@ -138,6 +156,7 @@
 
 	.set-pb-5   { padding-bottom: 5px;  }
 	.set-pb-10  { padding-bottom: 10px; }
+	.set-pb-15  { padding-bottom: 15px; }
 	.set-pb-20  { padding-bottom: 20px; }
 	.set-pb-30  { padding-bottom: 30px; }
 	.set-pb-40  { padding-bottom: 40px; }
@@ -150,6 +169,7 @@
 
 	.set-pl-5   { padding-left: 5px;  }
 	.set-pl-10  { padding-left: 10px; }
+	.set-pl-15  { padding-left: 15px; }
 	.set-pl-20  { padding-left: 20px; }
 	.set-pl-30  { padding-left: 30px; }
 	.set-pl-40  { padding-left: 40px; }
