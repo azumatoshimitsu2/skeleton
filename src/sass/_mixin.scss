@@ -1,9 +1,7 @@
 @mixin object($pos: absolute) {
 	display: block;
 	content: "";
-	@if $pos !=  absolute{
-		position: $pos;
-	}
+	position: $pos;
 }
 
 @mixin transition($prop) {
