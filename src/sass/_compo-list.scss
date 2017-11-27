@@ -30,13 +30,10 @@
 		text-decoration: none;
 	}
 
-	.thumb,
-	.desc {
+	.list-table__cell {
 		display: table-cell;
 		vertical-align: middle;
 	}
-	
-	.thumb { width: 100px; }
 }
 
 //

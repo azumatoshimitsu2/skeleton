@@ -22,12 +22,12 @@
 	.set-disp-cell { display: table-cell; }
 	.set-disp-ib   { display: inline-block; }
 
+	.set-valign-t { vertical-align: top; }
 	.set-valign-m { vertical-align: middle; }
+	.set-valign-b { vertical-align: bottom; }
 	// floa
 	.set-float-l { float: left; }
 	.set-float-r { float: right; }
-
-	.set-valign-m { vertical-align: middle; }
 
 	.set-align-c { text-align: center; }
 	.set-align-r { text-align: right; }
