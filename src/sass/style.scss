@@ -20,10 +20,11 @@
 // Bese
 
 //************************************************
-
-.screen-reader-text,
-.sp-only-ib,
-.sp-only { display: none; }
+#container {
+	.screen-reader-text,
+	.sp-only-ib,
+	.sp-only { display: none; }
+}
 
 @media screen and (max-width: $break_point) {
 	
