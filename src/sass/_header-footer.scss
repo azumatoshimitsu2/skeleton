@@ -13,6 +13,7 @@
 }
 
 .nav-main {
+	@include transition(height 0.3s ease);
 
 	ul {
 		display: table;
@@ -23,80 +24,6 @@
 		display: table-cell;
 	}
 	
-}
-
-
-.toggle-nav {
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 200;
-	width: 36px;
-	height: 36px;
-	background: #000;
-	@include transform(rotate(0deg));
-	cursor: pointer;
-
-	span {
-		display: block;
-		position: absolute;
-		height: 2px;
-		width: 80%;
-		background: #FFF;
-		border-radius: 9px;
-		opacity: 1;
-		left: 10%;
-		@include transform(rotate(0deg));
-		@include transition(.25s ease-in-out);
-
-		&:nth-child(1) {
-		  top: 9px;
-		}
-
-		&:nth-child(2) {
-		  top: 17px;
-		}
-
-		&:nth-child(3) {
-		  top: 25px;
-		}
-	}
-
-	&.open {
-		span {
-
-			&:nth-child(1) {
-			  top: 17px;
-			  @include transform(rotate(135deg));
-			}
-
-			&:nth-child(2) {
-			  opacity: 0;
-			  left: -60px;
-			}
-
-			&:nth-child(3) {
-			  top: 17px;
-			  @include transform(rotate(-135deg));
-			}
-		}
-
-		b {
-			color: #FFF;
-		}
-	}
-
-	b {
-		display: block;
-		width: 100%;
-		text-align: center;
-		position: absolute;
-		font-weight: normal;
-		left: -2px;
-		bottom: -18px;
-		font-size: 11px;
-		color: #000;
-	}
 }
 
 
@@ -113,6 +40,34 @@
 	#container {
 
 		.site-header {
+		}
+
+		.nav-main {
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 100;
+			overflow: hidden;
+			display: block;
+			background-color: #FFF;
+			width: 100%;
+			height: 0;
+
+			ul {
+				display: block;
+				width: 100%;
+			}
+
+			li {
+				display: block;
+				padding: 10px;
+				border-bottom: 1px solid #000;
+			}
+
+			&.nav-main--show {
+				overflow: auto;
+				height: 100vh;
+			}
 		}
 	}
 }

@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-/************************************************
-
- Single property
-
-************************************************/
-
 #container {
 
 	.set-block-c { margin-left: auto; margin-right: auto; }
@@ -55,7 +49,6 @@
 	.set-fs-30 { font-size: 3.0rem; }
 
 	.set-w-full { width: 100%; }
-	.set-w-half,
 	.set-w-50   { width: 50%; }
 	.set-w-10   { width: 10%; }
 	.set-w-20   { width: 20%; }
@@ -186,12 +179,21 @@
 	.reset-ml { margin-left:   0; }
 	
 	.reset-max-w { max-width: none; }
+
+	.reset-a-style {
+		cursor: default;
+	}
 	
 }
 
 @media screen and (max-width: $break_point) {
 	
 	#container {
+
+		.sp-full-w {
+			margin-right: -1 *  $sp_pad;
+			margin-left: -1 *  $sp_pad;
+		}
 
 		.reset-sp-mt { margin-top:    0; }
 		.reset-sp-mr { margin-right:  0; }

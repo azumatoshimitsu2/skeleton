@@ -2,6 +2,10 @@
 	@include background-image(linear-gradient(#fff 0, #000 100%));
 }
 
+.text-shadow {
+	text-shadow : 2px 2px 2px #FFF, -2px 2px 2px #FFF, 2px -2px 2px #FFF, -2px -2px 2px #FFF;
+}
+
 .compo-wrap-resposive-iframe {
 	position: relative;
 	width: 100%;

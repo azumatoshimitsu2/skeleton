@@ -12,7 +12,6 @@
 <meta property="og:description" content="">
 <title>title</title>
 <link href="./assets/css/style.css" rel="stylesheet" media="all">
-<script src="./assets/js/bundle.js"></script>
 </head>
 <body>
 	<div id="container" class="fixed-width">
@@ -25,7 +24,7 @@
 		</div>
 		<!--  //site-header  -->
 		
-		<div class="toggle-nav sp-only"><span></span><span></span><span></span></div>
+		<div class="button button--toggle sp-only"><span></span><span></span><span></span></div>
 
 		<nav class="nav-main">
 			<ul>
@@ -51,6 +50,7 @@
 					<h2 class="set-mb-10 set-fs-20">Button</h2>
 					<a href="#" class="button">a tag button</a>
 					<button class="button">button element button</button>
+					<a href="tel:0000000000">0000000000</a>
 				</section>
 				
 				<section class="set-mb-20">
@@ -75,13 +75,13 @@
 						<ul class="list-has-thumb">
 							<li>
 								<a href="#" class="has-arrow">
-									<div class="thumb"><img src="images/dummy.png" width="80" alt=""></div>
+									<div class="thumb"><img src="./assets/images/dummy.png" width="80" alt=""></div>
 									<p class="desc">list</p>
 								</a>
 							</li>
 							<li>
 								<a href="#" class="has-arrow">
-									<div class="thumb"><img src="images/dummy.png" width="80" alt=""></div>
+									<div class="thumb"><img src="./assets/images/dummy.png" width="80" alt=""></div>
 									<p class="desc">list</p>
 								</a>
 							</li>
@@ -101,7 +101,7 @@
 					<h3>Responsive float</h3>
 					<div class="col">
 						<div class="box set-w set-w-40 set-mb-10" style="background: #CCC; height:100px;"><p>box</p></div>
-						<div class="last set-w  set-w set-w-40 set-mb-10" style="background: #CCC; height:100px;"><p>box</p></div>
+						<div class="box--r set-w  set-w set-w-40 set-mb-10" style="background: #CCC; height:100px;"><p>box</p></div>
 					</div>
 				</section>
 				
@@ -132,6 +132,31 @@
 						</tbody>
 					</table>
 				</section>
+
+				<section class="set-mb-20">
+					<h2 class="set-mb-10 set-fs-20">Slide Toggle</h2>
+
+				 <div class="compo-toggle">
+				    <p class="compo-toggle__trigger">toggle button</p>
+				    <div class="compo-toggle__content">
+				        <p>content <br>
+				        content <br>
+				        content <br>
+				        content <br>
+				        content </p>
+				    </div>
+				 </div>
+
+				 <br><br>
+
+				 <div class="compo-toggle" data-show="1">
+				    <button class="compo-toggle__trigger">toggle button</button>
+				    <div class="compo-toggle__content">
+				       <p>show default</p>
+				    </div>
+				  </div>
+
+				</section>
 				
 				<section>
 					<h2 class="set-mb-10 set-fs-20">CSS Animation</h2>
@@ -142,12 +167,13 @@
 			</main>
 		</div>
 		<!--  //wrapper  --> 
-		<div class="totop"><a href="#container">ページ上部へ</a></div>
+		<div class="button button--totop"><a href="#container">ページ上部へ</a></div>
 		<!--  site-footer  -->
 		<div class="site-footer">
 			<div class="copy">&copy; copyright</div>
 		</div>
 		<!--  //site-footer  --> 
 	</div>
+<script src="./assets/js/bundle.js"></script>
 </body>
 </html>

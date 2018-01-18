@@ -9,13 +9,77 @@
 	user-select: none;
 	border: 0;
 	@include transition(all 0.5s ease);
-
+	
 	&:hover {
 		text-decoration: none;
 	}
 
-	&.button--default {
+	&.button--totop {
+		
+	}
 
+	&.button--default {
+	
+		@media screen and (min-width: $break_point) {
+			&:hover {
+			}
+		}
+
+	}
+
+	&.button--toggle {
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 200;
+		width: 36px;
+		height: 36px;
+		background: #000;
+		@include transform(rotate(0deg));
+
+		span {
+			display: block;
+			position: absolute;
+			height: 2px;
+			width: 80%;
+			background: #FFF;
+			opacity: 1;
+			left: 10%;
+			@include transform(rotate(0deg));
+			@include transition(.25s ease-in-out);
+
+			&:nth-child(1) {
+			  top: 9px;
+			}
+
+			&:nth-child(2) {
+			  top: 17px;
+			}
+
+			&:nth-child(3) {
+			  top: 25px;
+			}
+		}
+
+		&.button--toggle--open {
+			span {
+
+				&:nth-child(1) {
+				  top: 17px;
+				  @include transform(rotate(135deg));
+				}
+
+				&:nth-child(2) {
+				  opacity: 0;
+				  left: -60px;
+				}
+
+				&:nth-child(3) {
+				  top: 17px;
+				  @include transform(rotate(-135deg));
+				}
+			}
+		}
 	}
 
 }
