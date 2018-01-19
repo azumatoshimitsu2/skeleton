@@ -174,3 +174,13 @@ main, section, aside, figure, header, footer {
 * {
 	box-sizing: border-box;
 }
+
+@media screen and (max-width: $break_point) {
+	#container {
+		ul, ol, p, dt, dd,
+		caption, th, td,
+		select,input, textarea, button, figcaption {
+			font-size: $sp_bfs;
+		}
+	}
+}
