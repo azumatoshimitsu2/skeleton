@@ -1,5 +1,5 @@
 .linear-gradient {
-	@include background-image(linear-gradient(#fff 0, #000 100%));
+	background: linear-gradient(to bottom, red 5%, yellow 25%, #1E90FF 50%);
 }
 
 .text-shadow {
