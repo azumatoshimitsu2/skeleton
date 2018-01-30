@@ -1,7 +1,7 @@
 # Ignore docs files
 .DS_Store
 .Thumbs.db
-src/.sass-cache/
+.sass-cache/
 node_modules/
 npm-debug.log
 sample/
