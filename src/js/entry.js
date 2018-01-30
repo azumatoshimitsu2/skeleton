@@ -10,7 +10,7 @@ import sliderToggle from './modules/slideToggle.js'
 	if(u('#container').size().width > 640) {
 		u('meta[name="viewport"]').attr('content', 'width=1100')
 	}
-
+	
 	if(!ua.Mobile){
 	    u('a[href^="tel:"]').addClass('reset-a-style').on('click', function(e) {
 	        e.preventDefault()

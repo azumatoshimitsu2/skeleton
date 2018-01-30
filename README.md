@@ -71,6 +71,8 @@ clearfix の処理は全て .col を使用 .col 以外で clearfix は行わな�
 - node モジュールを仕様する場合 package.json の納品は必須
 
 ### webpack
-- npm start で /src/js/entry.js の変更を /dist/js/bundle.js に出力
-- webpack.config.js の plugins UglifyJsPlugin() のコメントアウト解除で公開用ファイルとして最小化
+npm start でビルド
+webpack --optimize-minimize  で最小化
+
+
 

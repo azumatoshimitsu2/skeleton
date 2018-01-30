@@ -1,5 +1,5 @@
 export default function(){
-  let u = window.navigator.userAgent.toLowerCase()
+  var u = window.navigator.userAgent.toLowerCase()
   return {
     Tablet:(u.indexOf("windows") != -1 && u.indexOf("touch") != -1)
       || u.indexOf("ipad") != -1
