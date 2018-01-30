@@ -173,12 +173,25 @@ main, section, aside, figure, header, footer {
 	box-sizing: border-box;
 }
 
+::-webkit-input-placeholder {
+	color: #c1c1c1;
+}
+:-moz-placeholder {
+	color: #c1c1c1;
+}
+::-moz-placeholder {
+	color: #c1c1c1;
+}
+:-ms-input-placeholder {
+ 	color: #c1c1c1;
+}
+
 @media screen and (max-width: $break_point) {
 	#container {
 		ul, ol, p, dt, dd,
 		caption, th, td,
 		select,input, textarea, button, figcaption {
-			font-size: $sp_bfs;
+			font-size: $sp_f;
 		}
 	}
 }
