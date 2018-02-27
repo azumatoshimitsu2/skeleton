@@ -20,6 +20,10 @@
 	}
 }
 
+.compo-toggle__content {
+	overflow: hidden;
+}
+
 @media screen and (max-width: $break_point) {
 
 	#container {

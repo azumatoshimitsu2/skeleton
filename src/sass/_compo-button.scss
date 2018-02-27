@@ -8,7 +8,7 @@
 	text-decoration: none;
 	user-select: none;
 	border: 0;
-	@include transition(all 0.5s ease);
+	transition: all 0.25s ease;
 	
 	&:hover {
 		text-decoration: none;
@@ -35,7 +35,7 @@
 		width: 36px;
 		height: 36px;
 		background: #000;
-		@include transform(rotate(0deg));
+		transform: rotate(0deg);
 
 		span {
 			display: block;
@@ -45,8 +45,8 @@
 			background: #FFF;
 			opacity: 1;
 			left: 10%;
-			@include transform(rotate(0deg));
-			@include transition(.25s ease-in-out);
+			transform: rotate(0deg);
+			transition: .25s ease-in-out;
 
 			&:nth-child(1) {
 			  top: 9px;
@@ -66,7 +66,7 @@
 
 				&:nth-child(1) {
 				  top: 17px;
-				  @include transform(rotate(135deg));
+				  transform: rotate(135deg);
 				}
 
 				&:nth-child(2) {
@@ -76,7 +76,7 @@
 
 				&:nth-child(3) {
 				  top: 17px;
-				  @include transform(rotate(-135deg));
+				  transform: rotate(-135deg);
 				}
 			}
 		}

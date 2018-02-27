@@ -4,30 +4,6 @@
 	position: $pos;
 }
 
-@mixin transition($prop) {
-	   -moz-transition: $prop;
-	     -o-transition: $prop;
-	    -ms-transition: $prop;
-	-webkit-transition: $prop;
-            transition: $prop;
-}
-
-@mixin transform($transforms) {
-	   -moz-transform: $transforms;
-	     -o-transform: $transforms;
-	    -ms-transform: $transforms;
-	-webkit-transform: $transforms;
-            transform: $transforms;
-}
-
-@mixin animation($animations) {
-    -webkit-animation: $animations;
-    -o-animation: $animations;
-    -ms-animation: $animations;
-    -moz-animation: $animations;
-    animation: $animations;
-}
-
 $set-prefix: -moz- , -webkit-, -o-, -ms-, '';
 
 @mixin prefix($prop, $value) {
