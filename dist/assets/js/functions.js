@@ -1,7 +1,7 @@
 ;(function() {
 	var ua_type = ua()
 
-	if(u('#container').size().width > 640) {
+	if(u('#container').size().width > 720) {
 		u('meta[name="viewport"]').attr('content', 'width=1100')
 	}
 	
