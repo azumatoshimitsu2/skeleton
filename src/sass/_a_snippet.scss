@@ -1,23 +1,11 @@
-.animation {
-	transition : background 0.5s ease;
-
-	&:hover {
-		background-color: #F00;
-	}
+.linear-gradient {
+	background: linear-gradient(to bottom, red 5%, yellow 25%, #1E90FF 50%);
 }
 
-.animset {
-	animation : anim 1.5s ease-in-out infinite alternate;
+.text-shadow {
+	text-shadow : 2px 2px 2px #FFF, -2px 2px 2px #FFF, 2px -2px 2px #FFF, -2px -2px 2px #FFF;
 }
 
-@keyframes anim {
-	0% {
-		transform: rotate(-130deg);
-	}
-	100% {
-		transform: rotate(0deg);
-	}
-}
 
 .transition-fade {
 	opacity: 0;

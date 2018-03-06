@@ -25,5 +25,7 @@
 	u('.compo-toggle').each(function(v, i) {
 		sliderToggle(v)
 	})
+	
 })()
+
 

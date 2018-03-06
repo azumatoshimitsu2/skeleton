@@ -17,10 +17,8 @@
 	<div id="container" class="fixed-width">
 		<!--  site-header  -->
 		<div class="site-header col">
-			<div class="logo">.logo</div>
-			<div class="last">
-				text
-			</div>
+			<div class="site-header__logo">.logo</div>
+			<div class="site-header__box">text</div>
 		</div>
 		<!--  //site-header  -->
 		
@@ -43,7 +41,7 @@
 			<!--  main  -->
 			<main>
 				<header>
-					<h1 class="set-mt-20 set-mb-20 set-fs-24" itemprop="name">Component</h1>
+					<h1 class="set-mt-20 set-mb-20 set-fs-24" itemprop="name">Title</h1>
 				</header>
 				
 				<section class="set-mb-20">
@@ -51,11 +49,6 @@
 					<a href="#" class="button">a tag button</a>
 					<button class="button">button element button</button>
 					<a href="tel:0000000000">0000000000</a>
-				</section>
-				
-				<section class="set-mb-20">
-					<h2 class="set-mb-10 set-fs-20">Gradient</h2>
-					<div class="set-pb-100 linear-gradient"></div>
 				</section>
 				
 				<section class="set-mb-20">
@@ -72,17 +65,9 @@
 				<h2 class="set-mb-10 set-fs-20">List</h2>
 
 					<div class="set-mb-20">
-						<ul class="list-has-thumb">
-							<li>
-								<a href="#" class="has-arrow">
-									<p class="desc">list</p>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="has-arrow">
-									<p class="desc">list</p>
-								</a>
-							</li>
+						<ul class="list-disc">
+							<li>item</li>
+							<li>item</li>
 						</ul>
 					</div>
 				</section>
@@ -90,13 +75,12 @@
 				<section class="set-mb-20">
 					<h2 class="set-mb-10 set-fs-20">Float</h2>
 
-					<h3>Static float</h3>
-					<div class="col set-mb-20">
+					<div class="col">
 						<div class="set-float-l" style="background: #CCC; height:100px; width: 48%;"><p>set-float-l</p></div>
 						<div class="set-float-r" style="background: #CCC; height:100px; width: 48%;"><p>set-float-r</p></div>
 					</div>
 					
-					<h3>Responsive float</h3>
+					<h3 class="set-mt-20">Responsive</h3>
 					<div class="col">
 						<div class="box set-w set-w-40 set-mb-10" style="background: #CCC; height:100px;"><p>box</p></div>
 						<div class="box--r set-w  set-w set-w-40 set-mb-10" style="background: #CCC; height:100px;"><p>box</p></div>
@@ -109,10 +93,33 @@
 						<div class="flex__item" style="background: #CCC; height:100px;"></div>
 						<div class="flex__item" style="background: #CCC; height:100px;"></div>
 					</div>
+
+					<h3 class="set-mt-20">Responsive</h3>
+					<div class="flex flex--col-2 flex--reset-sp">
+						<div class="flex__item" style="background: #CCC; height:100px;"></div>
+						<div class="flex__item" style="background: #CCC; height:100px;"></div>
+					</div>
 				</section>
 
 				<section class="set-mb-20">
-					<h2 class="set-mb-10 set-fs-20">Responsive Table</h2>
+					<h2 class="set-mb-10 set-fs-20">Table</h2>
+					<table class="table-a">
+						<tbody>
+							<tr>
+								<th>table head</th>
+								<td>table data</td>
+							</tr>
+							<tr>
+								<th>table head</th>
+								<td>table data</td>
+							</tr>
+							<tr>
+								<th>table head</th>
+								<td>table data</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3 class="set-mt-20">Responsive</h3>
 					<table class="table-a table-responsive">
 						<tbody>
 							<tr>

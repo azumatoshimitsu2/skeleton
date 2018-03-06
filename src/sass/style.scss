@@ -1,7 +1,6 @@
 @charset "utf-8";
 @import "_var";
 @import "_mixin";
-@import "_animation";
 @import "_header-footer";
 @import "_compo-header";
 @import "_compo-list";
@@ -10,31 +9,8 @@
 @import "_compo-button";
 @import "_compo";
 @import "_layout";
-@import "_single-propery";
+@import "_util";
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
-
-//************************************************
-
-// Bese
-
-//************************************************
-#container {
-	.screen-reader-text,
-	.sp-only-ib,
-	.sp-only { display: none; }
-}
-
-@media screen and (max-width: $break_point) {
-	
-	#container {
-
-		.pc-only    { display: none; }
-		.sp-only    { display: block; }
-		.sp-only-ib { display: inline-block; }
-
-	}
-
-}
 
 //************************************************
 
@@ -58,8 +34,7 @@ body {
 body,
 h1, h2, h3, h4, h5, h6,
 p, ul, ol, dl, dt, dd,
-form, fieldset,
-hr, sup, figure {
+form, fieldset, hr, sup, figure {
 	margin: 0;
 	padding: 0;
 }
@@ -79,11 +54,15 @@ td img {
 	vertical-align: baseline;
 }
 
+iframe,
 fieldset {
 	border: 0;
 }
 
-legend {
+input,
+select,
+textarea {
+	font-family: $sans_serif;
 }
 
 button,
@@ -114,12 +93,6 @@ select {
 	}
 }
 
-input,
-select,
-textarea {
-	font-family: $sans_serif;
-}
-
 sup {
 	font-size: 10px;
 	line-height: 1.1;
@@ -131,21 +104,13 @@ a {
 	text-decoration: none;
 }
 
-iframe {
-	border: 0;
-}
-
-ul, ol, p, dt, dd,
-caption, th, td,
+ul, ol, p, dt, dd, caption, th, td,
 select,input, textarea, button, figcaption {
 	font-size: 1.4rem;
 }
 
-h1, h2, h3, h4, h5, h6, dt {
-	line-height: 1.4;
-}
-
 h1, h2, h3, h4, h5, h6 {
+	line-height: 1.4;
 	font-size: 1.6rem;
 }
 
@@ -173,17 +138,20 @@ main, section, aside, figure, header, footer {
 	box-sizing: border-box;
 }
 
+
+	$placeholder_color: #c1c1c1;
+
 ::-webkit-input-placeholder {
-	color: #c1c1c1;
+	color: $placeholder_color;
 }
 :-moz-placeholder {
-	color: #c1c1c1;
+	color: $placeholder_color;
 }
 ::-moz-placeholder {
-	color: #c1c1c1;
+	color: $placeholder_color;
 }
 :-ms-input-placeholder {
- 	color: #c1c1c1;
+ 	color: $placeholder_color;
 }
 
 @media screen and (max-width: $break_point) {
@@ -191,7 +159,7 @@ main, section, aside, figure, header, footer {
 		ul, ol, p, dt, dd,
 		caption, th, td,
 		select,input, textarea, button, figcaption {
-			font-size: $sp_f;
+			font-size: $sp_base_fs;
 		}
 	}
 }

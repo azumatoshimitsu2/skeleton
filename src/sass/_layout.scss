@@ -116,6 +116,10 @@
 
 		.flex--reset-sp {
 			display: block;
+
+			.flex__item {
+				width: auto;
+			}
 		}
 
 	}

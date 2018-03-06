@@ -8,7 +8,13 @@
 
 .site-header {
 
-	.logo { float: left; }
+	.site-header__logo {
+		float: left;
+	}
+
+	.site-header__box {
+		float: left;
+	}
 
 }
 
