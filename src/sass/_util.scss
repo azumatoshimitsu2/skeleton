@@ -17,6 +17,13 @@
 
 #container {
 
+	.set-ellipsis {
+		display: inline-block;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	}
+
 	.set-block-c { margin-left: auto; margin-right: auto; }
 	
 	.set-nowrap { white-space: nowrap; }
@@ -193,6 +200,10 @@
 	.reset-ml   { margin-left:   0; }
 	
 	.reset-max-w { max-width: none; }
+
+	.reset-a-style {
+		cursor: default;
+	}
 	
 }
 
@@ -309,19 +320,19 @@
 		.set-sp-pl-90  { padding-left: 90%; }
 		.set-sp-pl-100 { padding-left: 100%; }
 
-		.reset-sp-mt   { margin-top:    0; }
-		.reset-sp-mr   { margin-right:  0; }
-		.reset-sp-mb   { margin-bottom: 0; }
-		.reset-sp-ml   { margin-left:   0; }
+		.reset-sp-mt { margin-top:    0 !important; }
+		.reset-sp-mr { margin-right:  0 !important; }
+		.reset-sp-mb { margin-bottom: 0 !important; }
+		.reset-sp-ml { margin-left:   0 !important; }
 
-		.reset-sp-pt   { padding-top:    0; }
-		.reset-sp-pr   { padding-right:  0; }
-		.reset-sp-pb   { padding-bottom: 0; }
-		.reset-sp-pl   { padding-left:   0; }
+		.reset-sp-pt { padding-top:    0 !important; }
+		.reset-sp-pr { padding-right:  0 !important; }
+		.reset-sp-pb { padding-bottom: 0 !important; }
+		.reset-sp-pl { padding-left:   0 !important; }
 
-		.reset-sp-w { width: auto; }
+		.reset-sp-w { width: auto !important; }
 
-		.reset-sp-pos { position: static; }
+		.reset-sp-pos { position: static !important; }
 
 	}
 }
