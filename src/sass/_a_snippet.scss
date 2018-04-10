@@ -5,38 +5,3 @@
 .text-shadow {
 	text-shadow : 2px 2px 2px #FFF, -2px 2px 2px #FFF, 2px -2px 2px #FFF, -2px -2px 2px #FFF;
 }
-
-
-.transition-fade {
-	opacity: 0;
-	transition: opacity 0.5s ease;
-
-	&.transition-fade--in {
-		opacity: 1;
-		
-		.transition-fade__item {
-			display: block;
-		}
-	}
-
-	&.transition-fade--out {
-		opacity: 0;
-		
-		.transition-fade__item {
-			display: none;
-		}
-	}
-}
-
-.compo-toggle {
-
-	.compo-toggle__trigger {
-		cursor: pointer;
-	}
-
-	.compo-toggle__content {
-		overflow: hidden;
-		transition: height 0.25s ease;
-	}
-
-}

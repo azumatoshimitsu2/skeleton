@@ -15,7 +15,7 @@
 	}
 
 	&.button--totop {
-		
+		transition: none;
 	}
 
 	&.button--default {
@@ -49,15 +49,15 @@
 			transition: .25s ease-in-out;
 
 			&:nth-child(1) {
-			  top: 9px;
+				top: 9px;
 			}
 
 			&:nth-child(2) {
-			  top: 17px;
+				top: 17px;
 			}
 
 			&:nth-child(3) {
-			  top: 25px;
+				top: 25px;
 			}
 		}
 

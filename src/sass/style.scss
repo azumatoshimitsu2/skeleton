@@ -10,7 +10,7 @@
 @import "_compo";
 @import "_layout";
 @import "_util";
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
 //************************************************
 
@@ -87,8 +87,10 @@ textarea {
 }
 
 input,
-select {
+select,
+button {
  	line-height: 1.42857143;
+ 	outline: 0;
 }
 
 @media screen and (min-width: $break_point) {
@@ -141,9 +143,6 @@ main, section, aside, figure, header, footer {
 * {
 	box-sizing: border-box;
 }
-
-
-	$placeholder_color: #c1c1c1;
 
 ::-webkit-input-placeholder {
 	color: $placeholder_color;

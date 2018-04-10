@@ -37,9 +37,9 @@ $(document).ready(function () {
 		}
 	})
 
-	$(".toggle-nav").click(function(e) {
+	$(".button--toggle").click(function(e) {
 		e.preventDefault()
-		$(".toggle-nav").toggleClass("open")
+		$(".button--toggle").toggleClass("button--toggle--open")
 		$(".nav-main").slideToggle(250)
 	})
 
