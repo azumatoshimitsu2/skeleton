@@ -10,7 +10,7 @@
   
     root/
     ├── dist/
-        └── index.html
+        └──index.html
         └──assets/
                └──css/
                └──js/
@@ -20,12 +20,15 @@
                └──style.scss
                └──_var.scss
                └──_mixin.scss
-               └──_header-footer.scss
+               └──_compo.scss
+               └──_compo-button.scss
+               └──_compo-header.scss
+               └──_compo-icon.scss
                └──_compo-list.scss
                └──_compo-table.scss
-               └──_compo.scss
-               └──_single-propery.scss
-               └──_animation.scss
+               └──_util.scss
+               └──_layout.scss
+               └──_header-footer.scss
     package.json
     webpack.config.js
     
@@ -59,7 +62,7 @@
 - イレギュラーなスタイルに対応する場合は CSS の肥大化を防ぐため、都度スタイルを追加せず _single-propery.scss にある .set-\* クラスの組み合わせで対応（二回以上再利用されたものは、.set-\* の組み合わせではなくコンポーネントとして再定義するほうがよい）
 - 全体で共有する値は _var.scss に変数として記述して使用する
   
-###アンチパターン
+### アンチパターン
 - HTML の構造に依存している
 - スタイルを取り消している
 - 絶対値を多用している
@@ -67,7 +70,7 @@
 ※Web制作者のためのCSS設計の教科書 より引用
 
 ## デフォルトで定義された汎用クラス
-###目的
+### 目的
 - 頻出するスタイルを一度しか書かずにすむようにする
 - 主なレスポンシブレイアウトを一元管理
 
