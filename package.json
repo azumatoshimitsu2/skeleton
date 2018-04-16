@@ -1,30 +1,38 @@
 {
   "name": "skeleton",
   "version": "1.1.0",
-  "description": "HTML CSS スターターキット",
+  "description": "プロジェクト",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --watch"
+    "start": "webpack --watch",
+    "watch": "webpack-dev-server --mode development",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/azumatoshimitsu2/skeleton.git"
+    "url": "url"
   },
-  "author": "azuma toshimitsu",
-  "license": "",
-  "bugs": {
-    "url": "https://github.com/azumatoshimitsu2/skeleton/issues"
-  },
-  "homepage": "https://github.com/azumatoshimitsu2/skeleton",
+  "author": "Caracri-Works",
+  "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
+    "babel-loader": "^7.1.4",
     "babel-polyfill": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "webpack": "^3.10.0"
+    "babel-preset-env": "^1.6.1",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.8.3",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.3"
   },
-  "dependencies": {
-    "jump.js": "^1.0.2",
-    "umbrellajs": "^2.10.1"
-  }
+  "dependencies": {}
 }
