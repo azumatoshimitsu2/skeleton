@@ -1,7 +1,7 @@
 // webpack v4
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -42,38 +42,11 @@ module.exports = {
                     use: ['css-loader', 'sass-loader']
                 })
             },
-            //file-loaderがsrcからdistフォルダにイメージをコピーする（webpack-serverに必要）
-            //{
-            //    test: /\.(jpg|png|gif|svg|ico)$/,
-            //    use: [
-            //        {
-            //            loader: 'file-loader',
-            //            options: {
-            //                name: '[name].[ext]',
-            //                outputPath: 'img/'
-            //            }
-            //        }
-            //    ]
-            //}
         ]
     },
     plugins: [
         // CSS
         new ExtractTextPlugin("assets/css/styles.css"),
-        // HTML
-        //new HtmlWebpackPlugin({
-        //    inject: false, // CSSとJavaScriptを自動的に挿入する
-        //    hash: true,
-        //    template: './src/index.html',
-        //    filename: './index.html'
-        //}),
-        // srcからdistフォルダに画像をコピーする
-        //new CopyWebpackPlugin([
-        //    {
-        //        from: 'src/img',
-        //        to: 'assets/img'
-        //    } 
-        //]),
         // srcフォルダからdistフォルダにJavaScriptのlibs（例：jQuery）をコピーする
         new CopyWebpackPlugin([
             {
@@ -81,5 +54,11 @@ module.exports = {
                 to: 'assets/js'
             } 
         ]),
+        new BrowserSyncPlugin({
+            // browse to http://localhost:3000/ during development,
+            host: 'localhost',
+            port: 3000,
+            server: { baseDir: ['dist'] }
+        })
     ],
 };
