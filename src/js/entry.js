@@ -2,7 +2,7 @@
 import ua from './modules/ua.js';
 
 // SCSSソース　（SASSはJavaScriptで一度インポートする必要があります!）
-import '../sass/style.scss';
+import '../sass/styles.scss';
 
 
 (function() {

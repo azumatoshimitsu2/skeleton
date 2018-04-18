@@ -944,8 +944,7 @@
     position: static !important; } }
 
 html, body {
-  width: 100%;
-  font-size: 10px; }
+  width: 100%; }
 
 body {
   font-family: "Noto Sans Japanese", "\6E38\30B4\30B7\30C3\30AF\4F53", "Yu Gothic", YuGothic, "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo", "\30E1\30A4\30EA\30AA", sans-serif;

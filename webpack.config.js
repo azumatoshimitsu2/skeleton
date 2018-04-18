@@ -39,14 +39,29 @@ module.exports = {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader', 'sass-loader']
+                    use: [
+                        {
+                            loader: "css-loader",
+                            options: {
+                                url: false
+                            }
+                        },
+                        {
+                            loader: "sass-loader",
+                            options: {
+                                url: false
+                            }
+                        }
+                    ]
                 })
             },
         ]
     },
     plugins: [
         // CSS
-        new ExtractTextPlugin("assets/css/styles.css"),
+        new ExtractTextPlugin({
+            filename: "assets/css/styles.css"
+        }),
         // srcフォルダからdistフォルダにJavaScriptのlibs（例：jQuery）をコピーする
         new CopyWebpackPlugin([
             {
@@ -58,6 +73,7 @@ module.exports = {
             // browse to http://localhost:3000/ during development,
             host: 'localhost',
             port: 3000,
+            files: ['./dist/*'],
             server: { baseDir: ['dist'] }
         })
     ],
