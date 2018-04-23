@@ -3,6 +3,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -58,6 +59,8 @@ module.exports = {
         ]
     },
     plugins: [
+        // CSS Stylelint
+        new StyleLintPlugin({/* Options */}),
         // CSS
         new ExtractTextPlugin({
             filename: "assets/css/styles.css"
