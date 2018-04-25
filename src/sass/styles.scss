@@ -20,6 +20,7 @@
 
 html, body {
 	width: 100%;
+	font-size: 10px;
 }
 
 body {
@@ -88,14 +89,16 @@ textarea {
 input,
 select,
 button {
- 	line-height: 1.42857143;
- 	outline: 0;
+	line-height: 1.42857143;
+	outline: 0;
 }
 
 @media screen and (min-width: $break_point) {
+	
 	select {
-	 	background: #FFF;
+		background: #FFF;
 	}
+	
 }
 
 sup {
@@ -146,22 +149,29 @@ main, section, aside, figure, header, footer {
 ::-webkit-input-placeholder {
 	color: $placeholder_color;
 }
+
 :-moz-placeholder {
 	color: $placeholder_color;
 }
+
 ::-moz-placeholder {
 	color: $placeholder_color;
 }
+
 :-ms-input-placeholder {
- 	color: $placeholder_color;
+	color: $placeholder_color;
 }
 
 @media screen and (max-width: $break_point) {
+
 	#container {
+
 		ul, ol, p, dt, dd,
 		caption, th, td,
 		select,input, textarea, button, figcaption {
 			font-size: $sp_base_fs;
 		}
+		
 	}
+
 }

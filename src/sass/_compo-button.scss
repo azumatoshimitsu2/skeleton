@@ -21,8 +21,10 @@
 	&.button--default {
 	
 		@media screen and (min-width: $break_point) {
+
 			&:hover {
 			}
+			
 		}
 
 	}
@@ -62,21 +64,22 @@
 		}
 
 		&.button--toggle--open {
+
 			span {
 
 				&:nth-child(1) {
-				  top: 17px;
-				  transform: rotate(135deg);
+					top: 17px;
+					transform: rotate(135deg);
 				}
 
 				&:nth-child(2) {
-				  opacity: 0;
-				  left: -60px;
+					opacity: 0;
+					left: -60px;
 				}
 
 				&:nth-child(3) {
-				  top: 17px;
-				  transform: rotate(-135deg);
+					top: 17px;
+					transform: rotate(-135deg);
 				}
 			}
 		}

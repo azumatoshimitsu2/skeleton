@@ -3,11 +3,3 @@
 	content: "";
 	position: $pos;
 }
-
-$set-prefix: -moz- , -webkit-, -o-, -ms-, '';
-
-@mixin prefix($prop, $value) {
-    @each $prefix in $set-prefix {
-        #{$prefix}#{$prop}: $value;
-    }
-}

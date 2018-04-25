@@ -79,7 +79,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _ua = __webpack_require__(/*! ./modules/ua.js */ \"./src/js/modules/ua.js\");\n\nvar _ua2 = _interopRequireDefault(_ua);\n\n__webpack_require__(/*! ../sass/styles.scss */ \"./src/sass/styles.scss\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// JavaScriptモジュール\n(function () {\n\tconsole.log('loading: entry.js');\n})();\n\n// SCSSソース　（SASSはJavaScriptで一度インポートする必要があります!）\n\n//# sourceURL=webpack:///./src/js/entry.js?");
+eval("\n\nvar _ua = __webpack_require__(/*! ./modules/ua.js */ \"./src/js/modules/ua.js\");\n\nvar _ua2 = _interopRequireDefault(_ua);\n\n__webpack_require__(/*! ../sass/styles.scss */ \"./src/sass/styles.scss\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// JavaScriptモジュール\n$(document).ready(function () {\n\tvar ua = u();\n\n\tif (!ua.Mobile) {\n\t\t$('a[href^=\"tel:\"]').addClass(\"reset-a-style\").on('click', function (e) {\n\t\t\te.preventDefault();\n\t\t});\n\t}\n\n\tif ($(window).width() >= 720) {\n\t\t$('meta[name=\"viewport\"]').attr('content', 'width=1360');\n\t}\n});\n// SCSSソース　（SASSはJavaScriptで一度インポートする必要があります!）\n\n//# sourceURL=webpack:///./src/js/entry.js?");
 
 /***/ }),
 

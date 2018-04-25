@@ -61,7 +61,9 @@ module.exports = {
     },
     plugins: [
         // CSS Stylelint
-        new StyleLintPlugin({/* Options */}),
+        new StyleLintPlugin({
+            configFile: '.stylelintrc',
+        }),
         // CSS
         new ExtractTextPlugin({
             filename: "assets/css/styles.css"
@@ -77,8 +79,9 @@ module.exports = {
             // browse to http://localhost:3000/ during development,
             host: 'localhost',
             port: 3000,
-            files: ['./dist/*'],
-            server: { baseDir: ['dist'] }
+            //proxy: 'http://localhost/',
+            server: { baseDir: ['dist'] },
+            files: ['./dist/*','./dist/*.(html|php)','./dist/*/*.(html|php)','./dist/*/*/*.(html|php)'],
         })
     ],
 };
