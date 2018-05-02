@@ -18,26 +18,6 @@
 	}
 }
 
-.list-table {
-
-	li {
-		position: relative;
-		display: table;
-		width: 100%;
-		border-bottom: 1px solid #ccc;
-	}
-
-	a {
-		display: table-row;
-		text-decoration: none;
-	}
-
-	.list-table__cell {
-		display: table-cell;
-		vertical-align: middle;
-	}
-}
-
 @media screen and (max-width: $break_point) {
 
 	#container {
