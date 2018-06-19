@@ -15,4 +15,18 @@ $(document).ready(function () {
 	if($(window).width() >= 720) {
 		$('meta[name="viewport"]').attr('content', 'width=1360');
 	}
+	
+	$('a:not(".no-scroll")').click( function (e) {
+		let href = $(this).attr('href');
+		if(href.match(/^#/) && $(href).length > 0) {
+			e.preventDefault()
+			$('html, body').animate({ scrollTop: $(href).offset().top }, 'fast')
+		}
+	})
+
+	$('.button--toggle').click(function(e) {
+		e.preventDefault()
+		$(".button--toggle").toggleClass("button--toggle--open")
+		$(".nav-main").fadeToggle(250)
+	})
 })

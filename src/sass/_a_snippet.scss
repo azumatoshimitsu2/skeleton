@@ -5,3 +5,9 @@
 .text-shadow {
 	text-shadow : 2px 2px 2px #FFF, -2px 2px 2px #FFF, 2px -2px 2px #FFF, -2px -2px 2px #FFF;
 }
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
