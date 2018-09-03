@@ -52,9 +52,10 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: start;
 
 	&.flex--col-2 {
+		justify-content: space-between;
 
 		.flex__item {
 			width: 48%;
@@ -83,6 +84,11 @@
 		
 		.fixed-width {
 			width: auto;
+		}
+
+		.sp-pad {
+			padding-right: $sp_base_fs;
+			padding-left: $sp_base_fs;
 		}
 
 		.col {

@@ -5,6 +5,21 @@
 	.screen-reader-text,
 	.sp-only-ib,
 	.sp-only { display: none; }
+
+	.aligncenter {
+	    display: block;
+	    margin: 10px auto;
+	}
+
+	.alignright {
+		float: right;
+		margin-right: 0 0 0 10px;
+	}
+
+	.alignleft {
+		float: left;
+		margin: 0 10px 0 0;
+	}
 	
 }
 
