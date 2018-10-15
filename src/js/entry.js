@@ -12,7 +12,7 @@ $(document).ready(function () {
 	    });
 	}
 
-	if($(window).width() >= 720) {
+	if($(window).width() > 750) {
 		$('meta[name="viewport"]').attr('content', 'width=1360');
 	}
 	
