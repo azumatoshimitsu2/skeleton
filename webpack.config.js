@@ -66,7 +66,7 @@ module.exports = {
         }),
         // CSS
         new ExtractTextPlugin({
-            filename: "assets/css/styles.css"
+            filename: "assets/css/style.css"
         }),
         // srcフォルダからdistフォルダにJavaScriptのlibs（例：jQuery）をコピーする
         new CopyWebpackPlugin([

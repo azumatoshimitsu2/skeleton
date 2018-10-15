@@ -79,7 +79,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _ua = __webpack_require__(/*! ./modules/ua.js */ \"./src/js/modules/ua.js\");\n\nvar _ua2 = _interopRequireDefault(_ua);\n\n__webpack_require__(/*! ../sass/styles.scss */ \"./src/sass/styles.scss\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// JavaScriptモジュール\n$(document).ready(function () {\n\tvar ua = (0, _ua2.default)();\n\n\tif (!ua.Mobile) {\n\t\t$('a[href^=\"tel:\"]').addClass('reset-a-style').on('click', function (e) {\n\t\t\te.preventDefault();\n\t\t});\n\t}\n\n\tif ($(window).width() >= 720) {\n\t\t$('meta[name=\"viewport\"]').attr('content', 'width=1360');\n\t}\n\n\t$('a:not(\".no-scroll\")').click(function (e) {\n\t\tvar href = $(this).attr('href');\n\t\tif (href.match(/^#/) && $(href).length > 0) {\n\t\t\te.preventDefault();\n\t\t\t$('html, body').animate({ scrollTop: $(href).offset().top }, 'fast');\n\t\t}\n\t});\n\n\t$('.button--toggle').click(function (e) {\n\t\te.preventDefault();\n\t\t$(\".button--toggle\").toggleClass(\"button--toggle--open\");\n\t\t$(\".nav-main\").fadeToggle(250);\n\t});\n});\n// SCSSソース　（SASSはJavaScriptで一度インポートする必要があります!）\n\n//# sourceURL=webpack:///./src/js/entry.js?");
+eval("\n\nvar _ua = __webpack_require__(/*! ./modules/ua.js */ \"./src/js/modules/ua.js\");\n\nvar _ua2 = _interopRequireDefault(_ua);\n\n__webpack_require__(/*! ../sass/style.scss */ \"./src/sass/style.scss\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// JavaScriptモジュール\n$(document).ready(function () {\n\tvar ua = (0, _ua2.default)();\n\n\tif (!ua.Mobile) {\n\t\t$('a[href^=\"tel:\"]').addClass('reset-a-style').on('click', function (e) {\n\t\t\te.preventDefault();\n\t\t});\n\t}\n\n\tif ($(window).width() > 750) {\n\t\t$('meta[name=\"viewport\"]').attr('content', 'width=1360');\n\t}\n\n\t$('a:not(\".no-scroll\")').click(function (e) {\n\t\tvar href = $(this).attr('href');\n\t\tif (href.match(/^#/) && $(href).length > 0) {\n\t\t\te.preventDefault();\n\t\t\t$('html, body').animate({ scrollTop: $(href).offset().top }, 'fast');\n\t\t}\n\t});\n\n\t$('.button--toggle').click(function (e) {\n\t\te.preventDefault();\n\t\t$(\".button--toggle\").toggleClass(\"button--toggle--open\");\n\t\t$(\".nav-main\").fadeToggle(250);\n\t});\n});\n// SCSSソース　（SASSはJavaScriptで一度インポートする必要があります!）\n\n//# sourceURL=webpack:///./src/js/entry.js?");
 
 /***/ }),
 
@@ -95,14 +95,14 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 
 /***/ }),
 
-/***/ "./src/sass/styles.scss":
-/*!******************************!*\
-  !*** ./src/sass/styles.scss ***!
-  \******************************/
+/***/ "./src/sass/style.scss":
+/*!*****************************!*\
+  !*** ./src/sass/style.scss ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/sass/styles.scss?");
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/sass/style.scss?");
 
 /***/ })
 
