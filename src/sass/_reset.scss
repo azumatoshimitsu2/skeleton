@@ -5,7 +5,7 @@ html, body {
 
 body {
 	font-family: $sans_serif;
-	line-height: 1.7;
+	line-height: 1.9;
 	font-feature-settings : "palt" 1;
 	-webkit-text-size-adjust: 100%;
 	text-size-adjust: 100%;
@@ -110,10 +110,6 @@ h1, h2, h3, h4, h5, h6 {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-
-	td, th {
-		line-height: 1.4;
-	}
 }
 
 hr {

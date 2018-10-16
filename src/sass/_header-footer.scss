@@ -7,6 +7,7 @@
 //***********************************************
 
 .site-header {
+	line-height: 1.4;
 
 	.site-header__logo {
 		float: left;
@@ -78,6 +79,7 @@
 //***********************************************
 
 .site-footer {
+	line-height: 1.4;
 }
 
 @media screen and (max-width: $break_point) {
