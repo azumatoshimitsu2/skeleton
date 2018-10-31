@@ -12,6 +12,10 @@ $(document).ready(function () {
 	    });
 	}
 
+	if(ua.Mobile || ua.Tablet){
+		$('.hover').removeClass('hover');
+	}
+
 	if($(window).width() > 750) {
 		$('meta[name="viewport"]').attr('content', 'width=1360');
 	}
