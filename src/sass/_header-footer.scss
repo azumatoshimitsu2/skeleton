@@ -32,7 +32,7 @@
 	
 }
 
-@media screen and (min-width: $break_point + 1px) {
+@media screen and (min-width: $break_before) {
 
 	.nav-main {
 		display: block !important;
