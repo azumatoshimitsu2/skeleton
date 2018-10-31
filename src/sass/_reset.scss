@@ -53,6 +53,10 @@ textarea {
 	resize: none;
 }
 
+select {
+	height: 42px;
+}
+
 button,
 input[type="submit"],
 input[type="button"],
@@ -78,7 +82,7 @@ button {
 	outline: 0;
 }
 
-@media screen and (min-width: $break_point) {
+@media screen and (min-width: $break_before) {
 	
 	select {
 		background: #FFF;
@@ -148,9 +152,12 @@ main, section, aside, figure, header, footer {
 	#container {
 
 		ul, ol, p, dt, dd,
-		caption, th, td,
-		select,input, textarea, button, figcaption {
+		caption, th, td {
 			font-size: $sp_base_fs;
+		}
+
+		select,input, textarea, button, figcaption {
+			font-size: 4.6vw;
 		}
 		
 	}

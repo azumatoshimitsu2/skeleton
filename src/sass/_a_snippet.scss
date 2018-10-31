@@ -15,3 +15,40 @@
 .scroll {
 	-webkit-overflow-scrolling: touch;
 }
+
+	&:before,
+	&:after {
+		@include object();
+	}
+
+
+.filter {
+//彩度
+	filter: saturate(0%);
+//セピア
+	filter: sepia(100%);
+//色相回転
+	filter: hue-rotate(90deg);
+}
+
+	&.icon--toggle {
+		@include object();
+		left: 50%;
+		top: 50%;
+		margin: -4px 0 0 -4px;
+		width: 28px;
+		height: 28px;
+		border-top: 3px solid #000;
+		border-right: 3px solid #000;
+		transform: rotate(-225deg);
+		transition: transform 0.25s ease;
+
+		&.active {
+			transform: rotate(-45deg);
+		}
+	
+		@media screen and (max-width: $break_point) {
+			width: 5vw;
+			height: 5vw;
+		}
+	}

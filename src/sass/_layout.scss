@@ -1,3 +1,7 @@
+#container {
+	min-width: $base_width;
+}
+
 .fixed-width {
 	margin-right: auto;
 	margin-left: auto;
@@ -52,10 +56,9 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: start;
+	justify-content: space-between;
 
 	&.flex--col-2 {
-		justify-content: space-between;
 
 		.flex__item {
 			width: 48%;
@@ -81,6 +84,7 @@
 @media screen and (max-width: $break_point) {
 	
 	#container {
+		min-width: 0;
 		
 		.fixed-width {
 			width: auto;
