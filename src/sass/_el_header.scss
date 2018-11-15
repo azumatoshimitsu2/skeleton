@@ -1,10 +1,9 @@
 @charset "UTF-8";
+#container {
 
-.header-a {}
+	.header-a {}
+}
 
 @media screen and (max-width: $break_point) {
-
-	#container {
-	}
 	
 }

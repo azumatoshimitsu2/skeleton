@@ -70,17 +70,17 @@
 			left: 10%;
 			transform: rotate(0deg);
 			transition: .25s ease-in-out;
+			top: 50%;
 
 			&:nth-child(1) {
-				top: 9px;
+				margin-top: -8px;
 			}
 
 			&:nth-child(2) {
-				top: 17px;
 			}
 
 			&:nth-child(3) {
-				top: 25px;
+				margin-top: 8px;
 			}
 		}
 
@@ -89,7 +89,7 @@
 			span {
 
 				&:nth-child(1) {
-					top: 17px;
+					margin-top: 0;
 					transform: rotate(135deg);
 				}
 
@@ -99,7 +99,7 @@
 				}
 
 				&:nth-child(3) {
-					top: 17px;
+					margin-top: 0;
 					transform: rotate(-135deg);
 				}
 			}
