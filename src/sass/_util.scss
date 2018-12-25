@@ -22,7 +22,7 @@
 	
 }
 
-@media screen and (max-width: $break_point) {
+@media screen and (max-width: $BREAK_POINT) {
 	
 	#container {
 
@@ -148,20 +148,6 @@
 
 
 	.set-w-100px  { width: 100px; }
-
-	.set-w-150px  { width: 150px; }
-
-	.set-w-200px  { width: 200px; }
-
-	.set-w-250px  { width: 250px; }
-
-	.set-w-300px  { width: 300px; }
-
-	.set-w-350px  { width: 350px; }
-
-	.set-w-400px  { width: 400px; }
-
-	.set-w-500px  { width: 500px; }
 
 
 	.set-mt-5   { margin-top: 5px;  }
@@ -378,13 +364,13 @@
 	
 }
 
-@media screen and (max-width: $break_point) {
+@media screen and (max-width: $BREAK_POINT) {
 	
 	#container {
 
 		.sp-full-w {
-			margin-right: -1 *  $sp_pad;
-			margin-left: -1 *  $sp_pad;
+			margin-right: -1 *  $SP_PAD;
+			margin-left: -1 *  $SP_PAD;
 		}
 
 

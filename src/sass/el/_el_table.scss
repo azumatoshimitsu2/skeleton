@@ -1,0 +1,58 @@
+#container {
+
+	.wrap-table {
+		overflow: auto;	
+	}
+
+	.table-default {
+		width: 100%;
+
+		tr {
+		
+			th,
+			td {
+			}
+
+			th {
+			}
+
+			td {}
+
+		}
+
+	}
+
+	.table-a {
+
+		tr {
+			
+			th,
+			td {}
+
+			th {}
+
+			td {}
+
+		}
+
+	}
+
+}
+
+
+
+@media screen and (max-width: $BREAK_POINT) {
+
+	#container {
+
+		.table-responsive {
+			display: block;
+
+			thead, tbody, tr, th, td {
+				display: block;
+				text-align: left;
+			}
+
+		}
+	}
+}

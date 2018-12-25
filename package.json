@@ -1,0 +1,20 @@
+{
+  "name": "skeleton",
+  "version": "2.0.0",
+  "description": "HTML CSS スターターキット",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass src/sass/style.scss dist/assets/css/style.css -w --output-style compressed --source-map true",
+    "babel": "npx babel src/js/functions.js --out-file dist/assets/js/functions.js -w --source-maps --compact=true -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azumatoshimitsu2/skeleton.git"
+  },
+  "author": "azuma toshimitsu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azumatoshimitsu2/skeleton/issues"
+  },
+  "homepage": "https://github.com/azumatoshimitsu2/skeleton#readme"
+}

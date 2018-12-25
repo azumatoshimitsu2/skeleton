@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-	font-family: $sans_serif;
+	font-family: $SANS_SERIF;
 	line-height: 1.9;
 	font-feature-settings : "palt" 1;
 	-webkit-text-size-adjust: 100%;
@@ -46,7 +46,7 @@ fieldset {
 input,
 select,
 textarea {
-	font-family: $sans_serif;
+	font-family: $SANS_SERIF;
 }
 
 textarea {
@@ -80,14 +80,12 @@ select,
 button {
 	line-height: 1.42857143;
 	outline: 0;
+	background: #FFF;
 }
 
-@media screen and (min-width: $break_before) {
-	
-	select {
-		background: #FFF;
-	}
-	
+label {
+	display: inline-block;
+	cursor: pointer;
 }
 
 sup {
@@ -133,28 +131,28 @@ main, section, aside, figure, header, footer {
 }
 
 ::-webkit-input-placeholder {
-	color: $placeholder_color;
+	color: $PLACEHOLDER_COLOR;
 }
 
 :-moz-placeholder {
-	color: $placeholder_color;
+	color: $PLACEHOLDER_COLOR;
 }
 
 ::-moz-placeholder {
-	color: $placeholder_color;
+	color: $PLACEHOLDER_COLOR;
 }
 
 :-ms-input-placeholder {
-	color: $placeholder_color;
+	color: $PLACEHOLDER_COLOR;
 }
 
-@media screen and (max-width: $break_point) {
+@media screen and (max-width: $BREAK_POINT) {
 
 	#container {
 
 		ul, ol, p, dt, dd,
 		caption, th, td {
-			font-size: $sp_base_fs;
+			font-size: $SP_BASE_FS;
 		}
 
 		select,input, textarea, button, figcaption {

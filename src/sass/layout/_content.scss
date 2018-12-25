@@ -1,11 +1,16 @@
 #container {
-	min-width: $base_width;
+	@media screen and (min-width: $BREAK_BEFORE) {
+		min-width: $BASE_WIDTH;
+	}
 }
 
 .fixed-width {
 	margin-right: auto;
 	margin-left: auto;
-	width: $base_width;
+	
+	@media screen and (min-width: $BREAK_BEFORE) {
+		width: $BASE_WIDTH;
+	}
 }
 
 .col {
@@ -18,12 +23,17 @@
 		overflow: hidden;
 	}
 
-	.box {
-		float: left;
-	}
+	// pc で float sp で float しない
+	@media screen and (min-width: $BREAK_BEFORE) {
 
-	.box--r {
-		float: right;
+		.box {
+			float: left;
+		}
+
+		.box--r {
+			float: right;
+		}
+
 	}
 
 	&.col--2 {
@@ -34,7 +44,17 @@
 			&:nth-child(2n) {
 				float: right;
 			}
+		}
 
+		@media screen and (max-width: $BREAK_POINT) {
+			.box {
+				width: auto;
+
+				&:nth-child(2n) {
+					float: none;
+				}
+
+			}
 		}
 	}
 
@@ -48,8 +68,18 @@
 				margin-right: 0;
 			}
 		}
+
+		@media screen and (max-width: $BREAK_POINT) {
+			.box {
+				margin-right: 0;
+				width: auto;
+
+				&:nth-child(3n) {
+					float: none;
+				}
+			}
+		}
 	}
-	
 }
 
 .flex {
@@ -64,6 +94,9 @@
 			width: 48%;
 		}
 
+		@media screen and (max-width: $BREAK_POINT) {
+		}
+
 	}
 
 	&.flex--col-3 {
@@ -76,59 +109,20 @@
 			&:nth-child(3n) {
 				margin-right: 0;
 			}
+		}
 
+		@media screen and (max-width: $BREAK_POINT) {
 		}
 	}
 }
 
-@media screen and (max-width: $break_point) {
+@media screen and (max-width: $BREAK_POINT) {
 	
 	#container {
-		min-width: 0;
-		
-		.fixed-width {
-			width: auto;
-		}
 
 		.sp-pad {
-			padding-right: $sp_pad;
-			padding-left: $sp_pad;
-		}
-
-		.col {
-			
-			.box,
-			.box--r {
-				float: none;
-			}
-
-			&.col--2 {
-
-				.box {
-					width: auto;
-
-					&:nth-child(2n) {
-						float: none;
-					}
-
-				}
-
-			}
-
-			&.col--3 {
-
-				.box {
-					margin-right: 0;
-					width: auto;
-
-					&:nth-child(3n) {
-						float: none;
-					}
-
-				}
-
-			}
-			
+			padding-right: $SP_PAD;
+			padding-left: $SP_PAD;
 		}
 
 		.flex--reset-sp {
@@ -137,9 +131,6 @@
 			.flex__item {
 				width: auto;
 			}
-
 		}
-
 	}
-
 }

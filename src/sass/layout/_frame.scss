@@ -1,0 +1,77 @@
+//************************************************
+
+// Header
+
+//***********************************************
+
+#container {
+
+	.site-header {
+		line-height: 1.4;
+
+		.site-header__logo {
+			float: left;
+		}
+
+		.site-header__box {
+			float: left;
+		}
+
+		@media screen and (min-width: $BREAK_BEFORE) {
+		}
+
+	}
+
+	.nav-main {
+
+		ul {
+			display: table;
+			width: 100%;
+		}
+
+		li {
+			display: table-cell;
+		}
+
+		@media screen and (min-width: $BREAK_BEFORE) {
+			display: block !important;
+
+		}
+
+		@media screen and (max-width: $BREAK_POINT) {
+			.nav-main {
+				position: fixed;
+				left: 0;
+				top: 0;
+				z-index: 100;
+				overflow: auto;
+				display: none;
+				background-color: #FFF;
+				width: 100%;
+				height: 100vh;
+
+				ul {
+					display: block;
+					width: 100%;
+				}
+
+				li {
+					display: block;
+					padding: 10px;
+					border-bottom: 1px solid #000;
+				}
+			}
+		}
+		
+	}
+	
+	.site-footer {
+		line-height: 1.4;
+
+		@media screen and (max-width: $BREAK_POINT) {
+		}
+	}
+
+}
+
+

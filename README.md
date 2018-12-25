@@ -7,30 +7,35 @@
 ただし公開ファイルと公開不要なファイル（SASS や node_modules など）は明確に分ける
 
 特に理由がなければ下記の形にする
-  
+
     root/
     ├── dist/
         └──index.html
         └──assets/
-               └──css/
-               └──js/
-               └──images/
+           └──css/
+           └──js/
+           └──images/
     └── src/
         └──sass/
-               └──style.scss
-               └──_var.scss
+            └──style.scss
+            └──const
+               └──_global_var.scss
                └──_mixin.scss
+               └──_reset.scss
+            └──layout
+               └──_content.scss
+               └──_frame.scss
+            └──el
+               └──_el_button.scss
+               └──_el_header.scss
+               └──_el_icon.scss
+               └──_el_list.scss
+               └──_el_table.scss
+            └──compo
                └──_compo.scss
-               └──_compo-button.scss
-               └──_compo-header.scss
-               └──_compo-icon.scss
-               └──_compo-list.scss
-               └──_compo-table.scss
-               └──_util.scss
-               └──_layout.scss
-               └──_header-footer.scss
-    package.json
-    webpack.config.js
+            └──_util.scss
+
+    └── package.json
     
 ## 基本ルール
 
@@ -60,9 +65,8 @@
 - アンチパターンを回避し、予測可能で再利用しやすいコードを書く
 - 継承を利用して、共通の意味を持ったコンポーネントで共有するスタイルを複数箇所に書かないようにする
 - イレギュラーなスタイルに対応する場合は CSS の肥大化を防ぐため、都度スタイルを追加せず _util.scss にある .set-\* クラスの組み合わせで対応（二回以上再利用されたものは、.set-\* の組み合わせではなくコンポーネントとして再定義するほうがよい）
-- 全体で共有する値は _var.scss に変数として記述して使用する
-- 変数、ミックスインの乱用は避ける
-- 文字サイズは基本的 ul, ol, p, dt, dd, caption, th, td, small など意味的な要素に指定。span や div には直接指定しない（階層が深くなると把握が困難になるため）
+- 全体で共有する値は _global_var.scss に記述して使用する
+- 文字サイズは意味的な要素に指定するよう心がける。span や div には直接指定しない（階層が深くなると把握が困難になるため）
   
 ### アンチパターン
 - HTML の構造に依存している
@@ -80,7 +84,7 @@
 clearfix の処理は全て .col を使用 .col 以外で clearfix は行わない。また、.col 自体に直接スタイルを追加するのは不可
 
 ### .fixed-width
-- 最上位の幅固定には .fixed-width を使用。また、その値は _var.scss 内で定義されたものを参照。このクラスも直接スタイルを追加するのは不可
+- 最上位の幅固定には .fixed-width を使用。また、その値は _global_var.scss 内で定義されたものを参照。このクラスも直接スタイルを追加するのは不可
 
 ### .sp-only .pc-only
 - .sp-only .pc-only のふたつのクラスは、ブレイクポイント毎に表示を切り替える場合に使用。直接スタイルの追加は不可。また、このクラスを持った要素への display プロパティの追加は**いかなる方法も不可**。
