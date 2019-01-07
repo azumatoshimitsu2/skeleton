@@ -1,8 +1,9 @@
 #container {
 
-	.header-a {}
+	.header-a {
+		@media screen and (max-width: $BREAK_POINT) {
+			
+		}
+	}
 }
 
-@media screen and (max-width: $BREAK_POINT) {
-	
-}

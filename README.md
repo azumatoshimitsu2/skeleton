@@ -33,7 +33,8 @@
                └──_el_table.scss
             └──compo
                └──_compo.scss
-            └──_util.scss
+            └──util
+               └──_util.scss
 
     └── package.json
     

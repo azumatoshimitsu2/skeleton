@@ -1,25 +1,32 @@
-.list-default {
+#container {
 
-	li { 
+	.list-default {
+		
+		li { 
+		}
+		
+		@media screen and (max-width: $BREAK_POINT) {
+		}
 	}
-}
 
-.list-disc {
-	list-style: disc;
-	margin-left: 20px;
-}
+	.list-disc {
+		list-style: disc;
+		margin-left: 20px;
 
-.list-inline {
-	
-	li {
-		display: inline-block;
-		margin-right: 10px;
-		vertical-align: top;
+		@media screen and (max-width: $BREAK_POINT) {
+		}
 	}
-}
 
-@media screen and (max-width: $BREAK_POINT) {
+	.list-inline {
+		
+		li {
+			display: inline-block;
+			margin-right: 10px;
+			vertical-align: top;
+		}
 
-	#container {
+		@media screen and (max-width: $BREAK_POINT) {
+		}
 	}
+
 }

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "scss": "node-sass src/sass/style.scss dist/assets/css/style.css -w --output-style compressed --source-map true",
-    "babel": "npx babel src/js/functions.js --out-file dist/assets/js/functions.js -w --source-maps --compact=true -w"
+    "rollup": "rollup --config rollup.config.js -w -m",
+    "start": "npm run scss & npm run rollup"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,16 @@
   "bugs": {
     "url": "https://github.com/azumatoshimitsu2/skeleton/issues"
   },
-  "homepage": "https://github.com/azumatoshimitsu2/skeleton#readme"
+  "homepage": "https://github.com/azumatoshimitsu2/skeleton#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "node-sass": "^4.11.0",
+    "rollup": "^1.0.1",
+    "rollup-plugin-babel": "^4.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-uglify": "^6.0.0",
+    "rollup-watch": "^4.3.1"
+  }
 }

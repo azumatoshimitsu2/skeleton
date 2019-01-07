@@ -10,14 +10,15 @@
 		tr {
 		
 			th,
-			td {
-			}
+			td {}
 
-			th {
-			}
+			th {}
 
 			td {}
 
+		}
+
+		@media screen and (max-width: $BREAK_POINT) {
 		}
 
 	}
@@ -33,6 +34,9 @@
 
 			td {}
 
+		}
+
+		@media screen and (max-width: $BREAK_POINT) {
 		}
 
 	}
