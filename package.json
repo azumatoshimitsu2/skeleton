@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "scss": "node-sass src/sass/style.scss dist/assets/css/style.css -w --output-style compressed --source-map true",
-    "rollup": "rollup --config rollup.config.js -w -m",
+    "rollup": "rollup --config rollup.config.js -w -m --no-strict",
     "start": "npm run scss & npm run rollup"
   },
   "repository": {
