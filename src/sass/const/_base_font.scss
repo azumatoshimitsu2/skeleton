@@ -1,0 +1,36 @@
+body {
+	font-family: $SANS_SERIF;
+}
+
+input,
+select,
+textarea {
+	font-family: $SANS_SERIF;
+}
+
+ul, ol, p, dt, dd, caption, th, td,
+select,input, textarea, button, figcaption {
+	font-size: $BASE_FS;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.4;
+	font-size: $BASE_FS + .2rem;
+}
+
+@media screen and (max-width: $BREAK_POINT) {
+
+	#container {
+
+		ul, ol, p, dt, dd,
+		caption, th, td {
+			font-size: $SP_BASE_FS;
+		}
+
+		select,input, textarea, button, figcaption {
+			font-size: 4.6vw;
+		}
+		
+	}
+
+}

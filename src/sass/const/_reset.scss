@@ -4,7 +4,6 @@ html, body {
 }
 
 body {
-	font-family: $SANS_SERIF;
 	line-height: 1.9;
 	font-feature-settings : "palt" 1;
 	-webkit-text-size-adjust: 100%;
@@ -41,13 +40,7 @@ td img {
 iframe,
 fieldset {
 	border: 0;
-}
-
-input,
-select,
-textarea {
-	font-family: $SANS_SERIF;
-}
+}１
 
 textarea {
 	resize: none;
@@ -62,6 +55,7 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"] {
 	-webkit-appearance: none;
+	background-color: transparent;
 	cursor: pointer;
 	border: 0;
 	border-radius: 0;
@@ -99,16 +93,6 @@ a {
 	text-decoration: none;
 }
 
-ul, ol, p, dt, dd, caption, th, td,
-select,input, textarea, button, figcaption {
-	font-size: $BASE_FS;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	line-height: 1.4;
-	font-size: $BASE_FS + .2rem;
-}
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -144,21 +128,4 @@ main, section, aside, figure, header, footer {
 
 :-ms-input-placeholder {
 	color: $PLACEHOLDER_COLOR;
-}
-
-@media screen and (max-width: $BREAK_POINT) {
-
-	#container {
-
-		ul, ol, p, dt, dd,
-		caption, th, td {
-			font-size: $SP_BASE_FS;
-		}
-
-		select,input, textarea, button, figcaption {
-			font-size: 4.6vw;
-		}
-		
-	}
-
 }
