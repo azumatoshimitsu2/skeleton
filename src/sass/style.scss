@@ -4,10 +4,10 @@
 @import "./mixin/_mixin";
 @import "./layout/_frame";
 @import "./layout/_content";
-@import "./el/_el_header";
-@import "./el/_el_list";
-@import "./el/_el_table";
-@import "./el/_el_icon";
-@import "./el/_el_button";
 @import "./compo/_compo";
+@import "./el/_header";
+@import "./el/_list";
+@import "./el/_table";
+@import "./el/_icon";
+@import "./el/_button";
 @import "./util/_util";
