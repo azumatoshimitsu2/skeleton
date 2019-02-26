@@ -50,6 +50,11 @@ select {
 	height: 42px;
 }
 
+pre {
+	word-wrap: break-word; /* IE11用 */
+	white-space: pre-wrap;
+}
+
 button,
 input[type="submit"],
 input[type="button"],
