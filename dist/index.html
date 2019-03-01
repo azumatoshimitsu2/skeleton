@@ -17,7 +17,7 @@
 <script src="./assets/js/bundle.js"></script>
 </head>
 <body>
-	<div id="container" class="fixed-width">
+	<div id="container" class="container fixed-width">
 		<!--  site-header  -->
 		<div class="site-header col">
 			<div class="site-header__logo">.logo</div>
@@ -57,13 +57,15 @@
 			<!--  main  -->
 			<main>
 				<header>
-					<h1 class="unit" itemprop="name">Title</h1>
+					<h1 class="string">Title</h1>
 				</header>
 
 				<a href="#" target="_blank" rel="noopener">Blank link</a>
 				
 				<section class="unit">
-					<h2>Button</h2>
+					<header>
+						<h2>Button</h2>
+					</header>
 					<a href="#" class="button">anchor</a>
 					<button class="button">button element button</button>
 					<a href="tel:0000000000">0000000000</a>
@@ -83,7 +85,7 @@
 				<h2 class="set-mb-10">List</h2>
 
 					<div class="unit">
-						<ul class="list-disc">
+						<ul class="list-disc set-fs-16">
 							<li>item</li>
 							<li>item</li>
 						</ul>
@@ -91,7 +93,9 @@
 				</section>
 
 				<section class="unit">
-					<h2>Float</h2>
+					<header>
+						<h2>Float</h2>
+					</header>
 
 					<div class="col">
 						<div class="set-float-l" style="background: #CCC; height:100px; width: 48%;"><p>set-float-l</p></div>
@@ -99,9 +103,9 @@
 					</div>
 					
 					<h3 class="set-mt-20">Responsive</h3>
-					<div class="col">
-						<div class="box set-w set-w-40 set-mb-10" style="background: #CCC; height:100px;"><p>box</p></div>
-						<div class="box--r set-w  set-w set-w-40 set-mb-10" style="background: #CCC; height:100px;"><p>box</p></div>
+					<div class="col col--2">
+						<div class="box set-mb-10" style="background: #CCC; height:100px;"><p>box</p></div>
+						<div class="box box--r set-mb-10" style="background: #CCC; height:100px;"><p>box</p></div>
 					</div>
 				</section>
 				
@@ -120,7 +124,9 @@
 				</section>
 
 				<section class="unit">
-					<h2>Table</h2>
+					<header>
+						<h2>Table</h2>
+					</header>
 					<table class="table-a">
 						<tbody>
 							<tr>
@@ -137,7 +143,12 @@
 							</tr>
 						</tbody>
 					</table>
-					<h3>Responsive</h3>
+				</section>
+
+				<section class="unit">
+					<header>
+						<h2>Responsive</h2>
+					</header>
 					<table class="table-a table-responsive">
 						<tbody>
 							<tr>

@@ -1,7 +1,4 @@
-body {
-	font-family: $SANS_SERIF;
-}
-
+body,
 input,
 select,
 textarea {
@@ -15,12 +12,11 @@ select,input, textarea, button, figcaption {
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.4;
-	font-size: $BASE_FS + .2rem;
 }
 
 @media screen and (max-width: $BREAK_POINT) {
 
-	#container {
+	#container.container {
 
 		ul, ol, p, dt, dd,
 		caption, th, td {
