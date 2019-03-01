@@ -38,44 +38,27 @@
 
 	&.col--2 {
 
-		.box {
-			width: 49%;
-
-			&:nth-child(2n) {
-				float: right;
-			}
-		}
-
-		@media screen and (max-width: $BREAK_POINT) {
+		@media screen and (min-width: $BREAK_BEFORE) {
 			.box {
-				width: auto;
+				width: 49%;
 
 				&:nth-child(2n) {
-					float: none;
+					float: right;
 				}
-
 			}
 		}
 	}
 
 	&.col--3 {
 
-		.box {
-			margin-right: 2%;
-			width: 32%;
+		@media screen and (max-width: $BREAK_BEFORE) {
 
-			&:nth-child(3n) {
-				margin-right: 0;
-			}
-		}
-
-		@media screen and (max-width: $BREAK_POINT) {
 			.box {
-				margin-right: 0;
-				width: auto;
+				margin-right: 2%;
+				width: 32%;
 
 				&:nth-child(3n) {
-					float: none;
+					margin-right: 0;
 				}
 			}
 		}
