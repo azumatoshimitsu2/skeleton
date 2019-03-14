@@ -1,4 +1,4 @@
-#container {
+#container.container {
 
 	.screen-reader-text,
 	.sp-only-ib,
@@ -24,7 +24,7 @@
 
 @media screen and (max-width: $BREAK_POINT) {
 	
-	#container {
+	#container.container {
 
 		.pc-only    { display: none; }
 
@@ -35,7 +35,7 @@
 	}
 }
 
-#container {
+#container.container {
 
 	.set-ellipsis {
 		display: inline-block;
@@ -366,13 +366,16 @@
 
 @media screen and (max-width: $BREAK_POINT) {
 	
-	#container {
+	#container.container {
 
 		.sp-full-w {
 			margin-right: -1 *  $SP_PAD;
 			margin-left: -1 *  $SP_PAD;
 		}
 
+		.set-sp-align-c { text-align: center; }
+		.set-sp-align-r { text-align: right; }
+		.set-sp-align-l { text-align: left; }
 
 		.set-sp-mt-5   { margin-top: 5vw;  }
 
