@@ -31,6 +31,7 @@ var _ua = ua();
 			$(".button--toggle").toggleClass("button--toggle--open");
 			$(".nav-main").fadeToggle(250);
 		});
+		
 	});
 })(jQuery);
 

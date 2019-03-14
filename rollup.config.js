@@ -12,7 +12,7 @@ export default {
   plugins: [
     babel({
       exclude: 'node_modules/**' // only transpile our source code
-    }), // ES5に変換
-    uglify()
+    }) // ES5に変換
+    // ,uglify()
   ]
 };
