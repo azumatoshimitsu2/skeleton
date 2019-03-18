@@ -1,16 +1,17 @@
-import ua from './modules/ua.js';
-
-var _ua = ua();
+import uajs from './modules/ua.js';
 
 (function($) {
+
+	var ua = uajs();
+	
 	$(document).ready(function () {
 
-		if(!_ua.Mobile){
+		if(!ua.Mobile){
 		    $('a[href^="tel:"]').addClass('reset-a-style').on('click', function(e) {
 		        e.preventDefault();
 		    });
 		}
-		if(_ua.Mobile || _ua.Tablet){
+		if(ua.Mobile || ua.Tablet){
 			$('.hover').removeClass('hover');
 		}
 
@@ -33,5 +34,5 @@ var _ua = ua();
 		});
 		
 	});
-})(jQuery);
 
+})(jQuery);
