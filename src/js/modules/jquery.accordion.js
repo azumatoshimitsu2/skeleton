@@ -1,12 +1,13 @@
 export default function(){
 
   // アコーディオン HTML Sample
-  // <div class="accordion">
-  // <div class="accordion__switch">トグルボタン</div>
-  //  <div class="accordion__target">
+
+  //<div class="accordion">
+  //  <div class="accordion__switch">アコーディオン</div>
+  //  <div class="accordion__target set-hide">
   //    アコーディゴンのコンンテンツ
   //  </div>
-  // </div>
+  //</div>
 
   var accordions = []
 
@@ -17,7 +18,7 @@ export default function(){
       $trigger.on('click', function(e) {
         e.preventDefault();
         $trigger.toggleClass('active');
-        $target.slideToggle(300);
+        $target.slideToggle(250);
       })
 
       accordions.push($(this));

@@ -1,23 +1,23 @@
 export default function(){
 
   // タブ HTML Sample
-  // <div class="ui-tab">
-  //   <ul class="ui-tab__switchs">
-  //     <li data-target="targetID1">タブボタン1</li>
-  //     <li data-target="targetID2">タブボタン2</li>
-  //   </ul>
+  //<div class="ui-tab">
+  //  <ul class="ui-tab__switchs">
+  //    <li data-target="#targetID1" class="active">タブボタン1</li>
+  //    <li data-target="#targetID2">タブボタン2</li>
+  //  </ul>
   //  <div className="ui-tab__content">
-  //   <div id="targetID1" class="ui-tab__content__item">
-  //    タブコンテンツ1
-  //   </div>
-  //   <div id="targetID2" class="ui-tab__content__item">
-  //    タブコンテンツ2
-  //   </div>
+  //    <div id="targetID1" class="ui-tab__content__item">
+  //      <p>タブコンテンツ1</p>
+  //    </div>
+  //    <div id="targetID2" class="ui-tab__content__item set-hide">
+  //      <p>タブコンテンツ2</p>
+  //    </div>
   //  </div>
-  // </div>
+  //</div>
 
-  var tabs = [];
-  var hash = location.hash;
+  let tabs = [];
+  let hash = location.hash;
   let loc = location.pathname;
 
   $('.ui-tab').each(function() {
