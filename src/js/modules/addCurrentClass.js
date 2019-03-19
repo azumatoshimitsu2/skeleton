@@ -4,12 +4,10 @@ export default function(){
   let path = location.pathname
 
   $('.nav-main a').each(function() {
-
     if($(this).attr('href') == path) {
 		if(!$(this).hasClass('throwgh-current')) {
     		$(this).addClass('current');
     	}
     }
-
-  })
+  });
 }
