@@ -4,27 +4,10 @@
 	.sp-only-ib,
 	.sp-only { display: none; }
 
-
 	@media screen and (max-width: $BREAK_POINT) {
 		.pc-only    { display: none; }
 		.sp-only    { display: block; }
 		.sp-only-ib { display: inline-block; }
-	}
-	
-	//Wordpress style
-	.aligncenter {
-	    display: block;
-	    margin: 10px auto;
-	}
-
-	.alignright {
-		float: right;
-		margin-right: 0 0 0 10px;
-	}
-
-	.alignleft {
-		float: left;
-		margin: 0 10px 0 0;
 	}
 }
 
@@ -63,14 +46,12 @@
 	.set-align-r   { text-align: right; }
 	.set-align-l   { text-align: left; }
 
-
 	//font size util
 	@for $i from 11 through 30 {
 		.set-fs-#{$i} {
 			font-size: $i*.1rem;
 		}
 	}
-	
 
 	//width util
 	$arrw : 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
@@ -81,7 +62,6 @@
 	}
 
 	.set-w-full { width: 100%; }
-
 
 	//margin padding util
 	$arrn : 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
@@ -99,7 +79,6 @@
 		.set-pl-#{$n} { padding-left:   #{$n}px; }
 	}
 
-
 	.reset-mt      { margin-top:     0; }
 	.reset-mr      { margin-right:   0; }
 	.reset-mb      { margin-bottom:  0; }
@@ -112,7 +91,6 @@
 	
 	.reset-max-w   { max-width: none; }
 	.reset-a-style { cursor: default; }
-
 
 	@media screen and (max-width: $BREAK_POINT) {
 
@@ -140,7 +118,6 @@
 			.set-sp-pb-#{$n} { padding-bottom: #{$n}vw; }
 			.set-sp-pl-#{$n} { padding-left:   #{$n}vw; }
 		}
-
 
 		.reset-sp-mt  { margin-top:     0; }
 		.reset-sp-mr  { margin-right:   0; }

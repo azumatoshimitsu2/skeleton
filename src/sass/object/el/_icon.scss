@@ -33,23 +33,6 @@
 				border-right: 2px solid #fff;
 				transform: rotate(45deg);
 			}
-
-			&.v-top:after {
-				left: 5px;
-				top: 6px;
-				transform: rotate(-45deg);
-			}
-
-			&.v-bottom:after {
-				left: 5px;
-				top: 4px;
-				transform: rotate(-225deg);
-			}
-
-			&.h-left:after {
-				left: 6px;
-				transform: rotate(-130deg);
-			}
 		}
 	}
 

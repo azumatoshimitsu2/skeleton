@@ -1,0 +1,36 @@
+.col {
+	zoom: 1;
+
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+		overflow: hidden;
+	}
+
+	// pc で float sp で float しない
+	@media screen and (min-width: $BREAK_BEFORE) {
+
+		.box {
+			float: left;
+		}
+
+		.box-r {
+			float: right;
+		}
+
+	}
+
+	&.col--2 {
+
+		@media screen and (min-width: $BREAK_BEFORE) {
+			.box {
+				width: 49%;
+
+				&:nth-child(2n) {
+					float: right;
+				}
+			}
+		}
+	}
+}

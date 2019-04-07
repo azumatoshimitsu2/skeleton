@@ -1,0 +1,22 @@
+#container {
+
+	.site-header {
+		line-height: 1.4;
+
+		@media screen and (min-width: $BREAK_BEFORE) {
+
+			.site-header__logo {
+				float: left;
+			}
+
+			.site-header__box {
+				float: left;
+			}
+
+		}
+
+	}
+
+}
+
+

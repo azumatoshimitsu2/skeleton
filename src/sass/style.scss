@@ -1,14 +1,33 @@
 @charset "utf-8";
-@import "./const/_global_var";
-@import "./const/_base_font";
-@import "./const/_reset";
-@import "./mixin/_mixin";
-@import "./layout/_frame";
-@import "./layout/_content";
-@import "./compo/_compo";
-@import "./el/_header";
-@import "./el/_list";
-@import "./el/_table";
-@import "./el/_icon";
-@import "./el/_button";
-@import "./util/_util";
+
+//基本的なスタイル
+@import "./foundation/_global_var";
+@import "./foundation/_mixin";
+@import "./foundation/_reset";
+@import "./foundation/_font";
+
+//ヘッダ、フッタ、共通ナビ、カラム構造
+@import "./layout/_flex";
+@import "./layout/_float";
+@import "./layout/_header";
+@import "./layout/_nav-main";
+@import "./layout/_footer";
+
+//プラグインや CMS 用のスタイル
+@import "./vendors/_cms";
+
+//粒度の決まった部品
+@import "./object/el/_button";
+@import "./object/el/_icon";
+@import "./object/el/_header";
+@import "./object/el/_list";
+@import "./object/el/_table";
+
+//恣意的な大きさの部品
+@import "./object/compo/_compo";
+
+//ページ固有のスタイル - サイトのトップ以外での使用は非推奨
+@import "./object/page/_home";
+
+//汎用クラス
+@import "./object/util/_util";

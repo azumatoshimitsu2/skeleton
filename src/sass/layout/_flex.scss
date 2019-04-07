@@ -1,0 +1,47 @@
+.flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	&.flex--col-2 {
+
+		.flex__item {
+			width: 48%;
+		}
+
+		@media screen and (max-width: $BREAK_POINT) {
+		}
+
+	}
+
+	&.flex--col-3 {
+		justify-content: flex-start;
+
+		.flex__item {
+			width: 32%;
+			margin-right: 2%;
+
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+		}
+
+		@media screen and (max-width: $BREAK_POINT) {
+		}
+	}
+}
+
+@media screen and (max-width: $BREAK_POINT) {
+	
+	#container {
+
+		.flex--reset-sp {
+			display: block;
+
+			.flex__item {
+				width: auto;
+			}
+		}
+	}
+}
