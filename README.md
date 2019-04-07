@@ -35,7 +35,7 @@
                └──jquery.***..scss
             └──object（部品のスタイル）
              └──el（粒度の決まった部品）
-               └──_button.scss
+               └──_btn.scss
                └──_icon.scss
                └──_header.scss
                └──_list.scss
