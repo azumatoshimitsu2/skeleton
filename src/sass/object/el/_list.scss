@@ -5,7 +5,7 @@
 		li { 
 		}
 		
-		@media screen and (max-width: $BREAK_POINT) {
+		@include sp_style() {
 		}
 	}
 
@@ -13,7 +13,7 @@
 		list-style: disc;
 		margin-left: 20px;
 
-		@media screen and (max-width: $BREAK_POINT) {
+		@include sp_style() {
 		}
 	}
 
@@ -25,7 +25,7 @@
 			vertical-align: top;
 		}
 
-		@media screen and (max-width: $BREAK_POINT) {
+		@include sp_style() {
 		}
 	}
 

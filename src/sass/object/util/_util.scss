@@ -4,7 +4,7 @@
 	.sp-only-ib,
 	.sp-only { display: none; }
 
-	@media screen and (max-width: $BREAK_POINT) {
+	@include sp_style() {
 		.pc-only    { display: none; }
 		.sp-only    { display: block; }
 		.sp-only-ib { display: inline-block; }
@@ -92,7 +92,7 @@
 	.reset-max-w   { max-width: none; }
 	.reset-a-style { cursor: default; }
 
-	@media screen and (max-width: $BREAK_POINT) {
+	@include sp_style() {
 
 		.sp-full-w {
 			margin-right: -1 * $SP_PAD;

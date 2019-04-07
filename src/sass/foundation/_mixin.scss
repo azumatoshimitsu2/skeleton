@@ -3,3 +3,15 @@
 	content: "";
 	position: $pos;
 }
+
+@mixin sp_style() {
+	@media screen and (max-width: $BREAK_POINT) {
+		@content;
+	}
+}
+
+@mixin pc_style() {
+	@media screen and (min-width: $BREAK_BEFORE) {
+		@content;
+	}
+}

@@ -1,11 +1,11 @@
 #container {
 
 	.header-a {
-		@media screen and (max-width: $BREAK_POINT) {
-			
-		}
 
 		.string  {
+		}
+		
+		@include sp_style() {
 		}
 	}
 }

@@ -3,7 +3,7 @@
 	.site-header {
 		line-height: 1.4;
 
-		@media screen and (min-width: $BREAK_BEFORE) {
+		@include pc_style() {
 
 			.site-header__logo {
 				float: left;

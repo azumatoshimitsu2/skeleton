@@ -9,7 +9,7 @@
 	}
 
 	// pc で float sp で float しない
-	@media screen and (min-width: $BREAK_BEFORE) {
+	@include pc_style() {
 
 		.box {
 			float: left;
@@ -23,7 +23,7 @@
 
 	&.col--2 {
 
-		@media screen and (min-width: $BREAK_BEFORE) {
+		@include pc_style() {
 			.box {
 				width: 49%;
 

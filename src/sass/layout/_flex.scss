@@ -10,7 +10,7 @@
 			width: 48%;
 		}
 
-		@media screen and (max-width: $BREAK_POINT) {
+		@include sp_style() {
 		}
 
 	}
@@ -27,12 +27,12 @@
 			}
 		}
 
-		@media screen and (max-width: $BREAK_POINT) {
+		@include sp_style() {
 		}
 	}
 }
 
-@media screen and (max-width: $BREAK_POINT) {
+@include sp_style() {
 	
 	#container {
 

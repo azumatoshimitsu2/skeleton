@@ -2,7 +2,7 @@
 
 	.nav-main {
 
-		@media screen and (min-width: $BREAK_BEFORE) {
+		@include pc_style() {
 
 			ul {
 				display: table;
@@ -15,7 +15,7 @@
 
 		}
 
-		@media screen and (max-width: $BREAK_POINT) {
+		@include sp_style() {
 			position: fixed;
 			left: 0;
 			top: 0;
