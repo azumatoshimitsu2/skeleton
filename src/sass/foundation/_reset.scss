@@ -119,18 +119,20 @@ main, section, aside, figure, header, footer {
 	box-sizing: border-box;
 }
 
+$placeholder_color : #c1c1c1;
+
 ::-webkit-input-placeholder {
-	color: $PLACEHOLDER_COLOR;
+	color: $placeholder_color;
 }
 
 :-moz-placeholder {
-	color: $PLACEHOLDER_COLOR;
+	color: $placeholder_color;
 }
 
 ::-moz-placeholder {
-	color: $PLACEHOLDER_COLOR;
+	color: $placeholder_color;
 }
 
 :-ms-input-placeholder {
-	color: $PLACEHOLDER_COLOR;
+	color: $placeholder_color;
 }
