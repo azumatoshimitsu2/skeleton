@@ -1,0 +1,31 @@
+#container.container {
+
+	.fixed-width {
+		margin-right: auto;
+		margin-left: auto;
+
+		@include pc_style() {
+			width: $BASE_WIDTH;
+		}
+	}
+
+	$arrw : 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
+	@each $w in $arrw {
+		.set-w-#{$w} {
+			width: percentage($w / 100);
+		}
+	}
+
+	.set-w-full    { width: 100%; }
+	.reset-max-w   { max-width: none; }
+
+	@include sp_style() {
+
+		.sp-full-w {
+			margin-right: -1 * $SP_PAD;
+			margin-left:  -1 * $SP_PAD;
+		}
+
+		.reset-sp-w   { width: auto; }
+	}
+}

@@ -45,6 +45,8 @@
              └──page（ページ固有のスタイル - サイトのトップ以外での使用は非推奨）
                └──_home.scss
              └──util（汎用クラス）
+               └──_margin_padding.scss
+               └──_width.scss
                └──_util.scss
         └──js/
              └──main.js

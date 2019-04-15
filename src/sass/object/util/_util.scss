@@ -9,9 +9,13 @@
 		.sp-only    { display: block; }
 		.sp-only-ib { display: inline-block; }
 	}
-}
 
-#container.container {
+	//font size
+	@for $i from 11 through 30 {
+		.set-fs-#{$i} {
+			font-size: $i*.1rem;
+		}
+	}
 
 	.set-ellipsis {
 		display: inline-block;
@@ -20,116 +24,43 @@
 		white-space: nowrap;
 	}
 
-	.set-block-c   { margin-left: auto; margin-right: auto; }
+	.set-float-l   { float: left;  }
+	.set-float-r   { float: right; }
 	
 	.set-nowrap    { white-space: nowrap; }
-	
-	.set-min-line  { line-height: 1; }
-	.set-low-line  { line-height: 1.4; }
 
 	.set-pos-rel   { position: relative; }
 	.set-pos-abs   { position: absolute; }
 
 	.set-hide      { display: none; }
 
-	.set-disp-cell { display: table-cell; }
+	.set-disp-cell { display: table-cell;   }
 	.set-disp-ib   { display: inline-block; }
 
-	.set-valign-t  { vertical-align: top; }
+	.set-valign-t  { vertical-align: top;    }
 	.set-valign-m  { vertical-align: middle; }
 	.set-valign-b  { vertical-align: bottom; }
 
-	.set-float-l   { float: left; }
-	.set-float-r   { float: right; }
-
 	.set-align-c   { text-align: center; }
-	.set-align-r   { text-align: right; }
-	.set-align-l   { text-align: left; }
+	.set-align-r   { text-align: right;  }
+	.set-align-l   { text-align: left;   }
 
-	//font size util
-	@for $i from 11 through 30 {
-		.set-fs-#{$i} {
-			font-size: $i*.1rem;
-		}
+	.set-block-c   {
+		margin-left: auto; 
+		margin-right: auto;
 	}
-
-	//width util
-	$arrw : 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
-	@each $w in $arrw {
-		.set-w-#{$w} {
-			width: percentage($w / 100);
-		}
-	}
-
-	.set-w-full { width: 100%; }
-
-	//margin padding util
-	$arrn : 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
-	@each $n in $arrn {
-		.set-mt-#{$n} { margin-top:     #{$n}px; }
-		.set-mr-#{$n} { margin-right:   #{$n}px; }
-		.set-mt-#{$n} { margin-top:     #{$n}px; }
-		.set-mb-#{$n} { margin-bottom:  #{$n}px; }
-		.set-ml-#{$n} { margin-left:    #{$n}px; }
-
-		.set-pt-#{$n} { padding-top:    #{$n}px; }
-		.set-pr-#{$n} { padding-right:  #{$n}px; }
-		.set-pt-#{$n} { padding-top:    #{$n}px; }
-		.set-pb-#{$n} { padding-bottom: #{$n}px; }
-		.set-pl-#{$n} { padding-left:   #{$n}px; }
-	}
-
-	.reset-mt      { margin-top:     0; }
-	.reset-mr      { margin-right:   0; }
-	.reset-mb      { margin-bottom:  0; }
-	.reset-ml      { margin-left:    0; }
-
-	.reset-pt      { padding-top:    0; }
-	.reset-pr      { padding-right:  0; }
-	.reset-pb      { padding-bottom: 0; }
-	.reset-pl      { padding-left:   0; }
-	
-	.reset-max-w   { max-width: none; }
-	.reset-a-style { cursor: default; }
 
 	@include sp_style() {
 
-		.sp-full-w {
-			margin-right: -1 * $SP_PAD;
-			margin-left:  -1 * $SP_PAD;
+		.sp-pad {
+			padding-right: $SP_PAD;
+			padding-left:  $SP_PAD;
 		}
 
 		.set-sp-align-c { text-align: center; }
 		.set-sp-align-r { text-align: right; }
 		.set-sp-align-l { text-align: left; }
 
-		$arrspn : 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
-
-		@each $n in $arrspn {
-			.set-sp-mt-#{$n} { margin-top:     #{$n}vw; }
-			.set-sp-mr-#{$n} { margin-right:   #{$n}vw; }
-			.set-sp-mt-#{$n} { margin-top:     #{$n}vw; }
-			.set-sp-mb-#{$n} { margin-bottom:  #{$n}vw; }
-			.set-sp-ml-#{$n} { margin-left:    #{$n}vw; }
-
-			.set-sp-pt-#{$n} { padding-top:    #{$n}vw; }
-			.set-sp-pr-#{$n} { padding-right:  #{$n}vw; }
-			.set-sp-pt-#{$n} { padding-top:    #{$n}vw; }
-			.set-sp-pb-#{$n} { padding-bottom: #{$n}vw; }
-			.set-sp-pl-#{$n} { padding-left:   #{$n}vw; }
-		}
-
-		.reset-sp-mt  { margin-top:     0; }
-		.reset-sp-mr  { margin-right:   0; }
-		.reset-sp-mb  { margin-bottom:  0; }
-		.reset-sp-ml  { margin-left:    0; }
-
-		.reset-sp-pt  { padding-top:    0; }
-		.reset-sp-pr  { padding-right:  0; }
-		.reset-sp-pb  { padding-bottom: 0; }
-		.reset-sp-pl  { padding-left:   0; }
-
-		.reset-sp-w   { width: auto; }
 		.reset-sp-pos { position: static; }
 
 	}

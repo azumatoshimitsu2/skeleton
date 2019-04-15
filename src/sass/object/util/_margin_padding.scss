@@ -1,0 +1,59 @@
+#container.container {
+
+	//margin padding util
+	$arrn : 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
+	@each $n in $arrn {
+		.set-mt-#{$n} { margin-top:     #{$n}px; }
+		.set-mr-#{$n} { margin-right:   #{$n}px; }
+		.set-mt-#{$n} { margin-top:     #{$n}px; }
+		.set-mb-#{$n} { margin-bottom:  #{$n}px; }
+		.set-ml-#{$n} { margin-left:    #{$n}px; }
+
+		.set-pt-#{$n} { padding-top:    #{$n}px; }
+		.set-pr-#{$n} { padding-right:  #{$n}px; }
+		.set-pt-#{$n} { padding-top:    #{$n}px; }
+		.set-pb-#{$n} { padding-bottom: #{$n}px; }
+		.set-pl-#{$n} { padding-left:   #{$n}px; }
+	}
+
+	.reset-mt      { margin-top:     0; }
+	.reset-mr      { margin-right:   0; }
+	.reset-mb      { margin-bottom:  0; }
+	.reset-ml      { margin-left:    0; }
+
+	.reset-pt      { padding-top:    0; }
+	.reset-pr      { padding-right:  0; }
+	.reset-pb      { padding-bottom: 0; }
+	.reset-pl      { padding-left:   0; }
+
+	@include sp_style() {
+
+		$arrspn : 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
+
+		@each $n in $arrspn {
+			.set-sp-mt-#{$n} { margin-top:     #{$n}vw; }
+			.set-sp-mr-#{$n} { margin-right:   #{$n}vw; }
+			.set-sp-mt-#{$n} { margin-top:     #{$n}vw; }
+			.set-sp-mb-#{$n} { margin-bottom:  #{$n}vw; }
+			.set-sp-ml-#{$n} { margin-left:    #{$n}vw; }
+
+			.set-sp-pt-#{$n} { padding-top:    #{$n}vw; }
+			.set-sp-pr-#{$n} { padding-right:  #{$n}vw; }
+			.set-sp-pt-#{$n} { padding-top:    #{$n}vw; }
+			.set-sp-pb-#{$n} { padding-bottom: #{$n}vw; }
+			.set-sp-pl-#{$n} { padding-left:   #{$n}vw; }
+		}
+
+		.reset-sp-mt  { margin-top:     0; }
+		.reset-sp-mr  { margin-right:   0; }
+		.reset-sp-mb  { margin-bottom:  0; }
+		.reset-sp-ml  { margin-left:    0; }
+
+		.reset-sp-pt  { padding-top:    0; }
+		.reset-sp-pr  { padding-right:  0; }
+		.reset-sp-pb  { padding-bottom: 0; }
+		.reset-sp-pl  { padding-left:   0; }
+
+	}
+
+}
