@@ -3,7 +3,7 @@ import uajs from './modules/ua.js';
 (function($) {
 
 	var ua = uajs();
-	
+
 	$(document).ready(function () {
 
 		if(!ua.Mobile){
@@ -15,8 +15,8 @@ import uajs from './modules/ua.js';
 			$('.hover').removeClass('hover');
 		}
 
-		if($(window).width() > 750) {
-			$('meta[name="viewport"]').attr('content', 'width=1360');
+		if($(window).width() > 767) {
+			$('meta[name="viewport"]').attr('content', 'width=1200');
 		}
 		
 		$('a:not(".no-scroll")').click( function (e) {
