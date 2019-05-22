@@ -9,13 +9,11 @@
 
 		tr {
 		
-			th,
-			td {}
+			th, td {}
 
 			th {}
 
 			td {}
-
 		}
 
 		@include sp_style() {
@@ -27,20 +25,16 @@
 
 		tr {
 			
-			th,
-			td {}
+			th, td {}
 
 			th {}
 
 			td {}
-
 		}
 
 		@include sp_style() {
 		}
-
 	}
-
 }
 
 
@@ -56,7 +50,6 @@
 				display: block;
 				text-align: left;
 			}
-
 		}
 	}
 }

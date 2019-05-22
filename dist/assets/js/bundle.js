@@ -31,9 +31,9 @@ function uajs () {
         }, 'fast');
       }
     });
-    $('.button--toggle').click(function (e) {
+    $('.btn--toggle').click(function (e) {
       e.preventDefault();
-      $(".button--toggle").toggleClass("button--toggle--open");
+      $(".btn--toggle").toggleClass("btn--toggle--open");
       $(".nav-main").fadeToggle(250);
     });
   });

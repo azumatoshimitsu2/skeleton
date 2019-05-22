@@ -15,11 +15,11 @@
 			text-decoration: none;
 		}
 
-		&.btn--totop {
+		&--totop {
 			transition: none;
 		}
 
-		&.btn--default {
+		&--default {
 		
 			&.hover {
 				transition: all 0.25s ease;
@@ -29,7 +29,7 @@
 			}
 		}
 		
-		&.btn--close {
+		&--close {
 			background: #000;
 			width: 38px;
 			height: 38px;
@@ -50,7 +50,7 @@
 			}
 		}
 		
-		&.btn--toggle {
+		&--toggle {
 			position: absolute;
 			right: 0;
 			top: 0;
@@ -85,8 +85,8 @@
 					top: 67%;
 				}
 			}
-
-			&.btn--toggle--open {
+			
+			&--open {
 
 				span {
 
@@ -107,5 +107,6 @@
 				}
 			}
 		}
+		
 	}
 }
