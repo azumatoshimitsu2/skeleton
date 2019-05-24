@@ -1,17 +1,17 @@
 @mixin object($pos: absolute) {
-	display: block;
-	content: "";
-	position: $pos;
+  display: block;
+  content: "";
+  position: $pos;
 }
 
 @mixin sp_style() {
-	@media screen and (max-width: $BREAK_POINT) {
-		@content;
-	}
+  @media screen and (max-width: $BREAK_POINT) {
+    @content;
+  }
 }
 
 @mixin pc_style() {
-	@media screen and (min-width: $BREAK_BEFORE) {
-		@content;
-	}
+  @media screen and (min-width: $BREAK_BEFORE) {
+    @content;
+  }
 }

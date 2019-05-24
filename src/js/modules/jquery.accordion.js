@@ -1,4 +1,4 @@
-export default function(){
+export default function () {
 
   // アコーディオン HTML Sample
 
@@ -11,17 +11,17 @@ export default function(){
 
   var accordions = []
 
-  $('.accordion').each(function() {
-      let $trigger = $(this).find('.accordion__switch');
-      let $target = $(this).find('.accordion__target');
+  $('.accordion').each(function () {
+    let $trigger = $(this).find('.accordion__switch');
+    let $target = $(this).find('.accordion__target');
 
-      $trigger.on('click', function(e) {
-        e.preventDefault();
-        $trigger.toggleClass('active');
-        $target.slideToggle(250);
-      })
+    $trigger.on('click', function (e) {
+      e.preventDefault();
+      $trigger.toggleClass('active');
+      $target.slideToggle(250);
+    })
 
-      accordions.push($(this));
+    accordions.push($(this));
   });
 
   return accordions;

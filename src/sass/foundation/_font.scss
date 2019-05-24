@@ -2,29 +2,55 @@ body,
 input,
 select,
 textarea {
-	font-family: $SANS_SERIF;
+  font-family: $SANS_SERIF;
 }
 
-ul, ol, p, dt, dd, caption, th, td,
-select,input, textarea, button, figcaption {
-	font-size: $BASE_FS;
+ul,
+ol,
+p,
+dt,
+dd,
+caption,
+th,
+td,
+select,
+input,
+textarea,
+button,
+figcaption {
+  font-size: $BASE_FS;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	line-height: 1.4;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.4;
 }
 
 @include sp_style() {
 
-	#container.container {
+  #container.container {
 
-		ul, ol, p, dt, dd,
-		caption, th, td {
-			font-size: $SP_BASE_FS;
-		}
+    ul,
+    ol,
+    p,
+    dt,
+    dd,
+    caption,
+    th,
+    td {
+      font-size: $SP_BASE_FS;
+    }
 
-		select,input, textarea, button, figcaption {
-			font-size: 4.6vw;
-		}
-	}
+    select,
+    input,
+    textarea,
+    button,
+    figcaption {
+      font-size: 4.6vw;
+    }
+  }
 }

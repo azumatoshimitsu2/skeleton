@@ -1,22 +1,20 @@
 #container {
 
-	.site-header {
-		line-height: 1.4;
+  .site-header {
+    line-height: 1.4;
 
-		@include pc_style() {
+    @include pc_style() {
 
-			.site-header__logo {
-				float: left;
-			}
+      .site-header__logo {
+        float: left;
+      }
 
-			.site-header__box {
-				float: left;
-			}
+      .site-header__box {
+        float: left;
+      }
 
-		}
+    }
 
-	}
+  }
 
 }
-
-

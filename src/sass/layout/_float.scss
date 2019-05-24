@@ -1,36 +1,36 @@
 .col {
-	zoom: 1;
+  zoom: 1;
 
-	&:after {
-		content: '';
-		display: block;
-		clear: both;
-		overflow: hidden;
-	}
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+    overflow: hidden;
+  }
 
-	// pc で float sp で float しない
-	@include pc_style() {
+  // pc で float sp で float しない
+  @include pc_style() {
 
-		.box {
-			float: left;
-		}
+    .box {
+      float: left;
+    }
 
-		.box-r {
-			float: right;
-		}
+    .box-r {
+      float: right;
+    }
 
-	}
+  }
 
-	&.col--2 {
+  &.col--2 {
 
-		@include pc_style() {
-			.box {
-				width: 49%;
+    @include pc_style() {
+      .box {
+        width: 49%;
 
-				&:nth-child(2n) {
-					float: right;
-				}
-			}
-		}
-	}
+        &:nth-child(2n) {
+          float: right;
+        }
+      }
+    }
+  }
 }

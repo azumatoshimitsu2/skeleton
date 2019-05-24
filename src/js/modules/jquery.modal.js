@@ -1,4 +1,4 @@
-export default function(){
+export default function () {
 
   // モーダル HTML Sample
 
@@ -13,16 +13,18 @@ export default function(){
 
   $('#container').append('<div id="modal-overlay" class="c-modal-overlay">');
 
-  $('.modal-trigger').on('click', function(e) {
+  $('.modal-trigger').on('click', function (e) {
     e.preventDefault();
     let $target = $($(this).attr('data-target'));
     let scTop = $(window).scrollTop();
-    $target.css({'top' : (scTop + 100) + 'px' });
+    $target.css({
+      'top': (scTop + 100) + 'px'
+    });
     $target.fadeIn(250);
     $('#modal-overlay').fadeIn(250);
   });
 
-  $('.modal-close-trigger, #modal-overlay').on('click', function(e) {
+  $('.modal-close-trigger, #modal-overlay').on('click', function (e) {
     $('.modal-window').fadeOut(250);
     $('#modal-overlay').fadeOut(250);
   });

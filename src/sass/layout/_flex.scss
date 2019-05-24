@@ -1,46 +1,44 @@
 .flex {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-	&.flex--col-2 {
+  &.flex--col-2 {
 
-		.flex__item {
-			width: 48%;
-		}
+    .flex__item {
+      width: 48%;
+    }
 
-		@include sp_style() {
-		}
-	}
+    @include sp_style() {}
+  }
 
-	&.flex--col-3 {
-		justify-content: flex-start;
+  &.flex--col-3 {
+    justify-content: flex-start;
 
-		.flex__item {
-			width: 32%;
-			margin-right: 2%;
+    .flex__item {
+      width: 32%;
+      margin-right: 2%;
 
-			&:nth-child(3n) {
-				margin-right: 0;
-			}
-		}
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
 
-		@include sp_style() {
-		}
-	}
+    @include sp_style() {}
+  }
 }
 
 @include sp_style() {
-	
-	#container {
 
-		.flex--reset-sp {
-			display: block;
+  #container {
 
-			.flex__item {
-				width: auto;
-			}
-		}
-	}
+    .flex--reset-sp {
+      display: block;
+
+      .flex__item {
+        width: auto;
+      }
+    }
+  }
 }
