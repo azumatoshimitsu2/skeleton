@@ -1,5 +1,4 @@
 #container.container {
-
   //margin padding util
   $arrn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
 
@@ -78,7 +77,6 @@
   }
 
   @include sp_style() {
-
     $arrspn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
 
     @each $n in $arrspn {
@@ -154,7 +152,5 @@
     .reset-sp-pl {
       padding-left: 0;
     }
-
   }
-
 }

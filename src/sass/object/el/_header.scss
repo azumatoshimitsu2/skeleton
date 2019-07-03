@@ -1,12 +1,9 @@
 #container {
+  .header-a {
+    .str {
+    }
 
-	.header-a {
-
-		.str  {
-		}
-		
-		@include sp_style() {
-		}
-	}
+    @include sp_style() {
+    }
+  }
 }
-

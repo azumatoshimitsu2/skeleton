@@ -6,7 +6,7 @@ body {
 
 body {
   line-height: 1.9;
-  font-feature-settings: "palt"1;
+  font-feature-settings: "palt" 1;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -95,7 +95,7 @@ select,
 button {
   line-height: 1.42857143;
   outline: 0;
-  background: #FFF;
+  background: #fff;
 }
 
 label {
@@ -140,7 +140,7 @@ footer {
   box-sizing: border-box;
 }
 
-$placeholder_color : #c1c1c1;
+$placeholder_color: #c1c1c1;
 
 ::-webkit-input-placeholder {
   color: $placeholder_color;

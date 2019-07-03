@@ -1,5 +1,4 @@
 #container.container {
-
   .screen-reader-text,
   .sp-only-ib,
   .sp-only {
@@ -23,7 +22,7 @@
   //font size
   @for $i from 11 through 30 {
     .set-fs-#{$i} {
-      font-size: $i*.1rem;
+      font-size: $i * 0.1rem;
     }
   }
 
@@ -100,7 +99,6 @@
   }
 
   @include sp_style() {
-
     .sp-pad {
       padding-right: $SP_PAD;
       padding-left: $SP_PAD;
@@ -121,7 +119,5 @@
     .reset-sp-pos {
       position: static;
     }
-
   }
-
 }
