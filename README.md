@@ -37,7 +37,7 @@
              └──el（粒度の決まった部品）
                └──_btn.scss
                └──_icon.scss
-               └──_header.scss
+               └──_heading.scss
                └──_list.scss
                └──_table.scss
              └──compo（恣意的な大きさの部品）
@@ -98,8 +98,8 @@
 ### .col
 clearfix の処理は全て .col を使用 .col 以外で clearfix は行わない。また、.col クラスにスタイルを追加するのは不可
 
-### .fixed-width
-- 最上位の幅固定には .fixed-width を使用。その値は _global_var.scss 内で定義されたものを参照。このクラスも直接スタイルを追加するのは不可
+### .fix-w
+- 最上位の幅固定には .fix-w を使用。その値は _global_var.scss 内で定義されたものを参照。このクラスも直接スタイルを追加するのは不可
 
 ### .sp-only .pc-only
 - .sp-only .pc-only のふたつのクラスは、ブレイクポイント毎に表示を切り替える場合に使用。直接スタイルの追加は不可。また、このクラスを持った要素への display プロパティの追加は**いかなる方法も不可**。
