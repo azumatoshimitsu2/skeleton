@@ -27,7 +27,7 @@
             └──layout （ヘッダ、フッタ、共通ナビ、カラム構造）
                └──_flex.scss
                └──_float.scss
-               └──_header.scss
+               └──_head.scss
                └──_nav-main.scss
                └──_footer.scss
             └──vendors（プラグインや CMS 用のスタイル）

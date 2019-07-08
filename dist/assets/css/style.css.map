@@ -15,7 +15,7 @@
 		"../../../src/sass/vendors/_cms.scss",
 		"../../../src/sass/object/el/_btn.scss",
 		"../../../src/sass/object/el/_icon.scss",
-		"../../../src/sass/object/el/_heading.scss",
+		"../../../src/sass/object/el/_head.scss",
 		"../../../src/sass/object/el/_list.scss",
 		"../../../src/sass/object/el/_table.scss",
 		"../../../src/sass/object/compo/_compo.scss",
