@@ -3,46 +3,26 @@
     overflow: auto;
   }
 
-  .table-default {
-    width: 100%;
+  .table {
+    &-a {
+      tr {
+        th,
+        td {
+        }
 
-    tr {
-      th,
-      td {
+        th {
+        }
+
+        td {
+        }
       }
 
-      th {
+      @include sp_style() {
       }
-
-      td {
-      }
-    }
-
-    @include sp_style() {
     }
   }
-
-  .table-a {
-    tr {
-      th,
-      td {
-      }
-
-      th {
-      }
-
-      td {
-      }
-    }
-
+  &-responsive {
     @include sp_style() {
-    }
-  }
-}
-
-@include sp_style() {
-  #container {
-    .table-responsive {
       display: block;
 
       thead,

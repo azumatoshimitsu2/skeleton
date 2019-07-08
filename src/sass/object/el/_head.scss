@@ -1,9 +1,11 @@
 #container {
-  .head-a {
-    .str {
-    }
+  .head {
+    &-a {
+      .str {
+      }
 
-    @include sp_style() {
+      @include sp_style() {
+      }
     }
   }
 }

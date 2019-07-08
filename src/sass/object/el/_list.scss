@@ -1,28 +1,30 @@
 #container {
-  .list-default {
-    li {
+  .list {
+    &-default {
+      li {
+      }
+
+      @include sp_style() {
+      }
     }
 
-    @include sp_style() {
-    }
-  }
+    &-disc {
+      list-style: disc;
+      margin-left: 20px;
 
-  .list-disc {
-    list-style: disc;
-    margin-left: 20px;
-
-    @include sp_style() {
-    }
-  }
-
-  .list-inline {
-    li {
-      display: inline-block;
-      margin-right: 10px;
-      vertical-align: top;
+      @include sp_style() {
+      }
     }
 
-    @include sp_style() {
+    &-inline {
+      li {
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: top;
+      }
+
+      @include sp_style() {
+      }
     }
   }
 }

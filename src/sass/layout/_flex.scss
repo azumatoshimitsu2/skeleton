@@ -4,16 +4,16 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  &.flex--col-2 {
-
+  &--col-2 {
     .flex__item {
       width: 48%;
     }
 
-    @include sp_style() {}
+    @include sp_style() {
+    }
   }
 
-  &.flex--col-3 {
+  &--col-3 {
     justify-content: flex-start;
 
     .flex__item {
@@ -25,15 +25,12 @@
       }
     }
 
-    @include sp_style() {}
+    @include sp_style() {
+    }
   }
-}
 
-@include sp_style() {
-
-  #container {
-
-    .flex--reset-sp {
+  @include sp_style() {
+    &--reset-sp {
       display: block;
 
       .flex__item {
