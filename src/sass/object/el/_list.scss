@@ -1,13 +1,5 @@
 #container {
   .list {
-    &-default {
-      li {
-      }
-
-      @include sp_style() {
-      }
-    }
-
     &-disc {
       list-style: disc;
       margin-left: 20px;

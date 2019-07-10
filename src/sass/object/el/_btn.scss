@@ -18,15 +18,6 @@
       transition: none;
     }
 
-    &--default {
-      &.hover {
-        transition: all 0.25s ease;
-
-        &:hover {
-        }
-      }
-    }
-
     &--close {
       background: #000;
       width: 38px;

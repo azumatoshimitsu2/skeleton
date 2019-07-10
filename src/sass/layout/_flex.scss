@@ -4,6 +4,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  &--start {
+    justify-content: flex-start;
+  }
+
   &--col-2 {
     .flex__item {
       width: 48%;
