@@ -9,9 +9,9 @@
 //ヘッダ、フッタ、共通ナビ、カラム構造
 @import "./layout/_flex";
 @import "./layout/_float";
-@import "./layout/_header";
+@import "./layout/_site-header";
 @import "./layout/_nav-main";
-@import "./layout/_footer";
+@import "./layout/_site-footer";
 
 //プラグインや CMS 用のスタイル
 @import "./vendors/_cms";
@@ -19,7 +19,7 @@
 //粒度の決まった部品
 @import "./object/el/_btn";
 @import "./object/el/_icon";
-@import "./object/el/_head";
+@import "./object/el/_header";
 @import "./object/el/_list";
 @import "./object/el/_table";
 

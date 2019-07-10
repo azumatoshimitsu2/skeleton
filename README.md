@@ -27,9 +27,9 @@
             └──layout （ヘッダ、フッタ、共通ナビ、カラム構造）
                └──_flex.scss
                └──_float.scss
-               └──_head.scss
                └──_nav-main.scss
-               └──_footer.scss
+               └──_site-header.scss
+               └──_site-footer.scss
             └──vendors（プラグインや CMS 用のスタイル）
                └──_cms.scss（WP の記事内部など CMS で使用されるもの）
                └──jquery.***..scss
@@ -37,7 +37,7 @@
              └──el（粒度の決まった部品）
                └──_btn.scss
                └──_icon.scss
-               └──_heading.scss
+               └──_header.scss
                └──_list.scss
                └──_table.scss
              └──compo（恣意的な大きさの部品）
