@@ -2,7 +2,7 @@
   zoom: 1;
 
   &:after {
-    content: '';
+    content: "";
     display: block;
     clear: both;
     overflow: hidden;
@@ -10,7 +10,6 @@
 
   // pc で float sp で float しない
   @include pc_style() {
-
     .box {
       float: left;
     }
@@ -18,11 +17,9 @@
     .box-r {
       float: right;
     }
-
   }
 
   &.col--2 {
-
     @include pc_style() {
       .box {
         width: 49%;

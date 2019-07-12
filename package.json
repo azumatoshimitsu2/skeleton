@@ -4,6 +4,7 @@
   "description": "HTML CSS スターターキット",
   "main": "index.js",
   "scripts": {
+    "rscss": "node index.js recursiveSassCompile",
     "scss": "node-sass src/sass/style.scss dist/assets/css/style.css -w --output-style compressed --source-map true",
     "rollup": "rollup --config rollup.config.js -w -m --no-strict",
     "start": "npm run scss & npm run rollup"
@@ -22,6 +23,8 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "babel-preset-es2015-rollup": "^3.0.0",
+    "chokidar": "^3.0.2",
+    "fs-extra": "^8.1.0",
     "node-sass": "^4.12.0",
     "rollup": "^1.12.3",
     "rollup-plugin-babel": "^4.3.2",
