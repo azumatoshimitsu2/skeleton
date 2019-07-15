@@ -8,18 +8,18 @@ switch (cmd) {
   case 'recursiveSassCompile':
     const src = __dirname + '/src/sass/';
 
-    var watcher = chokidar.watch(src, {	//watch対象ディレクトリorファイル
-      persistent: true	//監視を継続するかどうか
+    const watcher = chokidar.watch(src, {
+      persistent: true
     });
 
-    let walker = function (p, fileCallback, errCallback) {
+    const walker = function (p, fileCallback, errCallback) {
       fs.readdir(p, function (err, files) {
         if (err) {
           errCallback(err);
           return;
         }
         files.forEach(function (f) {
-          var fp = path.join(p, f); // フルパスに変換
+          let fp = path.join(p, f);
           if (fs.statSync(fp).isDirectory()) {
             walker(fp, fileCallback);
           } else {
@@ -29,7 +29,7 @@ switch (cmd) {
       });
     };
 
-    let compleScss = function (scss_filename) {
+    const compleScss = function (scss_filename) {
       let name = path.basename(scss_filename);
       if (name.endsWith('.scss') && !name.startsWith('_')) {
         sass.render({
