@@ -1,4 +1,4 @@
-import uajs from './modules/ua.js';
+import uajs from './modules/ua';
 
 (function ($) {
   const ua = uajs();
@@ -37,3 +37,4 @@ import uajs from './modules/ua.js';
   });
 
 })(jQuery);
+
