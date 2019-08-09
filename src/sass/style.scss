@@ -30,6 +30,10 @@
 @import "./object/page/_home";
 
 //汎用クラス
-@import "./object/util/_margin_padding";
+@import "./object/util/_display";
+@import "./object/util/_margin";
+@import "./object/util/_padding";
 @import "./object/util/_width";
+@import "./object/util/_align";
+@import "./object/util/_fontsize";
 @import "./object/util/_util";

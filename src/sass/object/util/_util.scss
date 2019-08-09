@@ -1,40 +1,10 @@
 #container.container {
-  .screen-reader-text,
-  .sp-only-ib,
-  .sp-only {
-    display: none;
+  .set-pos-rel {
+    position: relative;
   }
 
-  @include sp_style() {
-    .pc-only {
-      display: none;
-    }
-
-    .sp-only {
-      display: block;
-    }
-
-    .sp-only-ib {
-      display: inline-block;
-    }
-  }
-
-  //font size
-  @for $i from 11 through 30 {
-    .set-fs-#{$i} {
-      font-size: $i * 0.1rem;
-    }
-  }
-
-  .set-ellipsis {
-    display: inline-block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .set-wbreak {
-    word-break: break-all;
+  .set-pos-abs {
+    position: absolute;
   }
 
   .set-float-l {
@@ -45,75 +15,25 @@
     float: right;
   }
 
+  .set-wbreak {
+    word-break: break-all;
+  }
+
   .set-nowrap {
     white-space: nowrap;
   }
 
-  .set-pos-rel {
-    position: relative;
-  }
-
-  .set-pos-abs {
-    position: absolute;
-  }
-
-  .set-hide {
-    display: none;
-  }
-
-  .set-disp-cell {
-    display: table-cell;
-  }
-
-  .set-disp-ib {
+  .set-ellipsis {
     display: inline-block;
-  }
-
-  .set-valign-t {
-    vertical-align: top;
-  }
-
-  .set-valign-m {
-    vertical-align: middle;
-  }
-
-  .set-valign-b {
-    vertical-align: bottom;
-  }
-
-  .set-align-c {
-    text-align: center;
-  }
-
-  .set-align-r {
-    text-align: right;
-  }
-
-  .set-align-l {
-    text-align: left;
-  }
-
-  .set-block-c {
-    margin-left: auto;
-    margin-right: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   @include sp_style() {
     .sp-pad {
       padding-right: $SP_PAD;
       padding-left: $SP_PAD;
-    }
-
-    .set-sp-align-c {
-      text-align: center;
-    }
-
-    .set-sp-align-r {
-      text-align: right;
-    }
-
-    .set-sp-align-l {
-      text-align: left;
     }
 
     .reset-sp-pos {

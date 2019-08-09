@@ -1,0 +1,37 @@
+#container.container {
+  .screen-reader-text,
+  .sp-only-ib,
+  .sp-only {
+    display: none;
+  }
+
+  .set-hide {
+    display: none;
+  }
+
+  .set-disp-table {
+    display: table;
+  }
+
+  .set-disp-cell {
+    display: table-cell;
+  }
+
+  .set-disp-ib {
+    display: inline-block;
+  }
+
+  @include sp_style() {
+    .pc-only {
+      display: none;
+    }
+
+    .sp-only {
+      display: block;
+    }
+
+    .sp-only-ib {
+      display: inline-block;
+    }
+  }
+}
