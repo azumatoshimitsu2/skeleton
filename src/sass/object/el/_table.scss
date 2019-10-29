@@ -3,25 +3,24 @@
     overflow: auto;
   }
 
-  .table {
-    &-a {
-      tr {
-        th,
-        td {
-        }
-
-        th {
-        }
-
-        td {
-        }
+  .table-a {
+    tr {
+      th,
+      td {
       }
 
-      @include sp_style() {
+      th {
+      }
+
+      td {
       }
     }
+
+    @include sp_style() {
+    }
   }
-  &-responsive {
+
+  .table-responsive {
     @include sp_style() {
       display: block;
 

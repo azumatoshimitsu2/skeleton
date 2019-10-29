@@ -1,22 +1,20 @@
 #container {
-  .list {
-    &-disc {
-      list-style: disc;
-      margin-left: 20px;
+  .list-disc {
+    list-style: disc;
+    margin-left: 20px;
 
-      @include sp_style() {
-      }
+    @include sp_style() {
+    }
+  }
+
+  .list-inline {
+    li {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
     }
 
-    &-inline {
-      li {
-        display: inline-block;
-        margin-right: 10px;
-        vertical-align: top;
-      }
-
-      @include sp_style() {
-      }
+    @include sp_style() {
     }
   }
 }

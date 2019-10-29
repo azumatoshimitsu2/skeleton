@@ -1,31 +1,29 @@
 #container {
-  .c {
-    &-wrap-resposive-iframe {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%;
+  .c-wrap-resposive-iframe {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
 
-      iframe {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-      @include sp_style() {
-      }
-    }
-
-    &-modal-overlay {
-      display: none;
-      position: fixed;
-      left: 0;
+    iframe {
+      position: absolute;
       top: 0;
-      z-index: 100;
-      background: rgba(#000, 0.8);
+      right: 0;
       width: 100%;
       height: 100%;
     }
+
+    @include sp_style() {
+    }
+  }
+
+  .c-modal-overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background: rgba(#000, 0.8);
+    width: 100%;
+    height: 100%;
   }
 }
