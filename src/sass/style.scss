@@ -24,10 +24,10 @@
 @import "./object/el/_table";
 
 //恣意的な大きさの部品
-@import "./object/compo/_compo";
+@import "./object/compo/*";
 
 //ページ固有のスタイル - サイトのトップ以外での使用は非推奨
-@import "./object/page/_home";
+@import "./object/page/*";
 
 //汎用クラス
 @import "./object/util/_display";
