@@ -1,0 +1,30 @@
+.c-wrap-table {
+  overflow: auto;
+}
+
+.c-table-a {
+  tr {
+    th, td {
+    }
+    th {
+    }
+    td {
+    }
+  }
+  @include sp_style() {
+  }
+}
+
+.c-table-responsive {
+  @include sp_style() {
+    display: block;
+    thead,
+    tbody,
+    tr,
+    th,
+    td {
+      display: block;
+      text-align: left;
+    }
+  }
+}

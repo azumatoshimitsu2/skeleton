@@ -1,4 +1,4 @@
-#container.container {
+#container {
   .screen-reader-text {
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);
@@ -9,7 +9,7 @@
     padding: 0;
     position: absolute;
     width: 1px;
-    word-wrap: normal; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+    word-wrap: normal;
   }
   .sp-only-ib,
   .sp-only {
