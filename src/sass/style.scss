@@ -7,11 +7,7 @@
 @import "./foundation/_font";
 
 //ヘッダ、フッタ、共通ナビ、カラム構造
-@import "./layout/_flex";
-@import "./layout/_float";
-@import "./layout/_site-header";
-@import "./layout/_nav-main";
-@import "./layout/_site-footer";
+@import "./layout/*";
 
 //プラグインや CMS 用のスタイル
 @import "./vendors/_cms";

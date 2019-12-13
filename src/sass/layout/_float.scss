@@ -18,16 +18,4 @@
       float: right;
     }
   }
-
-  &.col--2 {
-    @include pc_style() {
-      .box {
-        width: 49%;
-
-        &:nth-child(2n) {
-          float: right;
-        }
-      }
-    }
-  }
 }

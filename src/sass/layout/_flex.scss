@@ -4,35 +4,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  &--start {
-    justify-content: flex-start;
-  }
-
-  &--col-2 {
-    .flex__item {
-      width: 48%;
-    }
-
-    @include sp_style() {
-    }
-  }
-
-  &--col-3 {
-    justify-content: flex-start;
-
-    .flex__item {
-      width: 32%;
-      margin-right: 2%;
-
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
-    }
-
-    @include sp_style() {
-    }
-  }
-
   @include sp_style() {
     &--reset-sp {
       display: block;
@@ -42,4 +13,15 @@
       }
     }
   }
+}
+
+.flex-start {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.flex--r {
+  flex-flow: row-reverse;
 }
