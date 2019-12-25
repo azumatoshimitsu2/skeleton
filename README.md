@@ -25,11 +25,13 @@
                └──_reset.scss
                └──_font.scss
             └──layout （ヘッダ、フッタ、共通ナビ、カラム構造）
+               └──_col.scss
                └──_flex.scss
                └──_float.scss
-               └──_nav-main.scss
-               └──_site-header.scss
-               └──_site-footer.scss
+               └──_footer.scss
+               └──_header.scss
+               └──_nav.scss
+               └──_page.scss
             └──vendors（プラグインや CMS 用のスタイル）
                └──_cms.scss（WP の記事内部など CMS で使用されるもの）
                └──jquery.***..scss
