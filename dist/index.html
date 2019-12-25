@@ -12,7 +12,6 @@
   <meta property="og:image" content="">
   <meta property="og:description" content="">
   <title>title</title>
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&amp;subset=japanese" rel="stylesheet">
   <link href="./assets/css/style.css" rel="stylesheet" media="all">
   <script src="./assets/js/lib/jquery.min.js"></script>
   <script src="./assets/js/bundle.js"></script>
@@ -21,14 +20,14 @@
 <body>
   <div id="container" class="container fix-w">
     <!--  site-header  -->
-    <div class="site-header col">
-      <div class="site-header__logo">.logo</div>
-      <div class="site-header__box">text</div>
+    <div class="l-page__header l-header">
+      <div class="l-header__logo">.logo</div>
+      <div class="l-header__box">text</div>
     </div>
     <!--  //site-header  -->
     <button type="button" class="c-btn c-btn--toggle sp-only"><span></span><span></span><span></span></div>
 
-    <nav class="nav-main">
+    <nav class="l-nav">
       <ul>
         <li>navigation</li>
         <li>navigation</li>
@@ -55,9 +54,9 @@
     </ol>
     <!--  //breadcrumb  -->
     <!--  wrapper  -->
-    <div class="wrapper col">
+    <div class="l-page__content">
       <!--  main  -->
-      <main>
+      <main clasd="l-page__main">
         <header class="page-title">
           <h1 class="str">サンプル HTML</h1>
         </header>
@@ -212,8 +211,8 @@
     <div class="wrap-totop"><a href="#container" class="c-btn c-btn--totop"><span
           class="screen-reader-text">ページ上部へ</span></a></div>
     <!--  site-footer  -->
-    <div class="site-footer">
-      <div class="copy">&copy; copyright</div>
+    <div class="l-footer">
+      <div class="l-footer__copy">&copy; copyright</div>
     </div>
     <!--  //site-footer  -->
   </div>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap&subset=japanese');
+
 body,
 input,
 select,
@@ -31,7 +33,7 @@ h6 {
 }
 
 @include sp_style() {
-  #container.container {
+  #container {
     ul,
     ol,
     p,

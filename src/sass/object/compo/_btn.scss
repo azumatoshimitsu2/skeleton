@@ -11,9 +11,11 @@
   &:hover {
     text-decoration: none;
   }
+
   &--totop {
     transition: none;
   }
+
   &--close {
     background: #000;
     width: 38px;
@@ -32,6 +34,7 @@
       transform: rotate(-135deg);
     }
   }
+
   &--toggle {
     position: absolute;
     right: 0;
