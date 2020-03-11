@@ -1,10 +1,11 @@
 .l-nav {
+
   @include pc_style() {
-    ul {
+    &__list {
       display: table;
       width: 100%;
     }
-    li {
+    &__item {
       display: table-cell;
     }
   }
@@ -18,10 +19,11 @@
     background-color: #fff;
     width: 100%;
     height: 100vh;
-    ul {
+
+    &__list {
       width: 100%;
     }
-    li {
+    &__item {
       padding: 10px;
       border-bottom: 1px solid #000;
     }

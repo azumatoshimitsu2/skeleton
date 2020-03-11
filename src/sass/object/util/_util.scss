@@ -30,6 +30,10 @@
     white-space: nowrap;
   }
 
+  .reset-a-style {
+    cursor: default;
+  }
+
   @include sp_style() {
     .sp-pad {
       padding-right: $SP_PAD;

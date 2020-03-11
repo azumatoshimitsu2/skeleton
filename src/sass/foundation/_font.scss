@@ -7,19 +7,7 @@ textarea {
   font-family: $SANS_SERIF;
 }
 
-ul,
-ol,
-p,
-dt,
-dd,
-caption,
-th,
-td,
-select,
-input,
-textarea,
-button,
-figcaption {
+body {
   font-size: $BASE_FS;
 }
 
@@ -34,14 +22,7 @@ h6 {
 
 @include sp_style() {
   #container {
-    ul,
-    ol,
-    p,
-    dt,
-    dd,
-    caption,
-    th,
-    td {
+    body {
       font-size: $SP_BASE_FS;
     }
 
