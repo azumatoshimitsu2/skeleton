@@ -4,6 +4,31 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  &--start {
+    justify-content: flex-start;
+  }
+
+  &--center {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--r {
+    flex-flow: row-reverse;
+  }
+
+  &--col2 {
+    .flex__item {
+      width: 48%;
+    }
+  }
+  &--col3 {
+    .flex__item {
+      width: 32%;
+    }
+  }
+
   @include sp_style() {
     &--reset-sp {
       display: block;
@@ -13,23 +38,4 @@
       }
     }
   }
-}
-
-.flex-start {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.flex-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.flex--r {
-  flex-flow: row-reverse;
 }

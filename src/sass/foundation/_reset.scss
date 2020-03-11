@@ -67,8 +67,7 @@ select {
 
 pre {
   word-wrap: break-word;
-  /* IE11用 */
-  white-space: pre-wrap;
+  white-space: pre-wrap;//IE11用
 }
 
 button,
