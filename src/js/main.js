@@ -30,7 +30,7 @@ import uajs from './modules/ua';
 
     $('.btn--toggle').click(function (e) {
       e.preventDefault();
-      $(".btn--toggle").toggleClass("btn--toggle--open");
+      $(".btn--toggle").toggleClass("is-active");
       $(".nav-main").fadeToggle(250);
     });
 

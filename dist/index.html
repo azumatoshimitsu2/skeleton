@@ -25,15 +25,17 @@
       <div class="l-header__box">text</div>
     </div>
     <!--  //site-header  -->
-    <button type="button" class="c-btn c-btn--toggle sp-only"><span></span><span><b class="screen-reader-text">メニュー</b></span><span></span></div>
 
-    <nav class="l-nav">
-      <ul>
-        <li>navigation</li>
-        <li>navigation</li>
-        <li>navigation</li>
-      </ul>
-    </nav>
+    <div class="l-nav">
+      <button class="l-nav__btn sp-only js-gnav js-gnav-toggle"><span class="l-nav__btn-bar"></span><b class="screen-reader-text">メニュー</b></button>
+
+      <nav class="l-nav__body js-gnav-target">
+        <ul class="l-nav__list">
+          <li class="l-nav__item"><a href="" class="js-hover">ホーム</a></li>
+          <li class="l-nav__item"><a href="" class="js-hover">ページ</a></li>
+        </ul>
+      </nav>
+    </div>
     <!--  breadcrumb  -->
     <ol class="c-breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
       <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">

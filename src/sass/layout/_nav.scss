@@ -10,21 +10,70 @@
     }
   }
   @include sp_style() {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 100;
-    overflow: auto;
-    display: none;
-    background-color: #fff;
-    width: 100%;
-    height: 100vh;
+    &__btn {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 55;
+      background: #000;
+      width: 15vw;
+      height: 15vw;
 
-    &__list {
-      width: 100%;
+      &.is-active {
+        .l-nav__btn-bar {
+          background: transparent;
+          &:before {
+            transform: translateY(0) rotate(45deg);
+          }
+          &:after {
+            transform: translateY(50%) rotate(-45deg);
+          }
+        }
+      }
+
+      &-bar {
+        display: block;
+        position: absolute;
+        left: 32.5%;
+        top: 50%;
+        background: #fff;
+        width: 36%;
+        height: 2px;
+        transition: background .25s ease;
+
+        &:before,
+        &:after {
+          @include object();
+          background: #fff;
+          width: 100%;
+          height: 2px;
+          transition: transform .25s ease;
+        }
+
+        &:before {
+          transform: translateY(-5px);
+        }
+
+        &:after {
+          transform: translateY(5px);
+        }
+      }
     }
+
+    &__body {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      overflow: auto;
+      display: none;
+      background-color: #fff;
+      width: 100%;
+      height: 100vh;
+    }
+
     &__item {
-      padding: 10px;
+      padding: 2vw;
       border-bottom: 1px solid #000;
     }
   }
