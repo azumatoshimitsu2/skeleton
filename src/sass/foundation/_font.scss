@@ -5,6 +5,7 @@ input,
 select,
 textarea {
   font-family: $SANS_SERIF;
+  font-size: $BASE_FS;
 }
 
 body {
@@ -21,17 +22,15 @@ h6 {
 }
 
 @include sp_style() {
-  #container {
-    body {
-      font-size: $SP_BASE_FS;
-    }
+  body {
+    font-size: $SP_BASE_FS;
+  }
 
-    select,
-    input,
-    textarea,
-    button,
-    figcaption {
-      font-size: 4.6vw;
-    }
+  select,
+  input,
+  textarea,
+  button,
+  figcaption {
+    font-size: 4.6vw;
   }
 }
