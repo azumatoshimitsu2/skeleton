@@ -19,6 +19,8 @@
 @import "./object/page/*";
 
 //汎用クラス
+@import "./object/util/_float";
+@import "./object/util/_flex";
 @import "./object/util/_display";
 @import "./object/util/_margin";
 @import "./object/util/_padding";
