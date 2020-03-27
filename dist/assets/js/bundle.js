@@ -31,10 +31,10 @@ function uajs () {
         }, 'fast');
       }
     });
-    $('.btn--toggle').click(function (e) {
+    $('.js-gnav-toggle').click(function (e) {
       e.preventDefault();
-      $(".btn--toggle").toggleClass("btn--toggle--open");
-      $(".nav-main").fadeToggle(250);
+      $(".js-gnav-toggle").toggleClass("is-active");
+      $(".js-gnav-target").fadeToggle(250);
     });
   });
 })(jQuery);//# sourceMappingURL=bundle.js.map

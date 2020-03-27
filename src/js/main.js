@@ -28,10 +28,10 @@ import uajs from './modules/ua';
       }
     });
 
-    $('.btn--toggle').click(function (e) {
+    $('.js-gnav-toggle').click(function (e) {
       e.preventDefault();
-      $(".btn--toggle").toggleClass("is-active");
-      $(".nav-main").fadeToggle(250);
+      $(".js-gnav-toggle").toggleClass("is-active");
+      $(".js-gnav-target").fadeToggle(250);
     });
 
   });

@@ -13,12 +13,33 @@
     }
   }
 
-  @include sp_style() {
-    &__btn {
+  &__body {
+    @include sp_style() {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      overflow: auto;
+      display: none;
+      background-color: #fff;
+      width: 100%;
+      height: 100vh;
+    }
+  }
+
+  &__item {
+    @include sp_style() {
+      padding: 2vw;
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  &__btn {
+    @include sp_style() {
       position: fixed;
       top: 0;
       right: 0;
-      z-index: 55;
+      z-index: 110;
       background: #000;
       width: 15vw;
       height: 15vw;
@@ -27,10 +48,10 @@
         .l-nav__btn-bar {
           background: transparent;
           &:before {
-            transform: translateY(0) rotate(45deg);
+            transform: rotate(45deg);
           }
           &:after {
-            transform: translateY(50%) rotate(-45deg);
+            transform: rotate(-45deg);
           }
         }
       }
@@ -62,23 +83,6 @@
           transform: translateY(5px);
         }
       }
-    }
-
-    &__body {
-      position: fixed;
-      left: 0;
-      top: 0;
-      z-index: 100;
-      overflow: auto;
-      display: none;
-      background-color: #fff;
-      width: 100%;
-      height: 100vh;
-    }
-
-    &__item {
-      padding: 2vw;
-      border-bottom: 1px solid #000;
     }
   }
 }
