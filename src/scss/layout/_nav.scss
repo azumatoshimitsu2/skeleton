@@ -3,7 +3,6 @@
  ******************************/
 
 .l-nav {
-
   @include pc_style() {
     &__list {
       display: table;
@@ -13,6 +12,7 @@
       display: table-cell;
     }
   }
+
   @include sp_style() {
     &__btn {
       position: fixed;

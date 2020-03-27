@@ -1,11 +1,11 @@
 {
   "name": "skeleton",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "HTML CSS スターターキット",
   "main": "index.js",
   "scripts": {
     "nodesass": "node-sass src/sass/style.scss dist/assets/css/style.css -w --output-style compressed --source-map true",
-    "sass": "node index.js",
+    "sass": "node sass.js",
     "rollup": "rollup --config rollup.config.js -w -m --no-strict",
     "start": "npm run sass & npm run rollup"
   },

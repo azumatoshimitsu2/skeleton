@@ -5,7 +5,7 @@ const path = require('path');
 const chokidar = require('chokidar');
 var globImporter = require('node-sass-glob-importer');
 
-const src = __dirname + '/src/sass/';
+const src = __dirname + '/src/scss/';
 const watcher = chokidar.watch(src, {
   persistent: true
 });
@@ -30,7 +30,7 @@ const compleScss = function (scss_filename) {
   if (name.endsWith('.scss') && !name.startsWith('_')) {
     sass.render({
       file: scss_filename,
-      includePaths: ['src/sass/'],
+      includePaths: ['src/scss/'],
       outputStyle: "compressed", //nested, expanded, compact
       importer: globImporter()
     }, (error, result) => {
@@ -42,7 +42,7 @@ const compleScss = function (scss_filename) {
       }
       else {
         let dist = scss_filename.replace(".scss", ".css");
-        dist = dist.replace("/src/sass/", "/dist/assets/css/");
+        dist = dist.replace("/src/scss/", "/dist/assets/css/");
         console.log('outputFile : ', dist);
         fs.outputFile(dist, result.css, (error) => {
           if (error) {
