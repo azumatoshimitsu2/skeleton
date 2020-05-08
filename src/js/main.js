@@ -1,4 +1,4 @@
-import uajs from './modules/ua';
+import uajs from './module/ua';
 
 (function ($) {
   const ua = uajs();
