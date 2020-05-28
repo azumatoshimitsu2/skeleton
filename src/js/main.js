@@ -1,4 +1,5 @@
 import uajs from './module/ua';
+import accessibleGnavToggle from './module/accessibleGnavToggle';
 
 (function ($) {
   const ua = uajs();
@@ -28,11 +29,7 @@ import uajs from './module/ua';
       }
     });
 
-    $('.js-gnav-toggle').click(function (e) {
-      e.preventDefault();
-      $(".js-gnav-toggle").toggleClass("is-active");
-      $(".js-gnav-target").fadeToggle(250);
-    });
+    accessibleGnavToggle();
 
   });
 
