@@ -12,7 +12,7 @@ import accessibleGnavToggle from './module/accessibleGnavToggle';
       });
     }
     if (ua.Mobile || ua.Tablet) {
-      $('.hover').removeClass('hover');
+      $('.is-hover').removeClass('is-hover');
     }
 
     if ($(window).width() > 767) {
