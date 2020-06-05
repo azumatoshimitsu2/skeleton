@@ -1,8 +1,8 @@
 /******************************
- * l-nav
+ * nav
  ******************************/
 
-.l-nav {
+.nav {
   @include pc_style() {
     &__list {
       display: table;

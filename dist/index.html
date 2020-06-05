@@ -20,24 +20,24 @@
 <body>
   <div id="container" class="container fix-w">
     <!--  site-header  -->
-    <div class="l-page__header l-header">
-      <div class="l-header__logo">.logo</div>
-      <div class="l-header__box">text</div>
+    <div class="page__header site-header">
+      <div class="site-header__logo">.logo</div>
+      <div class="site-header__box">text</div>
     </div>
     <!--  //site-header  -->
 
-    <div class="l-nav js-gnav-wrapper">
-      <button class="l-nav__btn sp-only js-gnav js-gnav-toggle"><span class="l-nav__btn-bar"></span><b class="screen-reader-text">メニュー</b></button>
+    <div class="nav js-gnav-wrapper">
+      <button class="nav__btn sp-only js-gnav js-gnav-toggle"><span class="nav__btn-bar"></span><b class="screen-reader-text">メニュー</b></button>
 
-      <nav class="l-nav__body js-gnav-target">
-        <ul class="l-nav__list">
-          <li class="l-nav__item"><a href="" class="js-hover">ホーム</a></li>
-          <li class="l-nav__item"><a href="" class="js-hover">ページ</a></li>
+      <nav class="nav__body js-gnav-target">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="" class="js-hover">ホーム</a></li>
+          <li class="nav__item"><a href="" class="js-hover">ページ</a></li>
         </ul>
       </nav>
     </div>
     <!--  breadcrumb  -->
-    <ol class="c-breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+    <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
       <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <a itemtype="http://schema.org/Thing" itemprop="item" href="/">
           <span itemprop="name">Books</span></a>
@@ -55,30 +55,30 @@
       </li>
     </ol>
     <!--  //breadcrumb  -->
-    <!--  wrapper  -->
-    <div class="l-page__content">
+    <!--  page__content  -->
+    <div class="page__content">
       <!--  main  -->
-      <main clasd="l-page__main">
+      <main clasd="page__main">
         <header class="page-title">
           <h1 class="str">サンプル HTML</h1>
         </header>
 
         <a href="#" target="_blank" rel="noopener">Blank link</a>
 
-        <section class="c-unit">
-          <header class="c-header-a">
-            <h2 class="str">ボタン</h2>
+        <section class="unit">
+          <header class="hdr-a">
+            <h2 class="hdr-a__str">ボタン</h2>
           </header>
           <div>
-            <a href="#" class="c-btn c-btn--default">anchor</a>
-            <button class="c-btn c-btn--default">button element button</button>
+            <a href="#" class="btn btn--default">anchor</a>
+            <button class="btn btn--default">button element button</button>
             <a href="tel:0000000000">0000000000</a>
           </div>
         </section>
 
-        <section class="c-unit">
-          <header class="c-header-a">
-            <h2 class="str">アイコン</h2>
+        <section class="unit">
+          <header class="hdr-a">
+            <h2 class="hdr-a__str">アイコン</h2>
           </header>
           <div>
             <i class="c-icon c-icon--arrow"></i>
@@ -86,9 +86,9 @@
           </div>
         </section>
 
-        <section class="c-unit">
-          <header class="c-header-a">
-            <h2 class="str">リスト</h2>
+        <section class="unit">
+          <header class="hdr-a">
+            <h2 class="hdr-a__str">リスト</h2>
           </header>
           <div>
             <ul class="list-disc">
@@ -98,9 +98,9 @@
           </div>
         </section>
 
-        <section class="c-unit">
-          <header class="c-header-a">
-            <h2 class="str">Float</h2>
+        <section class="unit">
+          <header class="hdr-a">
+            <h2 class="hdr-a__str">Float</h2>
           </header>
           <div>
             <div class="col">
@@ -112,8 +112,8 @@
               </div>
             </div>
             <section>
-              <header class="c-header-b">
-                <h3 class="str">.col.col--2</h3>
+              <header class="hdr-b">
+                <h3 class="hdr-b__str">.col.col--2</h3>
               </header>
               <div class="col col--2">
                 <div class="box set-mb-10" style="background: #CCC; height:100px;">
@@ -127,9 +127,9 @@
           </div>
         </section>
 
-        <section class="c-unit">
-          <header class="c-header-a">
-            <h2 class="str">Flex</h2>
+        <section class="unit">
+          <header class="hdr-a">
+            <h2 class="hdr-a__str">Flex</h2>
           </header>
           <div>
             <div class="flex flex--col-2">
@@ -137,7 +137,7 @@
               <div class="flex__item" style="background: #CCC; height:100px;"></div>
             </div>
             <section>
-              <header class="c-header-b">
+              <header class="hdr-b">
                 <h3 class="str">Responsive</h3>
               </header>
               <div class="flex flex--col-2 flex--reset-sp">
@@ -148,9 +148,9 @@
           </div>
         </section>
 
-        <section class="c-unit">
-          <header class="c-header-a">
-            <h2 class="str">テーブル</h2>
+        <section class="unit">
+          <header class="hdr-a">
+            <h2 class="?__str">テーブル</h2>
           </header>
           <div>
             <table class="table-a">
@@ -172,9 +172,9 @@
           </div>
         </section>
 
-        <section class="c-unit">
-          <header class="c-header-a">
-            <h2 class="str">レスポンシブ</h2>
+        <section class="unit">
+          <header class="hdr-a">
+            <h2 class="hdr-a__str">レスポンシブ</h2>
           </header>
           <div>
             <table class="table-a table-responsive">
@@ -196,7 +196,7 @@
           </div>
         </section>
 
-        <div class="c-unit">
+        <div class="unit">
           <div><input type="text" inputmode="numeric"></div>
           <div><input type="text" inputmode="tel"></div>
           <div><input type="text" inputmode="decimal"></div>
@@ -209,12 +209,12 @@
         <p class="sp-only set-mb-30">SPのみ表示</p>
       </main>
     </div>
-    <!--  //wrapper  -->
-    <div class="wrap-totop"><a href="#container" class="c-btn c-btn--totop"><span
+    <!--  //page__content  -->
+    <div class="wrap-totop"><a href="#container" class="btn btn--totop"><span
           class="screen-reader-text">ページ上部へ</span></a></div>
     <!--  site-footer  -->
-    <div class="l-footer">
-      <div class="l-footer__copy">&copy; copyright</div>
+    <div class="site-footer">
+      <div class="site-footer__copy">&copy; copyright</div>
     </div>
     <!--  //site-footer  -->
   </div>
