@@ -31,7 +31,7 @@ const compleScss = function (scss_filename) {
     sass.render({
       file: scss_filename,
       includePaths: ['src/scss/'],
-      outputStyle: "compressed", //nested, expanded, compact
+      outputStyle: "compressed", //compressed, nested, expanded, compact
       importer: globImporter()
     }, (error, result) => {
       if (error) {
