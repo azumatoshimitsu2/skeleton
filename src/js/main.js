@@ -21,11 +21,17 @@ import accessibleGnavToggle from './module/accessibleGnavToggle';
 
     $('a:not(".no-scroll")').click(function (e) {
       let href = $(this).attr('href');
-      if (href.match(/^#/) && $(href).length > 0) {
-        e.preventDefault();
-        $('html, body').animate({
-          scrollTop: $(href).offset().top
-        }, 'fast');
+      if (href.match(/#/)) {
+        if(!href.match(/^#/)) {
+          href = href.split("#");
+          href = "#" + href[1];
+        }
+        if($(href).length > 0) {
+          e.preventDefault();
+          $('html, body').animate({
+            scrollTop: $(href).offset().top
+          }, 'fast');
+        }
       }
     });
 
