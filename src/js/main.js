@@ -6,11 +6,6 @@ import accessibleGnavToggle from './module/accessibleGnavToggle';
 
   $(document).ready(function () {
 
-    if (!ua.Mobile) {
-      $('a[href^="tel:"]').addClass('reset-a-style').on('click', function (e) {
-        e.preventDefault();
-      });
-    }
     if (ua.Mobile || ua.Tablet) {
       $('.is-hover').removeClass('is-hover');
     }
@@ -36,7 +31,6 @@ import accessibleGnavToggle from './module/accessibleGnavToggle';
     });
 
     accessibleGnavToggle();
-
   });
 
 })(jQuery);

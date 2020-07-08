@@ -2,7 +2,7 @@ export default function () {
 
   //自身の位置までウィンドウスクロールされると、クラスを追加
 
-  $el = $('.scroll-point');
+  $el = $('.js-scroll-point');
 
   $el.each(function () {
     $(this).data({
@@ -15,7 +15,7 @@ export default function () {
 
     $el.each(function () {
       if (scTop >= $(this).data('top')) {
-        $(this).addClass('fire');
+        $(this).addClass('is-fire');
       }
     });
   });
