@@ -74,6 +74,14 @@ pre {
   white-space: pre-wrap;//IE11用
 }
 
+a[href^='tel:'] {
+
+  @include pc_style() {
+    display: inline-block;
+    pointer-events: none;
+  };
+}
+
 button,
 input[type="submit"],
 input[type="button"],
