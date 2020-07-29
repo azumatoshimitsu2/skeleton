@@ -40,11 +40,6 @@
   }
 
   @include sp_style() {
-    .sp-pad {
-      padding-right: $SP_PAD;
-      padding-left: $SP_PAD;
-    }
-
     .reset-sp-pos {
       position: static;
     }

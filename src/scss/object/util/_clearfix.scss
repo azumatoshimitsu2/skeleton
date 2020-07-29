@@ -1,0 +1,12 @@
+/******************************
+ * clearfix
+ ******************************/
+
+.cl {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+  }
+}
