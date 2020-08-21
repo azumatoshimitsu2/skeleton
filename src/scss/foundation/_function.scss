@@ -1,0 +1,5 @@
+// .selector { width: vw(123); }
+@function vw($pixel,$viewport:375) {
+	$num :round($pixel/$viewport * 1000);
+  @return #{$num / 10}vw;
+}
