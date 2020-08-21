@@ -2,7 +2,8 @@
  * util display
  ******************************/
 
- #container {
+#container {
+
   .screen-reader-text {
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);
@@ -15,6 +16,7 @@
     width: 1px;
     word-wrap: normal;
   }
+
   .sp-only-ib,
   .sp-only {
     display: none;
@@ -37,6 +39,7 @@
   }
 
   @include sp_style() {
+
     .pc-only {
       display: none;
     }
@@ -48,5 +51,7 @@
     .sp-only-ib {
       display: inline-block;
     }
-  }
+
+  };
+
 }

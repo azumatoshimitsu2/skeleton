@@ -3,6 +3,7 @@
  ******************************/
 
 .flex {
+  $this: &;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -23,23 +24,25 @@
   }
 
   &--col2 {
-    .flex__item {
+    #{$this}__item {
       width: 48%;
     }
   }
   &--col3 {
-    .flex__item {
+    #{$this}__item {
       width: 32%;
     }
   }
 
   @include sp_style() {
+
     &--reset-sp {
       display: block;
 
-      .flex__item {
+      #{$this}__item {
         width: auto;
       }
     }
-  }
+
+  };
 }

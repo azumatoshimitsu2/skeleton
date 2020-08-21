@@ -3,6 +3,7 @@
  ******************************/
 
 .site-footer {
+  $this: &;
   line-height: 1.4;
 
   @include sp_style() {

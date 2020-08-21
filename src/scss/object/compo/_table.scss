@@ -7,6 +7,7 @@
 }
 
 .table-a {
+
   tr {
     th, td {
     }
@@ -15,11 +16,14 @@
     td {
     }
   }
+
   @include sp_style() {
-  }
+  };
+
 }
 
 .c-table-responsive {
+
   @include sp_style() {
     display: block;
     thead,
@@ -30,5 +34,6 @@
       display: block;
       text-align: left;
     }
-  }
+  };
+
 }

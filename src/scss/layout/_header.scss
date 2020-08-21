@@ -3,17 +3,19 @@
  ******************************/
 
 .site-header {
+  $this: &;
 
   line-height: 1.4;
 
   @include pc_style() {
 
-    .site-header__logo {
+    #{$this}__logo {
       float: left;
     }
-    .site-header__box {
+    #{$this}__box {
       float: left;
     }
 
-  }
+  };
+
 }

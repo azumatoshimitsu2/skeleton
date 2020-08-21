@@ -23,6 +23,7 @@
     background: #000;
     width: 38px;
     height: 38px;
+
     &:before,
     &:after {
       @include object();
@@ -36,5 +37,6 @@
     &:after {
       transform: rotate(-135deg);
     }
+
   }
 }

@@ -3,6 +3,8 @@
  ******************************/
 
 .nav {
+  $this: &;
+
   @include pc_style() {
     &__list {
       display: table;
@@ -24,6 +26,10 @@
       background-color: #fff;
       width: 100%;
       height: 100vh;
+
+      &.is-active {
+        display: block;
+      }
     }
   }
 
@@ -45,7 +51,7 @@
       height: 15vw;
 
       &.is-active {
-        .l-nav__btn-bar {
+        #{$this}__btn-bar {
           background: transparent;
           &:before {
             transform: rotate(45deg);

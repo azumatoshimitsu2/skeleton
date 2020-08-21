@@ -40,8 +40,11 @@
   }
 
   @include sp_style() {
+
     .reset-sp-pos {
       position: static;
     }
-  }
+
+  };
+
 }
