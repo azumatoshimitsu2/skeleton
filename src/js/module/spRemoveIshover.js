@@ -7,7 +7,10 @@ export default function () {
   const ua = uajs();
 
   if (ua.Mobile || ua.Tablet) {
-    $('.is-hover').removeClass('is-hover');
+    const hoverItems = document.querySelectorAll('.is-hover');
+    hoverItems.forEach( (v, i) => {
+      v.classList.remove('is-hover');
+    });
   }
 
 }
