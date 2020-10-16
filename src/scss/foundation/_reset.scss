@@ -37,6 +37,19 @@ figure {
   padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+  @include sp_style() {
+    font-weight: $SP_BOLD;
+  };
+}
+
 ul {
   list-style: none;
 }
@@ -154,20 +167,9 @@ small {
   box-sizing: border-box;
 }
 
-$placeholder_color: #c1c1c1;
-
-::-webkit-input-placeholder {
-  color: $placeholder_color;
-}
-
-:-moz-placeholder {
-  color: $placeholder_color;
-}
-
-::-moz-placeholder {
-  color: $placeholder_color;
-}
-
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
 :-ms-input-placeholder {
-  color: $placeholder_color;
+  color: #c1c1c1;
 }
