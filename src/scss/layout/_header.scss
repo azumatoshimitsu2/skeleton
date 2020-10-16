@@ -4,16 +4,13 @@
 
 .site-header {
   $this: &;
-
   line-height: 1.4;
 
   @include pc_style() {
 
     #{$this}__logo {
-      float: left;
     }
     #{$this}__box {
-      float: left;
     }
 
   };
