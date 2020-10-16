@@ -2,49 +2,46 @@
  * util other
  ******************************/
 
-#container {
-
-  .set-pos-rel {
-    position: relative;
-  }
-
-  .set-pos-abs {
-    position: absolute;
-  }
-
-  .set-float-l {
-    float: left;
-  }
-
-  .set-float-r {
-    float: right;
-  }
-
-  .set-wbreak {
-    word-break: break-all;
-  }
-
-  .set-nowrap {
-    white-space: nowrap;
-  }
-
-  .set-ellipsis {
-    display: inline-block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .reset-a-style {
-    cursor: default;
-  }
-
-  @include sp_style() {
-
-    .reset-sp-pos {
-      position: static;
-    }
-
-  };
-
+.set-pos-rel {
+  position: relative;
 }
+
+.set-pos-abs {
+  position: absolute;
+}
+
+.set-float-l {
+  float: left;
+}
+
+.set-float-r {
+  float: right;
+}
+
+.set-wbreak {
+  word-break: break-all;
+}
+
+.set-nowrap {
+  white-space: nowrap;
+}
+
+.set-ellipsis {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reset-a-style {
+  cursor: default;
+}
+
+@include sp_style() {
+
+  .reset-sp-pos {
+    position: static;
+  }
+
+};
+

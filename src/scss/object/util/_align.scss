@@ -2,50 +2,47 @@
  * util align
  ******************************/
 
-#container {
+.set-block-c {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .set-block-c {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.set-align-c {
+  text-align: center;
+}
 
-  .set-align-c {
+.set-align-r {
+  text-align: right;
+}
+
+.set-align-l {
+  text-align: left;
+}
+
+.set-valign-t {
+  vertical-align: top;
+}
+
+.set-valign-m {
+  vertical-align: middle;
+}
+
+.set-valign-b {
+  vertical-align: bottom;
+}
+
+@include sp_style() {
+
+  .set-sp-align-c {
     text-align: center;
   }
 
-  .set-align-r {
+  .set-sp-align-r {
     text-align: right;
   }
 
-  .set-align-l {
+  .set-sp-align-l {
     text-align: left;
   }
 
-  .set-valign-t {
-    vertical-align: top;
-  }
-
-  .set-valign-m {
-    vertical-align: middle;
-  }
-
-  .set-valign-b {
-    vertical-align: bottom;
-  }
-
-  @include sp_style() {
-
-    .set-sp-align-c {
-      text-align: center;
-    }
-
-    .set-sp-align-r {
-      text-align: right;
-    }
-
-    .set-sp-align-l {
-      text-align: left;
-    }
-
-  };
-}
+};

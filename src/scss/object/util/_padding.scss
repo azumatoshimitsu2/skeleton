@@ -2,57 +2,46 @@
  * util padding
  ******************************/
 
-#container {
-  $arrn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
+$arrn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
 
-  @each $n in $arrn {
-    .set-pt-#{$n} {
-      padding-top: #{$n}px;
-    }
-
-    .set-pr-#{$n} {
-      padding-right: #{$n}px;
-    }
-
-    .set-pt-#{$n} {
-      padding-top: #{$n}px;
-    }
-
-    .set-pb-#{$n} {
-      padding-bottom: #{$n}px;
-    }
-
-    .set-pl-#{$n} {
-      padding-left: #{$n}px;
-    }
+@each $n in $arrn {
+  .set-pt-#{$n} {
+    padding-top: #{$n}px;
   }
-
-  .reset-pt {
-    padding-top: 0;
+  .set-pr-#{$n} {
+    padding-right: #{$n}px;
   }
-
-  .reset-pr {
-    padding-right: 0;
+  .set-pt-#{$n} {
+    padding-top: #{$n}px;
   }
-
-  .reset-pb {
-    padding-bottom: 0;
+  .set-pb-#{$n} {
+    padding-bottom: #{$n}px;
   }
-
-  .reset-pl {
-    padding-left: 0;
+  .set-pl-#{$n} {
+    padding-left: #{$n}px;
   }
+}
+.reset-pt {
+  padding-top: 0;
+}
+.reset-pr {
+  padding-right: 0;
+}
+.reset-pb {
+  padding-bottom: 0;
+}
+.reset-pl {
+  padding-left: 0;
+}
 
-  @include sp_style() {
+@include sp_style() {
 
-    .sp-pad {
-      padding-right: $SP_PAD;
-      padding-left: $SP_PAD;
-    }
-
-    $arrspn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
-
-    @each $n in $arrspn {
+  .sp-pad {
+    padding-right: $SP_PAD;
+    padding-left: $SP_PAD;
+  }
+  $arrspn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
+  @each $n in $arrspn {
       .set-sp-pt-#{$n} {
         padding-top: #{$n}vw;
       }
@@ -72,28 +61,22 @@
       .set-sp-pl-#{$n} {
         padding-left: #{$n}vw;
       }
-    }
+  }
+  .reset-sp-ml {
+    margin-left: 0;
+  }
+  .reset-sp-pt {
+    padding-top: 0;
+  }
+  .reset-sp-pr {
+    padding-right: 0;
+  }
+  .reset-sp-pb {
+    padding-bottom: 0;
+  }
+  .reset-sp-pl {
+    padding-left: 0;
+  }
 
-    .reset-sp-ml {
-      margin-left: 0;
-    }
+};
 
-    .reset-sp-pt {
-      padding-top: 0;
-    }
-
-    .reset-sp-pr {
-      padding-right: 0;
-    }
-
-    .reset-sp-pb {
-      padding-bottom: 0;
-    }
-
-    .reset-sp-pl {
-      padding-left: 0;
-    }
-
-  };
-
-}
