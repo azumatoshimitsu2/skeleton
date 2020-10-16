@@ -21,19 +21,3 @@
   };
 
 }
-
-.c-table-responsive {
-
-  @include sp_style() {
-    display: block;
-    thead,
-    tbody,
-    tr,
-    th,
-    td {
-      display: block;
-      text-align: left;
-    }
-  };
-
-}
