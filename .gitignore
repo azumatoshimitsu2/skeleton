@@ -7,3 +7,5 @@ node_modules/
 npm-debug.log
 local/
 *.map
+**/vendor
+dist/vendor-test.html
