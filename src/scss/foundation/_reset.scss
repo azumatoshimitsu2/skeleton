@@ -8,11 +8,16 @@ body {
   font-size: 10px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   line-height: 1.9;
   font-feature-settings: "palt" 1;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  font-size: 1.6rem;
 }
 
 body,
@@ -48,6 +53,14 @@ strong {
   @include sp_style() {
     font-weight: $SP_BOLD;
   };
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
 }
 
 ul {

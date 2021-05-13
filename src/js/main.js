@@ -1,16 +1,21 @@
-import accessibleGnavToggle from './module/accessibleGnavToggle';
-import addCurrentClass from './module/addCurrentClass';
-import smoothscroll from './module/jquery.smoothscroll';
+import addARIACurrent from './module/addARIACurrent';
 import pcViewportFixed from './module/pcViewportFixed';
-import spAddIshover from './module/spAddIshover';
+import fadeToggle from './module/fadeToggle';
+import slideToggle from './module/slideToggle';
+import pcAddIshover from './module/pcAddIshover';
+import scroll2AddClass from './module/scroll2AddClass';
+import accessibleGnavToggle from './module/accessibleGnavToggle';
 
-(function ($) {
-  $(document).ready(function () {
-    accessibleGnavToggle();
-    addCurrentClass();
-    spAddIshover();
+(function () {
+  window.addEventListener('DOMContentLoaded', function(e) {
+    addARIACurrent();
     pcViewportFixed();
-    smoothscroll();
+    fadeToggle();
+    slideToggle();
+    pcAddIshover();
+    scroll2AddClass();
   });
-})(jQuery);
+  
+  accessibleGnavToggle();
+})();
 

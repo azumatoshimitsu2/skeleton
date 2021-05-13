@@ -41,23 +41,45 @@
   }
 
   &__btn {
+    
     @include sp_style() {
-      position: fixed;
-      top: 0;
-      right: 0;
+      position: absolute;
+      background: transparent;
+      top: vw(40);
+      right: vw(30);
       z-index: 110;
-      background: #000;
-      width: 15vw;
-      height: 15vw;
+      width: vw(60);
+      height: vw(24);
+      margin-top: 1px;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        background: #3d3a35;
+        width: 100%;
+        height: 1px;
+        margin-top: -1px;
+        transition: opacity .25s ease;
+      }
 
       &.is-active {
+        &:before {
+          opacity: 0;
+        }
         #{$this}__btn-bar {
           background: transparent;
           &:before {
+            top: 50%;
             transform: rotate(45deg);
+            margin-top: -1vmin;
           }
           &:after {
+            top: 50%;
             transform: rotate(-45deg);
+            margin-top: -1vmin;
           }
         }
       }
@@ -65,30 +87,32 @@
       &-bar {
         display: block;
         position: absolute;
-        left: 32.5%;
-        top: 50%;
-        background: #fff;
-        width: 36%;
-        height: 2px;
-        transition: background .25s ease;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
 
         &:before,
         &:after {
-          @include object();
-          background: #fff;
+          position: absolute;
+          content: "";
+          display: block;
+          background: #3d3a35;
           width: 100%;
-          height: 2px;
+          height: 1px;
           transition: transform .25s ease;
         }
 
         &:before {
-          transform: translateY(-5px);
+          margin-top: -1px;
+          top: 0;
         }
 
         &:after {
-          transform: translateY(5px);
+          bottom: 0;
         }
       }
     }
+
   }
 }

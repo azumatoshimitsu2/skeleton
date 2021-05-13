@@ -6,7 +6,7 @@
   "scripts": {
     "nodesass": "node-sass src/scss/style.scss dist/assets/css/style.css -w --output-style compressed --source-map false",
     "sass": "node sass.js",
-    "rollup": "rollup --config rollup.config.js -w --no-strict --no-treeshake",
+    "rollup": "rollup --config rollup.config.js -w -m --no-strict --no-treeshake",
     "start": "npm run sass & npm run rollup"
   },
   "repository": {

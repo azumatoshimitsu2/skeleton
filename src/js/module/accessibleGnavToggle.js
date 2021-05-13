@@ -4,17 +4,27 @@ export default function() {
   //ハンバーガーメニュークリックと画面サイズに応じて aria 属性とクラス名の切り替え
   //メニューが開いている状態 aria-expanded: true, aria-hidden: false, .is-active 追加
   //メニューが閉じている状態 aria-expanded: false, aria-hidden: true, .is-active 削除
-  const elWrapper = document.querySelector('.js-gnav-wrapper');
-  const elBtns = document.querySelectorAll('.js-gnav');
-  const elTarget = document.querySelector('.js-gnav-target');
+  let elWrapper, elBtns, elTarget;
 
   function init() {
-    if(window.innerWidth > BREAK_POINTS.ltHbgMenu) {
+    elWrapper = document.querySelector('.js-gnav-wrapper');
+    elBtns = document.querySelectorAll('.js-gnav');
+    elTarget = document.querySelector('.js-gnav-target');
+
+    if(!elTarget) {
+      return 0;
+    }
+
+    if(window.innerWidth >= BREAK_POINTS.ltSP) {
       elTarget.classList.add('is-active');
     } else {
       elTarget.classList.remove('is-active');
     }
     toggleAtributes(elTarget);
+
+    [].forEach.call(elBtns, el => {
+      el.addEventListener('click', clickHandle)
+    })
   }
 
   function toggleAtributes(el) {
@@ -38,10 +48,6 @@ export default function() {
     elTarget.classList.toggle('is-active');
     toggleAtributes(elTarget);
   }
-
-  [].forEach.call(elBtns, el => {
-    el.addEventListener('click', clickHandle)
-  })
 
   window.addEventListener('DOMContentLoaded', init);
   window.addEventListener('resize', init);

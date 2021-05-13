@@ -11,7 +11,6 @@ export default function () {
     const hoverItems = document.querySelectorAll('a');
     hoverItems.forEach( (v, i) => {
       v.classList.add('is-hover');
-      console.log(v);
     });
   }
 

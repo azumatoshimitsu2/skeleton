@@ -13,197 +13,86 @@
   <meta property="og:description" content="">
   <title>title</title>
   <link href="./assets/css/style.css" rel="stylesheet" media="all">
-  <script src="./assets/js/lib/jquery.min.js"></script>
   <script src="./assets/js/bundle.js"></script>
 </head>
 
 <body>
   <div id="container" class="container fix-w">
-    <!--  site-header  -->
     <div class="page__header site-header">
-      <div class="site-header__logo">.logo</div>
-      <div class="site-header__box">text</div>
+      <div class="site-header__logo"></div>
+      <div class="site-header__box"></div>
     </div>
-    <!--  //site-header  -->
 
     <div class="nav js-gnav-wrapper">
-      <button class="nav__btn sp-only js-gnav js-gnav-toggle"><span class="nav__btn-bar"></span><b class="screen-reader-text">メニュー</b></button>
+      <button class="nav__btn sp-only js-gnav js-gnav-toggle">
+        <span class="nav__btn-bar"></span><b class="screen-reader-text">メニュー</b>
+      </button>
 
       <nav class="nav__body js-gnav-target">
         <ul class="nav__list">
-          <li class="nav__item"><a href="/dist/">ホーム</a></li>
+          <li class="nav__item"><a href="">ホーム</a></li>
           <li class="nav__item"><a href="">ページ</a></li>
         </ul>
       </nav>
     </div>
-    <!--  breadcrumb  -->
-    <div class="breadcrumb">
-      <a href="">HOME</a>
-      <span>Page</span>
-    </div>
-    <!--  //breadcrumb  -->
-    <!--  page__content  -->
     <div class="page__content">
-      <!--  main  -->
       <main clasd="page__main">
         <header class="page-title">
           <h1 class="str">サンプル HTML</h1>
         </header>
 
-        <a href="#" target="_blank" rel="noopener">Blank link</a>
-
-        <section class="unit">
-          <header class="hdr-a">
-            <h2 class="hdr-a__str">ボタン</h2>
-          </header>
-          <div>
-            <a href="#" class="btn btn--default">anchor</a>
-            <button class="btn btn--default">button element button</button>
-            <a href="tel:0000000000">0000000000</a>
-          </div>
-        </section>
-
-        <section class="unit">
-          <header class="hdr-a">
-            <h2 class="hdr-a__str">アイコン</h2>
-          </header>
-          <div>
-            <i class="icon icon--arrow"></i>
-            <i class="icon icon--carrow"></i>
-          </div>
-        </section>
-
-        <section class="unit">
-          <header class="hdr-a">
-            <h2 class="hdr-a__str">リスト</h2>
-          </header>
-          <div>
-            <ul class="list-disc">
-              <li>item</li>
-              <li>item</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="unit">
-          <header class="hdr-a">
-            <h2 class="hdr-a__str">Float</h2>
-          </header>
-          <div>
-            <div class="col">
-              <div class="set-float-l" style="background: #CCC; height:100px; width: 48%;">
-                <p>set-float-l</p>
-              </div>
-              <div class="set-float-r" style="background: #CCC; height:100px; width: 48%;">
-                <p>set-float-r</p>
-              </div>
+        <div>
+          <div class="js-slide-unit" style="border:1px solid #000; margin: 2em auto; width: 80%;">
+            <button class="js-slide-switch" style="font-size: 1.8rem; background:#eee; width:100%; padding:.5em;">
+              スライドトグルテスト
+              <i class="icon icon--toggle"></i>
+            </button>
+            <div class="js-slide-target set-hide" style="padding:.5em;">
+              スライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲット
             </div>
-            <section>
-              <header class="hdr-b">
-                <h3 class="hdr-b__str">.col.col--2</h3>
-              </header>
-              <div class="col col--2">
-                <div class="box set-mb-10" style="background: #CCC; height:100px;">
-                  <p>box</p>
-                </div>
-                <div class="box box--r set-mb-10" style="background: #CCC; height:100px;">
-                  <p>box</p>
-                </div>
-              </div>
-            </section>
           </div>
-        </section>
 
-        <section class="unit">
-          <header class="hdr-a">
-            <h2 class="hdr-a__str">Flex</h2>
-          </header>
-          <div>
-            <div class="flex flex--col-2">
-              <div class="flex__item" style="background: #CCC; height:100px;"></div>
-              <div class="flex__item" style="background: #CCC; height:100px;"></div>
+          <div class="js-fade-unit" style="margin: 2em auto; width: 80%;">
+            <button class="js-fade-switch" style="font-size: 1.8rem; background:#eee; width:100%; padding:.5em;">
+              フェードトグルテスト
+            </button>
+            <div class="js-fade-target set-hide" style="padding:.5em;">
+              フェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲット
             </div>
-            <section>
-              <header class="hdr-b">
-                <h3 class="str">Responsive</h3>
-              </header>
-              <div class="flex flex--col-2 flex--reset-sp">
-                <div class="flex__item" style="background: #CCC; height:100px;"></div>
-                <div class="flex__item" style="background: #CCC; height:100px;"></div>
-              </div>
-            </section>
           </div>
-        </section>
-
-        <section class="unit">
-          <header class="hdr-a">
-            <h2 class="?__str">テーブル</h2>
-          </header>
-          <div>
-            <table class="table-a">
-              <tbody>
-                <tr>
-                  <th>table head</th>
-                  <td>table data</td>
-                </tr>
-                <tr>
-                  <th>table head</th>
-                  <td>table data</td>
-                </tr>
-                <tr>
-                  <th>table head</th>
-                  <td>table data</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section class="unit">
-          <header class="hdr-a">
-            <h2 class="hdr-a__str">レスポンシブ</h2>
-          </header>
-          <div>
-            <table class="table-a table-responsive">
-              <tbody>
-                <tr>
-                  <th>table head</th>
-                  <td>table data</td>
-                </tr>
-                <tr>
-                  <th>table head</th>
-                  <td>table data</td>
-                </tr>
-                <tr>
-                  <th>table head</th>
-                  <td>table data</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <div class="unit">
-          <div><input type="text" inputmode="numeric"></div>
-          <div><input type="text" inputmode="tel"></div>
-          <div><input type="text" inputmode="decimal"></div>
-          <div><input type="text" inputmode="email"></div>
-          <div><input type="text" inputmode="url"></div>
-          <div><input type="text" inputmode="search"></div>
         </div>
 
-        <p class="pc-only set-mb-30">PCのみ表示</p>
-        <p class="sp-only set-mb-30">SPのみ表示</p>
+        <div style="margin:60vh 0 0 0;">
+          <h2>スクロールでクラス追加テスト</h2>
+
+          <style>
+            .u-tran {
+              color: #eee;
+              transition: .25s ease;
+            }
+            .u-tran.is-fire {
+              color: #f00;
+            }
+          </style>
+
+          <div class="js-scroll-point u-tran" style="margin-bottom: 10vh;">あいうえお</div>
+          <div class="js-scroll-points">
+            <li class="u-tran">かきくけこ</li>
+            <li class="u-tran">さしすせそ</li>
+            <li class="u-tran">たちつてと</li>
+            <li class="u-tran">なにぬねの</li>
+          </div>
+        </div>
+
+        <p class="pc-only">PCのみ表示</p>
+        <p class="sp-only">SPのみ表示</p>
+
       </main>
     </div>
-    <!--  //page__content  -->
-    <div class="wrap-totop"><a href="#container" class="btn btn--totop"><span
-          class="screen-reader-text">ページ上部へ</span></a></div>
-    <!--  site-footer  -->
+    <div class="wrap-totop"><a href="#container" class="btn btn--totop">ページ上部へ</a></div>
     <div class="site-footer">
-      <div class="site-footer__copy">&copy; copyright</div>
+      <small class="site-footer__copy">&copy; copyright</small>
     </div>
-    <!--  //site-footer  -->
   </div>
 </body>
 
