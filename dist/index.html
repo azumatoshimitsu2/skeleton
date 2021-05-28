@@ -62,6 +62,21 @@
           </div>
         </div>
 
+        <h2>wrap() テスト</h2>
+        <p id="wrap-target">この要素が div で囲まれる</p>
+        <p id="wrap-target2">この要素が div で囲まれる</p>
+        <style>
+          .myclass {
+            color: green;
+          }
+        </style>
+
+        <script type="module">
+          import wrap from '../src/js/module/wrap.js';
+          wrap('#wrap-target', 'div', {"class" : "myclass", "data-wrap" : "true"});
+          wrap('#wrap-target2', 'section');
+        </script>
+
         <div style="margin:60vh 0 0 0;">
           <h2>スクロールでクラス追加テスト</h2>
 
