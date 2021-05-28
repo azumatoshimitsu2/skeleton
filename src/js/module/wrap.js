@@ -1,4 +1,5 @@
 export default function (targetEl, wrapELName, wrapElAttrObj = {}) {
+	//targetEl を wrapELName で囲んで wrapElAttrObj で属性設定
 	const target = document.querySelector(targetEl);
 	const wrapEL = document.createElement(wrapELName);
 
