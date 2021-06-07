@@ -3,7 +3,7 @@ const sass = require('node-sass');
 const fs = require('fs-extra')
 const path = require('path');
 const chokidar = require('chokidar');
-var globImporter = require('node-sass-glob-importer');
+var nodeSassGlobbing = require('node-sass-globbing');
 
 const src = __dirname + '/src/scss/';
 const watcher = chokidar.watch(src, {
@@ -32,7 +32,7 @@ const compleScss = function (scss_filename) {
       file: scss_filename,
       includePaths: ['src/scss/'],
       outputStyle: "compressed", //compressed, nested, expanded, compact
-      importer: globImporter()
+      importer: nodeSassGlobbing
     }, (error, result) => {
       if (error) {
         console.log(error.status);
