@@ -40,7 +40,6 @@ export default function () {
 			welpos.forEach(function(v,i) {
 				var innerEl = v[0].querySelectorAll('.u-tran');
 				[].forEach.call(innerEl, function (el, i) {
-					var myCounter = 0;
 					setTimeout(function() {
 						el.classList.add('is-fire');
 					}, 200 * i)
@@ -57,7 +56,6 @@ export default function () {
 				if (scTop >= v[1]) {
 					var innerEl = v[0].querySelectorAll('.u-tran');
 					[].forEach.call(innerEl, function (el, i) {
-						var myCounter = 0;
 						setTimeout(function() {
 							el.classList.add('is-fire');
 						}, 180 * i)
