@@ -4,18 +4,13 @@ export default function() {
   //ハンバーガーメニュークリックと画面サイズに応じて aria 属性とクラス名の切り替え
   //メニューが開いている状態 aria-expanded: true, aria-hidden: false, .is-active 追加
   //メニューが閉じている状態 aria-expanded: false, aria-hidden: true, .is-active 削除
-  let elWrapper, elBtns, elTarget;
+  let elWrapper,elBtns,elTarget;
 
   function init() {
     elWrapper = document.querySelector('.js-gnav-wrapper');
-    elBtns = document.querySelectorAll('.js-gnav');
+    elBtns = document.querySelectorAll('.js-gnav-toggle');
     elTarget = document.querySelector('.js-gnav-target');
-
-    if(!elTarget) {
-      return 0;
-    }
-
-    if(window.innerWidth >= BREAK_POINTS.ltSP) {
+    if(window.innerWidth > BREAK_POINTS.ltHbgMenu) {
       elTarget.classList.add('is-active');
     } else {
       elTarget.classList.remove('is-active');

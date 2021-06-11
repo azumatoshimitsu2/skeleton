@@ -69,7 +69,7 @@
         &:before {
           opacity: 0;
         }
-        #{$this}__btn-bar {
+        #{$this}-bar {
           background: transparent;
           &:before {
             top: 50%;

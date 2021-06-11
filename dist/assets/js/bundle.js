@@ -9,83 +9,78 @@ function addARIACurrent () {
       }
     }
   });
-}var BREAK_POINTS = {
+}
+
+var BREAK_POINTS = {
   "ltSP": 767,
   "gtTAB": 768,
   "ltTAB": 992,
   "gtPC": 992
-};function pcViewportFixed () {
+};
+
+function pcViewportFixed () {
   // PC のブレイクポイント以上ではビューポート を固定
   if (window.innerWidth >= BREAK_POINTS.gtTAB) {
     document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=1200');
   }
-}function fadeToggle () {
-  //要素の透明度を変化させながら表示切り替え
-  var unitEl = document.querySelectorAll('.js-fade-unit');
+}
 
-  function fadeOut(el) {
-    el.style.opacity = 1;
+function fadeOut(el) {
+  el.style.opacity = 1;
 
-    (function fade() {
-      if ((el.style.opacity -= .06) < 0) {
-        el.style.display = "none";
-        el.classList.remove('is-processing');
-      } else {
-        el.classList.remove('is-show');
-        requestAnimationFrame(fade);
-      }
-    })();
+  (function fade() {
+    if ((el.style.opacity -= .06) < 0) {
+      el.style.display = "none";
+      el.classList.remove('is-processing');
+    } else {
+      el.classList.remove('is-show');
+      requestAnimationFrame(fade);
+    }
+  })();
+}
+
+;
+
+function fadeIn(el, display) {
+  el.style.opacity = 0;
+  el.style.display = display || "block";
+  setTimeout(function () {
+    if (!el.classList.contains('is-show')) {
+      el.classList.add('is-show');
+    }
+  }, 20);
+
+  (function fade() {
+    var val = parseFloat(el.style.opacity);
+
+    if (!((val += .06) > 1)) {
+      el.style.opacity = val;
+      requestAnimationFrame(fade);
+    } else {
+      el.classList.remove('is-processing');
+    }
+  })();
+}
+
+;
+
+var fadeToggle = function fadeToggle(elBtn, el) {
+  if (el.classList.contains('is-processing')) {
+    return;
+  } else {
+    el.classList.add('is-processing');
   }
 
-  ;
+  var compStyles = window.getComputedStyle(el);
 
-  function fadeIn(el, display) {
-    el.style.opacity = 0;
-    el.style.display = display || "block";
-    setTimeout(function () {
-      if (!el.classList.contains('is-show')) {
-        el.classList.add('is-show');
-      }
-    }, 20);
-
-    (function fade() {
-      var val = parseFloat(el.style.opacity);
-
-      if (!((val += .06) > 1)) {
-        el.style.opacity = val;
-        requestAnimationFrame(fade);
-      } else {
-        el.classList.remove('is-processing');
-      }
-    })();
+  if (compStyles.getPropertyValue('display') == 'none') {
+    fadeIn(el);
+  } else {
+    fadeOut(el);
   }
+};
 
-  ;
-
-  var fadeToggle = function fadeToggle(elBtn, el) {
-    if (el.classList.contains('is-processing')) {
-      return;
-    } else {
-      el.classList.add('is-processing');
-    }
-
-    var compStyles = window.getComputedStyle(el);
-
-    if (compStyles.getPropertyValue('display') == 'none') {
-      fadeIn(el);
-    } else {
-      fadeOut(el);
-    }
-  };
-
-  [].forEach.call(unitEl, function (el) {
-    var btn = el.querySelector('.js-fade-switch');
-    var elTarget = el.querySelector('.js-fade-target');
-    btn.addEventListener('click', function (e) {
-      fadeToggle(e.currentTarget, elTarget);
-    });
-  });
-}function slideToggle () {
+function slideToggle () {
   var unitEl = document.querySelectorAll('.js-slide-unit'); //要素の高さを変化させながら表示切り替え
 
   var slideUp = function slideUp(el, duration) {
@@ -173,14 +168,18 @@ function addARIACurrent () {
       slideToggle(e.currentTarget, elTarget);
     });
   });
-}function uajs () {
+}
+
+function uajs () {
   var u = window.navigator.userAgent.toLowerCase();
   return {
     Tablet: u.indexOf("windows") != -1 && u.indexOf("touch") != -1 || u.indexOf("ipad") != -1 || u.indexOf("android") != -1 && u.indexOf("mobile") == -1 || u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1 || u.indexOf("kindle") != -1 || u.indexOf("silk") != -1 || u.indexOf("playbook") != -1,
     Mobile: u.indexOf("windows") != -1 && u.indexOf("phone") != -1 || u.indexOf("iphone") != -1 || u.indexOf("ipod") != -1 || u.indexOf("android") != -1 && u.indexOf("mobile") != -1 || u.indexOf("firefox") != -1 && u.indexOf("mobile") != -1 || u.indexOf("blackberry") != -1
   };
 }
-;function pcAddIshover () {
+;
+
+function pcAddIshover () {
   // スマホタブレットでなければロールオーバーで使用する（二回タップ対策用）クラスを追加
   var ua = uajs();
 
@@ -190,7 +189,9 @@ function addARIACurrent () {
       v.classList.add('is-hover');
     });
   }
-}function trigger (element, event) {
+}
+
+function trigger (element, event) {
   if (document.createEvent) {
     var evt = document.createEvent("HTMLEvents");
     evt.initEvent(event, true, true);
@@ -199,7 +200,9 @@ function addARIACurrent () {
     var evt = document.createEventObject();
     return element.fireEvent("on" + event, evt);
   }
-}function scroll2AddClass () {
+}
+
+function scroll2AddClass () {
   //自身の位置までウィンドウスクロールされると、クラスを追加
   var wel = document.querySelectorAll('.js-scroll-points');
   var el = document.querySelectorAll('.js-scroll-point');
@@ -232,9 +235,8 @@ function addARIACurrent () {
         v[0].classList.add('is-fire');
       });
       welpos.forEach(function (v, i) {
-        var innerEl = v[0].querySelectorAll('.u-tran');
+        var innerEl = v[0].querySelectorAll('.js-tran');
         [].forEach.call(innerEl, function (el, i) {
-          var myCounter = 0;
           setTimeout(function () {
             el.classList.add('is-fire');
           }, 200 * i);
@@ -248,9 +250,8 @@ function addARIACurrent () {
       });
       welpos.forEach(function (v, i) {
         if (scTop >= v[1]) {
-          var innerEl = v[0].querySelectorAll('.u-tran');
+          var innerEl = v[0].querySelectorAll('.js-tran');
           [].forEach.call(innerEl, function (el, i) {
-            var myCounter = 0;
             setTimeout(function () {
               el.classList.add('is-fire');
             }, 180 * i);
@@ -261,7 +262,9 @@ function addARIACurrent () {
   });
   window.addEventListener('resize', setPos);
   trigger(window, 'scroll');
-}function accessibleGnavToggle () {
+}
+
+function accessibleGnavToggle () {
   //ハンバーガーメニュークリックと画面サイズに応じて aria 属性とクラス名の切り替え
   //メニューが開いている状態 aria-expanded: true, aria-hidden: false, .is-active 追加
   //メニューが閉じている状態 aria-expanded: false, aria-hidden: true, .is-active 削除
@@ -269,14 +272,10 @@ function addARIACurrent () {
 
   function init() {
     elWrapper = document.querySelector('.js-gnav-wrapper');
-    elBtns = document.querySelectorAll('.js-gnav');
+    elBtns = document.querySelectorAll('.js-gnav-toggle');
     elTarget = document.querySelector('.js-gnav-target');
 
-    if (!elTarget) {
-      return 0;
-    }
-
-    if (window.innerWidth >= BREAK_POINTS.ltSP) {
+    if (window.innerWidth > BREAK_POINTS.ltHbgMenu) {
       elTarget.classList.add('is-active');
     } else {
       elTarget.classList.remove('is-active');
@@ -312,14 +311,24 @@ function addARIACurrent () {
 
   window.addEventListener('DOMContentLoaded', init);
   window.addEventListener('resize', init);
-}(function () {
+}
+
+(function () {
   window.addEventListener('DOMContentLoaded', function (e) {
     addARIACurrent();
     pcViewportFixed();
-    fadeToggle();
     slideToggle();
     pcAddIshover();
     scroll2AddClass();
+    var unitEl = document.querySelectorAll('.js-fade-unit');
+    [].forEach.call(unitEl, function (el) {
+      var btn = el.querySelector('.js-fade-switch');
+      var elTarget = el.querySelector('.js-fade-target');
+      btn.addEventListener('click', function (e) {
+        fadeToggle(e.currentTarget, elTarget);
+      });
+    });
   });
   accessibleGnavToggle();
-})();//# sourceMappingURL=bundle.js.map
+})();
+//# sourceMappingURL=bundle.js.map

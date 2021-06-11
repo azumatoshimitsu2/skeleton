@@ -38,7 +38,7 @@ export default function () {
 				v[0].classList.add('is-fire');
 			});
 			welpos.forEach(function(v,i) {
-				var innerEl = v[0].querySelectorAll('.u-tran');
+				var innerEl = v[0].querySelectorAll('.js-tran');
 				[].forEach.call(innerEl, function (el, i) {
 					setTimeout(function() {
 						el.classList.add('is-fire');
@@ -54,7 +54,7 @@ export default function () {
 	
 			welpos.forEach(function(v,i) {
 				if (scTop >= v[1]) {
-					var innerEl = v[0].querySelectorAll('.u-tran');
+					var innerEl = v[0].querySelectorAll('.js-tran');
 					[].forEach.call(innerEl, function (el, i) {
 						setTimeout(function() {
 							el.classList.add('is-fire');
