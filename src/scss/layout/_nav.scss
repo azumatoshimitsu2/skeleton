@@ -1,3 +1,5 @@
+@use 'foundation/' as g;
+
 /******************************
  * nav
  ******************************/
@@ -5,7 +7,7 @@
 .nav {
   $this: &;
 
-  @include pc_style() {
+  @include g.pc_style() {
     &__list {
       display: table;
       width: 100%;
@@ -16,7 +18,7 @@
   }
 
   &__body {
-    @include sp_style() {
+    @include g.sp_style() {
       position: fixed;
       left: 0;
       top: 0;
@@ -34,7 +36,7 @@
   }
 
   &__item {
-    @include sp_style() {
+    @include g.sp_style() {
       padding: 2vw;
       border-bottom: 1px solid #000;
     }
@@ -42,7 +44,7 @@
 
   &__btn {
     
-    @include sp_style() {
+    @include g.sp_style() {
       position: absolute;
       background: transparent;
       top: vw(40);

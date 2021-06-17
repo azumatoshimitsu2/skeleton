@@ -1,3 +1,5 @@
+@use 'foundation/' as g;
+
 /******************************
  * reset
  ******************************/
@@ -50,8 +52,8 @@ h5,
 h6,
 b,
 strong {
-  @include sp_style() {
-    font-weight: $SP_BOLD;
+  @include g.sp_style() {
+    font-weight: g.$SP_BOLD;
   };
 }
 h1,
@@ -102,7 +104,7 @@ pre {
 
 a[href^='tel:'] {
 
-  @include pc_style() {
+  @include g.pc_style() {
     display: inline-block;
     pointer-events: none;
   };

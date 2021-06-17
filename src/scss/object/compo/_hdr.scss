@@ -1,3 +1,5 @@
+@use 'foundation/' as g;
+
 /******************************
  * hdr
  ******************************/
@@ -7,6 +9,6 @@
   &__ttl {
   }
 
-  @include sp_style() {
+  @include g.sp_style() {
   };
 }

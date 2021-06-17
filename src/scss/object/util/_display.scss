@@ -1,3 +1,5 @@
+@use 'foundation/' as g;
+
 /******************************
  * util display
  ******************************/
@@ -36,7 +38,7 @@
   display: inline-block;
 }
 
-@include sp_style() {
+@include g.sp_style() {
 
   .pc-only {
     display: none;

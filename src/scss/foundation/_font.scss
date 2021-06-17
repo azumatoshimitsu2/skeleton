@@ -1,3 +1,5 @@
+@use 'foundation/' as g;
+
 /******************************
  * base font
  ******************************/
@@ -8,12 +10,12 @@ body,
 input,
 select,
 textarea {
-  font-family: $SANS_SERIF;
-  font-size: $BASE_FS;
+  font-family: g.$SANS_SERIF;
+  font-size: g.$BASE_FS;
 }
 
 body {
-  font-size: $BASE_FS;
+  font-size: g.$BASE_FS;
 }
 
 h1,
@@ -25,9 +27,9 @@ h6 {
   line-height: 1.4;
 }
 
-@include sp_style() {
+@include g.sp_style() {
   body {
-    font-size: $SP_BASE_FS;
+    font-size: g.$SP_BASE_FS;
   }
 
   select,

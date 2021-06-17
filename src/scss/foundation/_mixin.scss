@@ -1,17 +1,13 @@
-@mixin object($pos: absolute) {
-  display: block;
-  content: "";
-  position: $pos;
-}
+@use 'foundation/global_var' as gvar;
 
 @mixin sp_style() {
-  @media screen and (max-width: $BREAK_POINT) {
+  @media screen and (max-width: gvar.$BREAK_POINT) {
     @content;
   }
 }
 
 @mixin pc_style() {
-  @media screen and (min-width: $BREAK_BEFORE) {
+  @media screen and (min-width: gvar.$BREAK_BEFORE) {
     @content;
   }
 }

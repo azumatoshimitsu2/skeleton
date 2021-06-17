@@ -1,3 +1,5 @@
+@use 'foundation/' as g;
+
 /******************************
  * icon
  ******************************/
@@ -26,7 +28,9 @@
     width: 16px;
     height: 16px;
     &:after {
-      @include object();
+      content: "";
+      display: block;
+      position: absolute;
       left: 4px;
       top: 5px;
       width: 4px;
@@ -51,7 +55,7 @@
       transform: translate(-50%,-100%) rotate(135deg);
       transition: transform .25s ease;
 
-      @include sp_style() {
+      @include g.sp_style() {
         width: vw(16);
         height: vw(16);
         border-width: 2px;

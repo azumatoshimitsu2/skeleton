@@ -1,3 +1,5 @@
+@use 'foundation/' as g;
+
 /******************************
  *btn
  ******************************/
@@ -26,7 +28,6 @@
 
     &:before,
     &:after {
-      @include object();
       background: #fff;
       width: 100%;
       height: 2px;
@@ -37,7 +38,6 @@
     &:after {
       transform: rotate(-135deg);
     }
-
 
   }
 }

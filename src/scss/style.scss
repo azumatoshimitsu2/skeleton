@@ -1,31 +1,35 @@
 @charset "utf-8";
 
 //基本的なスタイル
-@import "./foundation/_global_var";
-@import "./foundation/_mixin";
-@import "./foundation/_function";
-@import "./foundation/_reset";
-@import "./foundation/_font";
+@use "./foundation/_reset";
+@use "./foundation/_font";
 
 //ヘッダ、フッタ、共通ナビ、カラム構造
-@import "./layout/*";
+@use "./layout/footer";
+@use "./layout/header";
+@use "./layout/nav";
+@use "./layout/page";
 
 //プラグインや CMS 用のスタイル
-@import "./vendors/_cms";
+@use "./vendors/_cms";
 
 //恣意的な大きさの部品
-@import "./object/compo/*";
+@use "./object/compo/btn";
+@use "./object/compo/hdr";
+@use "./object/compo/icon";
+@use "./object/compo/list";
+@use "./object/compo/res-box";
+@use "./object/compo/table";
 
 //ページ固有のスタイル - サイトのトップ以外での使用は非推奨
-@import "./object/page/*";
+@use "./object/page/home";
 
 //汎用クラス
-@import "./object/util/_clearfix";
-@import "./object/util/_flex";
-@import "./object/util/_display";
-@import "./object/util/_margin";
-@import "./object/util/_padding";
-@import "./object/util/_width";
-@import "./object/util/_align";
-@import "./object/util/_fontsize";
-@import "./object/util/_util";
+@use "./object/util/_flex";
+@use "./object/util/_display";
+@use "./object/util/_margin";
+@use "./object/util/_padding";
+@use "./object/util/_width";
+@use "./object/util/_align";
+@use "./object/util/_fontsize";
+@use "./object/util/_util";

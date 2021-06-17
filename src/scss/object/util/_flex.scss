@@ -1,3 +1,5 @@
+@use 'foundation/' as g;
+
 /******************************
  * util flex
  ******************************/
@@ -34,7 +36,7 @@
     }
   }
 
-  @include sp_style() {
+  @include g.sp_style() {
 
     &--reset-sp {
       display: block;

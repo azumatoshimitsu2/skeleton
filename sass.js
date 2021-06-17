@@ -1,9 +1,8 @@
 const cmd = process.argv[2]
-const sass = require('node-sass');
+const sass = require('dart-sass');
 const fs = require('fs-extra')
 const path = require('path');
 const chokidar = require('chokidar');
-var nodeSassGlobbing = require('node-sass-globbing');
 
 const src = __dirname + '/src/scss/';
 const watcher = chokidar.watch(src, {
@@ -31,8 +30,7 @@ const compleScss = function (scss_filename) {
     sass.render({
       file: scss_filename,
       includePaths: ['src/scss/'],
-      outputStyle: "compressed", //compressed, nested, expanded, compact
-      importer: nodeSassGlobbing
+      outputStyle: "expanded", //compressed, nested, expanded, compact
     }, (error, result) => {
       if (error) {
         console.log(error.status);

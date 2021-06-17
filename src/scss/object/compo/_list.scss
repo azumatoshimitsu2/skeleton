@@ -1,3 +1,5 @@
+@use 'foundation/' as g;
+
 /******************************
  * list
  ******************************/
@@ -6,7 +8,7 @@
   list-style: disc;
   margin-left: 20px;
 
-  @include sp_style() {
+  @include g.sp_style() {
   };
 }
 
@@ -18,6 +20,6 @@
     vertical-align: top;
   }
 
-  @include sp_style() {
+  @include g.sp_style() {
   };
 }

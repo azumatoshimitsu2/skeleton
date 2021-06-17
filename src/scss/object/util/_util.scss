@@ -1,3 +1,5 @@
+@use 'foundation/' as g;
+
 /******************************
  * util other
  ******************************/
@@ -37,7 +39,7 @@
   cursor: default;
 }
 
-@include sp_style() {
+@include g.sp_style() {
 
   .reset-sp-pos {
     position: static;

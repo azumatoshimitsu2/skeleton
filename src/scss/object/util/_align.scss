@@ -1,3 +1,5 @@
+@use 'foundation/' as g;
+
 /******************************
  * util align
  ******************************/
@@ -31,7 +33,7 @@
   vertical-align: bottom;
 }
 
-@include sp_style() {
+@include g.sp_style() {
 
   .set-sp-align-c {
     text-align: center;
