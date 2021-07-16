@@ -191,15 +191,14 @@ function pcAddIshover () {
   }
 }
 
-function trigger (element, event) {
-  if (document.createEvent) {
-    var evt = document.createEvent("HTMLEvents");
-    evt.initEvent(event, true, true);
-    return element.dispatchEvent(evt);
-  } else {
-    var evt = document.createEventObject();
-    return element.fireEvent("on" + event, evt);
+function trigger (element, event, obj) {
+  if (!obj) {
+    obj = {};
   }
+
+  element.dispatchEvent(new CustomEvent(event, {
+    detail: obj
+  }));
 }
 
 function scroll2AddClass () {
