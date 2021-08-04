@@ -1,43 +1,27 @@
-function fadeOut(el){
+function fadeOut(el, d = 250){
+  el.style.display = 'inherit';
   el.style.opacity = 1;
+  el.style.transition = 'opacity '+d+'ms';
+  setTimeout(()=> {
+    el.style.opacity = 0;
+  }, 10);
 
-  (function fade() {
-    if ((el.style.opacity -= .06) < 0) {
-      el.style.display = "none";
-      el.classList.remove('is-processing');
-    } else {
-			el.classList.remove('is-show');
-      requestAnimationFrame(fade);
-    }
-  })();
-};
+  el.addEventListener('transitionend', (e) => {
+    el.style.display = 'none';
+  },
+  { once : true});
+}
 
-function fadeIn(el, display){
+function fadeIn(el, d = 250){
+  el.style.display = 'inherit';
   el.style.opacity = 0;
-  el.style.display = display || "block";
-	setTimeout(function() {
-		if(!el.classList.contains('is-show')) {
-			el.classList.add('is-show');
-		}
-	}, 20);
-
-  (function fade() {
-    var val = parseFloat(el.style.opacity);
-    if (!((val += .06) > 1)) {
-      el.style.opacity = val;
-      requestAnimationFrame(fade);
-    } else {
-		  el.classList.remove('is-processing');
-    }
-  })();
+  el.style.transition = 'opacity '+d+'ms';
+  setTimeout(()=> {
+    el.style.opacity = 1;
+  }, 10);
 };
 
 const fadeToggle = function(elBtn, el) {
-	if(el.classList.contains('is-processing')) {
-		return;
-	} else {
-		el.classList.add('is-processing');
-	}
   const compStyles = window.getComputedStyle(el);
   if(compStyles.getPropertyValue('display') == 'none') {
     fadeIn(el);
