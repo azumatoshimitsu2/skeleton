@@ -3,15 +3,10 @@
 /******************************
  * reset
  ******************************/
-
-html,
-body {
-  width: 100%;
-  font-size: 10px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 
 html {
-  scroll-behavior: smooth;
+  font-size: 10px;
 }
 
 body {
@@ -19,49 +14,20 @@ body {
   font-feature-settings: "palt" 1;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  font-size: 1.6rem;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-dl,
-dt,
-dd,
-form,
-fieldset,
-hr,
-sup,
-figure {
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dt, dd, form, fieldset, hr, sup, figure {
   margin: 0;
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-b,
-strong {
+h1, h2, h3, h4, h5, h6, b, strong {
   @include g.sp_style() {
     font-weight: g.$SP_BOLD;
   };
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
 }
 
@@ -84,17 +50,8 @@ td img {
   vertical-align: baseline;
 }
 
-iframe,
-fieldset {
+iframe, fieldset {
   border: 0;
-}
-
-textarea {
-  resize: none;
-}
-
-select {
-  height: 42px;
 }
 
 pre {
@@ -103,7 +60,6 @@ pre {
 }
 
 a[href^='tel:'] {
-
   @include g.pc_style() {
     display: inline-block;
     pointer-events: none;
@@ -121,24 +77,13 @@ input[type="reset"] {
   border-radius: 0;
 }
 
-input[type="tel"],
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea {
-  padding: 5px 8px;
-}
-
-input,
-select,
-button {
+select {
   line-height: 1.42857143;
   background: #fff;
 }
 
 label {
   display: inline-block;
-  cursor: pointer;
 }
 
 sup {
@@ -165,15 +110,6 @@ hr {
   border-top: 1px solid #ccc;
 }
 
-main,
-section,
-aside,
-figure,
-header,
-footer {
-  display: block;
-}
-
 small {
   font-size: 80%;
 }
@@ -184,4 +120,21 @@ small {
 
 ::placeholder {
   color: #c1c1c1;
+}
+
+/*font size*/
+
+body, input, select, textarea {
+  font-family: g.$SANS_SERIF;
+  font-size: g.$BASE_FS;
+}
+
+@include g.sp_style() {
+  body {
+    font-size: g.$SP_BASE_FS;
+  }
+
+  select, input, textarea {
+    font-size: 1.6rem;
+  }
 }

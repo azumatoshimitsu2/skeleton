@@ -1,14 +1,24 @@
 @use 'foundation/' as g;
 
 /******************************
- * hdr
+ * c-table
  ******************************/
 
-.hdr-a {
+.c-table-wrap {
+  overflow: auto;
+}
 
-  &__ttl {
+.c-table-a {
+  tr {
+    th, td {
+    }
+    th {
+    }
+    td {
+    }
   }
 
   @include g.sp_style() {
   };
+
 }

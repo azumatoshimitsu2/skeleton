@@ -7,19 +7,19 @@
 $arrn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
 
 @each $n in $arrn {
-  .set-pt-#{$n} {
+  .u-pt-#{$n} {
     padding-top: #{$n}px;
   }
-  .set-pr-#{$n} {
+  .u-pr-#{$n} {
     padding-right: #{$n}px;
   }
-  .set-pt-#{$n} {
+  .u-pt-#{$n} {
     padding-top: #{$n}px;
   }
-  .set-pb-#{$n} {
+  .u-pb-#{$n} {
     padding-bottom: #{$n}px;
   }
-  .set-pl-#{$n} {
+  .u-pl-#{$n} {
     padding-left: #{$n}px;
   }
 }
@@ -44,23 +44,23 @@ $arrn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
   }
   $arrspn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
   @each $n in $arrspn {
-      .set-sp-pt-#{$n} {
+      .u-sp-pt-#{$n} {
         padding-top: #{$n}vw;
       }
 
-      .set-sp-pr-#{$n} {
+      .u-sp-pr-#{$n} {
         padding-right: #{$n}vw;
       }
 
-      .set-sp-pt-#{$n} {
+      .u-sp-pt-#{$n} {
         padding-top: #{$n}vw;
       }
 
-      .set-sp-pb-#{$n} {
+      .u-sp-pb-#{$n} {
         padding-bottom: #{$n}vw;
       }
 
-      .set-sp-pl-#{$n} {
+      .u-sp-pl-#{$n} {
         padding-left: #{$n}vw;
       }
   }

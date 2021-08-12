@@ -4,31 +4,31 @@
  * util other
  ******************************/
 
-.set-pos-rel {
+.u-pos-rel {
   position: relative;
 }
 
-.set-pos-abs {
+.u-pos-abs {
   position: absolute;
 }
 
-.set-float-l {
+.u-float-l {
   float: left;
 }
 
-.set-float-r {
+.u-float-r {
   float: right;
 }
 
-.set-wbreak {
+.u-wbreak {
   word-break: break-all;
 }
 
-.set-nowrap {
+.u-nowrap {
   white-space: nowrap;
 }
 
-.set-ellipsis {
+.u-ellipsis {
   display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;

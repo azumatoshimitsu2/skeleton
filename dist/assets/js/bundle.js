@@ -26,51 +26,33 @@ function pcViewportFixed () {
 }
 
 function fadeOut(el) {
+  var d = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 250;
+  el.style.display = 'inherit';
   el.style.opacity = 1;
-
-  (function fade() {
-    if ((el.style.opacity -= .06) < 0) {
-      el.style.display = "none";
-      el.classList.remove('is-processing');
-    } else {
-      el.classList.remove('is-show');
-      requestAnimationFrame(fade);
-    }
-  })();
+  el.style.transition = 'opacity ' + d + 'ms';
+  setTimeout(function () {
+    el.style.opacity = 0;
+  }, 10);
+  el.addEventListener('transitionend', function (e) {
+    el.style.display = 'none';
+  }, {
+    once: true
+  });
 }
 
-;
-
-function fadeIn(el, display) {
+function fadeIn(el) {
+  var d = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 250;
+  el.style.display = 'inherit';
   el.style.opacity = 0;
-  el.style.display = display || "block";
+  el.style.transition = 'opacity ' + d + 'ms';
   setTimeout(function () {
-    if (!el.classList.contains('is-show')) {
-      el.classList.add('is-show');
-    }
-  }, 20);
-
-  (function fade() {
-    var val = parseFloat(el.style.opacity);
-
-    if (!((val += .06) > 1)) {
-      el.style.opacity = val;
-      requestAnimationFrame(fade);
-    } else {
-      el.classList.remove('is-processing');
-    }
-  })();
+    el.style.opacity = 1;
+  }, 10);
 }
 
 ;
 
 var fadeToggle = function fadeToggle(elBtn, el) {
-  if (el.classList.contains('is-processing')) {
-    return;
-  } else {
-    el.classList.add('is-processing');
-  }
-
   var compStyles = window.getComputedStyle(el);
 
   if (compStyles.getPropertyValue('display') == 'none') {
@@ -196,9 +178,19 @@ function trigger (element, event, obj) {
     obj = {};
   }
 
-  element.dispatchEvent(new CustomEvent(event, {
-    detail: obj
-  }));
+  if (typeof window.CustomEvent === "function") {
+    element.dispatchEvent(new CustomEvent(event, {
+      detail: obj
+    }));
+  } else {
+    params = {
+      bubbles: false,
+      cancelable: false,
+      detail: obj
+    };
+    var evt = document.createEvent('CustomEvent');
+    evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+  }
 }
 
 function scroll2AddClass () {
@@ -225,7 +217,6 @@ function scroll2AddClass () {
     });
   }
 
-  setPos();
   window.addEventListener('scroll', function (e) {
     var scTop = window.pageYOffset || document.documentElement.scrollTop; //一番下までスクロールされていれば全て処理
 
@@ -259,6 +250,7 @@ function scroll2AddClass () {
       });
     }
   });
+  setPos();
   window.addEventListener('resize', setPos);
   trigger(window, 'scroll');
 }

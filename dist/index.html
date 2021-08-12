@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="ja" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/WebPage">
+<html lang="ja" prefix="og: http://ogp.me/ns#">
 
 <head>
   <meta charset="utf-8">
@@ -18,25 +18,26 @@
 
 <body>
   <div id="container" class="container fix-w">
-    <header class="page__header site-header">
-      <div class="site-header__logo"></div>
-      <div class="site-header__box"></div>
+    <header class="l-header">
+      <div class="l-header__logo"></div>
+      <div class="l-header__box"></div>
     </header>
 
-    <div class="nav js-gnav-wrapper">
-      <button class="nav__btn sp-only js-gnav js-gnav-toggle">
-        <span class="nav__btn-bar"></span><b class="screen-reader-text">メニュー</b>
+    <div class="l-nav js-gnav-wrapper">
+      <button class="l-nav__btn sp-only js-gnav js-gnav-toggle">
+        <span class="l-nav__btn-bar"></span><b class="screen-reader-text">メニュー</b>
       </button>
 
-      <nav class="nav__body js-gnav-target">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="">ホーム</a></li>
-          <li class="nav__item"><a href="">ページ</a></li>
+      <nav class="l-nav__body js-gnav-target">
+        <ul class="l-nav__list">
+          <li class="l-nav__item"><a href="">ホーム</a></li>
+          <li class="l-nav__item"><a href="">ページ</a></li>
         </ul>
       </nav>
     </div>
-    <div class="page__content">
-      <main clasd="page__main">
+
+    <div class="l-content">
+      <main class="l-main">
         <header class="page-title">
           <h1 class="str">サンプル HTML</h1>
         </header>
@@ -45,9 +46,9 @@
           <div class="js-slide-unit" style="border:1px solid #000; margin: 2em auto; width: 80%;">
             <button class="js-slide-switch" style="font-size: 1.8rem; background:#eee; width:100%; padding:.5em;">
               スライドトグルテスト
-              <i class="icon icon--toggle"></i>
+              <i class="c-icon c-icon--toggle"></i>
             </button>
-            <div class="js-slide-target set-hide" style="padding:.5em;">
+            <div class="js-slide-target u-hide" style="padding:.5em;">
               スライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲット
             </div>
           </div>
@@ -56,7 +57,7 @@
             <button class="js-fade-switch" style="font-size: 1.8rem; background:#eee; width:100%; padding:.5em;">
               フェードトグルテスト
             </button>
-            <div class="js-fade-target set-hide" style="padding:.5em;">
+            <div class="js-fade-target u-hide" style="padding:.5em;">
               フェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲット
             </div>
           </div>
@@ -104,9 +105,9 @@
 
       </main>
     </div>
-    <div class="wrap-totop"><a href="#container" class="btn btn--totop">ページ上部へ</a></div>
-    <footer class="site-footer">
-      <small class="site-footer__copy">&copy; copyright</small>
+    <div class="wrap-totop"><a href="#container" class="c-btn c-btn--totop">ページ上部へ</a></div>
+    <footer class="l-footer">
+      <small class="l-footer__copy">&copy; copyright</small>
     </footer>
   </div>
 </body>

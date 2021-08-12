@@ -7,19 +7,19 @@
 $arrn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
 
 @each $n in $arrn {
-  .set-mt-#{$n} {
+  .u-mt-#{$n} {
     margin-top: #{$n}px;
   }
-  .set-mr-#{$n} {
+  .u-mr-#{$n} {
     margin-right: #{$n}px;
   }
-  .set-mt-#{$n} {
+  .u-mt-#{$n} {
     margin-top: #{$n}px;
   }
-  .set-mb-#{$n} {
+  .u-mb-#{$n} {
     margin-bottom: #{$n}px;
   }
-  .set-ml-#{$n} {
+  .u-ml-#{$n} {
     margin-left: #{$n}px;
   }
 }
@@ -45,19 +45,19 @@ $arrn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
   $arrspn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
 
   @each $n in $arrspn {
-    .set-sp-mt-#{$n} {
+    .u-sp-mt-#{$n} {
       margin-top: #{$n}vw;
     }
-    .set-sp-mr-#{$n} {
+    .u-sp-mr-#{$n} {
       margin-right: #{$n}vw;
     }
-    .set-sp-mt-#{$n} {
+    .u-sp-mt-#{$n} {
       margin-top: #{$n}vw;
     }
-    .set-sp-mb-#{$n} {
+    .u-sp-mb-#{$n} {
       margin-bottom: #{$n}vw;
     }
-    .set-sp-ml-#{$n} {
+    .u-sp-ml-#{$n} {
       margin-left: #{$n}vw;
     }
   }

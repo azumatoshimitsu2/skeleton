@@ -3,7 +3,7 @@
  ******************************/
 
 @for $i from 11 through 30 {
-  .set-fs-#{$i} {
+  .u-fs-#{$i} {
     font-size: $i * 0.1rem;
   }
 }

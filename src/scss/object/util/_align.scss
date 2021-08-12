@@ -4,46 +4,46 @@
  * util align
  ******************************/
 
-.set-block-c {
+.u-block-c {
   margin-left: auto;
   margin-right: auto;
 }
 
-.set-align-c {
+.u-align-c {
   text-align: center;
 }
 
-.set-align-r {
+.u-align-r {
   text-align: right;
 }
 
-.set-align-l {
+.u-align-l {
   text-align: left;
 }
 
-.set-valign-t {
+.u-valign-t {
   vertical-align: top;
 }
 
-.set-valign-m {
+.u-valign-m {
   vertical-align: middle;
 }
 
-.set-valign-b {
+.u-valign-b {
   vertical-align: bottom;
 }
 
 @include g.sp_style() {
 
-  .set-sp-align-c {
+  .u-sp-align-c {
     text-align: center;
   }
 
-  .set-sp-align-r {
+  .u-sp-align-r {
     text-align: right;
   }
 
-  .set-sp-align-l {
+  .u-sp-align-l {
     text-align: left;
   }
 

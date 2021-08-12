@@ -3,7 +3,7 @@ import trigger from './customEvent';
 
 export default function () {
   //自身の位置までウィンドウスクロールされると、クラスを追加
-	
+
 	const wel = document.querySelectorAll('.js-scroll-points');
 	const el = document.querySelectorAll('.js-scroll-point');
 	let elpos = [];
@@ -27,8 +27,6 @@ export default function () {
 		});
 	}
 
-	setPos();
-
 	window.addEventListener('scroll', function(e) {
 		const scTop = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -51,7 +49,7 @@ export default function () {
 					v[0].classList.add('is-fire');
 				}
 			});
-	
+
 			welpos.forEach(function(v,i) {
 				if (scTop >= v[1]) {
 					var innerEl = v[0].querySelectorAll('.js-tran');
@@ -65,6 +63,7 @@ export default function () {
 		}
 	});
 
+	setPos();
 	window.addEventListener('resize', setPos);
 	trigger(window, 'scroll');
 

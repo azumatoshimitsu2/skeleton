@@ -2,26 +2,24 @@
 
 //基本的なスタイル
 @use "./foundation/_reset";
-@use "./foundation/_font";
 
-//ヘッダ、フッタ、共通ナビ、カラム構造
+//ヘッダ、フッタ、共通ナビ
 @use "./layout/footer";
 @use "./layout/header";
 @use "./layout/nav";
-@use "./layout/page";
 
 //プラグインや CMS 用のスタイル
 @use "./vendors/_cms";
 
-//恣意的な大きさの部品
-@use "./object/compo/btn";
-@use "./object/compo/hdr";
-@use "./object/compo/icon";
-@use "./object/compo/list";
-@use "./object/compo/res-box";
-@use "./object/compo/table";
+//コンポーネント
+@use "./object/component/btn";
+@use "./object/component/hdr";
+@use "./object/component/icon";
+@use "./object/component/list";
+@use "./object/component/res-box";
+@use "./object/component/table";
 
-//ページ固有のスタイル - サイトのトップ以外での使用は非推奨
+//ページ固有のスタイル
 @use "./object/page/home";
 
 //汎用クラス
