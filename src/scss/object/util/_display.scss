@@ -17,39 +17,25 @@
   word-wrap: normal;
 }
 
-.sp-only-ib,
-.sp-only {
-  display: none;
-}
-
 .u-hide {
   display: none;
-}
-
-.u-disp-table {
-  display: table;
-}
-
-.u-disp-cell {
-  display: table-cell;
 }
 
 .u-disp-ib {
   display: inline-block;
 }
 
+@include g.pc_style() {
+
+ .u-sp-only {
+   display: none;
+ }
+
+};
 @include g.sp_style() {
 
-  .pc-only {
+  .u-pc-only {
     display: none;
-  }
-
-  .sp-only {
-    display: block;
-  }
-
-  .sp-only-ib {
-    display: inline-block;
   }
 
 };

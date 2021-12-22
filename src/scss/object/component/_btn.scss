@@ -24,9 +24,15 @@
 
     &:before,
     &:after {
+      content: "";
+      display: block;
       background: #fff;
-      width: 100%;
+      width: 70%;
       height: 2px;
+      position: absolute;
+      left: 15%;
+      top: 50%;
+      margin-top: -1px;
     }
     &:before {
       transform: rotate(135deg);
@@ -34,6 +40,5 @@
     &:after {
       transform: rotate(-135deg);
     }
-
   }
 }

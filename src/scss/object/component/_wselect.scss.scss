@@ -1,0 +1,30 @@
+.c-wselect {
+		overflow: hidden;
+        position: relative;
+        border-radius: 15px;
+
+        select {
+            width: 100%;
+			background: transparent;
+            -webkit-appearance: none;
+			background: #fff;
+            appearance: none;
+            padding: 5px 50px 5px 20px;
+            height: 48px;
+            border-radius: 5px;
+			border: 0;
+			font-size: 1.4rem;
+        }
+        &::after {
+            position: absolute;
+            right: 22px;
+            top: 50%;
+            content: "";
+            display: block;
+			width: 11px;
+			height: 11px;
+			border-top: 3px solid #000;
+			border-right: 3px solid #000;
+			transform: rotate(135deg) translateX(-80%);
+        }
+    }

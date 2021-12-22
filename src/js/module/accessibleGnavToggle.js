@@ -10,7 +10,7 @@ export default function() {
     elWrapper = document.querySelector('.js-gnav-wrapper');
     elBtns = document.querySelectorAll('.js-gnav-toggle');
     elTarget = document.querySelector('.js-gnav-target');
-    if(window.innerWidth > BREAK_POINTS.ltHbgMenu) {
+    if(window.innerWidth > BREAK_POINTS.ltSP) {
       elTarget.classList.add('is-active');
     } else {
       elTarget.classList.remove('is-active');

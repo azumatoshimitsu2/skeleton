@@ -12,6 +12,7 @@ body {
   font-feature-settings: "palt" 1;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  font-size: 1.6rem;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dt, dd, form, fieldset, hr, sup, figure {
@@ -42,6 +43,7 @@ img {
   vertical-align: top;
   max-width: 100%;
   height: auto;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 td img {
@@ -69,10 +71,7 @@ input[type=submit],
 input[type=button],
 input[type=reset] {
   -webkit-appearance: none;
-  background-color: transparent;
   cursor: pointer;
-  border: 0;
-  border-radius: 0;
 }
 
 select {
@@ -181,69 +180,58 @@ body, input, select, textarea {
     border-bottom: 1px solid #000;
   }
 }
+.l-nav__btn {
+  background: transparent;
+  border: 0;
+}
+.l-nav__btn svg {
+  vertical-align: top;
+}
+.l-nav__btn #is-line-1,
+.l-nav__btn #is-line-4 {
+  transform-origin: center;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+}
+.l-nav__btn #is-line-2,
+.l-nav__btn #is-line-3 {
+  transform-origin: center;
+  transition-property: transform;
+  transition-duration: 0.2s;
+}
+.l-nav__btn.is-active {
+  transform: translateX(0);
+}
+.l-nav__btn.is-active #is-line-1,
+.l-nav__btn.is-active #is-line-4 {
+  opacity: 0;
+}
+.l-nav__btn.is-active #is-line-2 {
+  transform: rotate(45deg);
+}
+.l-nav__btn.is-active #is-line-3 {
+  transform: rotate(-45deg);
+}
+@media screen and (min-width: 768px) {
+  .l-nav__btn {
+    display: none;
+  }
+}
 @media screen and (max-width: 767px) {
   .l-nav__btn {
     position: absolute;
     background: transparent;
-    top: vw(40);
-    right: vw(30);
+    top: 10.7vw;
+    right: 8vw;
     z-index: 110;
-    width: vw(60);
-    height: vw(24);
-    margin-top: 1px;
+    width: 8vw;
   }
-  .l-nav__btn:before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    background: #3d3a35;
-    width: 100%;
-    height: 1px;
-    margin-top: -1px;
-    transition: opacity 0.25s ease;
-  }
-  .l-nav__btn.is-active:before {
-    opacity: 0;
-  }
-  .l-nav__btn.is-active .l-nav-bar {
-    background: transparent;
-  }
-  .l-nav__btn.is-active .l-nav-bar:before {
-    top: 50%;
-    transform: rotate(45deg);
-    margin-top: -1vmin;
-  }
-  .l-nav__btn.is-active .l-nav-bar:after {
-    top: 50%;
-    transform: rotate(-45deg);
-    margin-top: -1vmin;
-  }
-  .l-nav__btn-bar {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .l-nav__btn-bar:before, .l-nav__btn-bar:after {
-    position: absolute;
-    content: "";
-    display: block;
-    background: #3d3a35;
-    width: 100%;
-    height: 1px;
-    transition: transform 0.25s ease;
-  }
-  .l-nav__btn-bar:before {
-    margin-top: -1px;
-    top: 0;
-  }
-  .l-nav__btn-bar:after {
-    bottom: 0;
-  }
+}
+.l-nav__line {
+  fill: none;
+  stroke: #000;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
 }
 
 body .aligncenter {
@@ -280,9 +268,15 @@ body .alignleft {
   height: 38px;
 }
 .c-btn--close:before, .c-btn--close:after {
+  content: "";
+  display: block;
   background: #fff;
-  width: 100%;
+  width: 70%;
   height: 2px;
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  margin-top: -1px;
 }
 .c-btn--close:before {
   transform: rotate(135deg);
@@ -355,6 +349,29 @@ body .alignleft {
 .c-icon--toggle.is::after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
+.c-icon--toggle2 {
+  background: #000;
+  width: 38px;
+  height: 38px;
+}
+.c-icon--toggle2:before, .c-icon--toggle2:after {
+  content: "";
+  display: block;
+  background: #fff;
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  margin-top: -1px;
+}
+.c-icon--toggle2:after {
+  transform: rotate(-90deg);
+  transition: 0.2s transform;
+}
+.c-icon--toggle2.is:after {
+  transform: rotate(0);
+}
 
 /******************************
  * c-list
@@ -392,8 +409,132 @@ body .alignleft {
 }
 
 /******************************
- * p-home
- ******************************/
+ * c-wradio
+ *****************************/
+.c-wradio > span {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  line-height: 1.4;
+}
+@media screen and (max-width: 767px) {
+  .c-wradio > span {
+    padding-left: 7vw;
+  }
+}
+.c-wradio > span label {
+  padding-left: 26px;
+}
+.c-wradio > span input[type=radio] {
+  position: absolute;
+  left: -100px;
+}
+.c-wradio > span input[type=radio] ~ span:before {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 0;
+  content: "";
+  background: #fff;
+  border: 1px solid #cecfcf;
+  border-radius: 100px;
+  width: 18px;
+  height: 18px;
+}
+@media screen and (max-width: 767px) {
+  .c-wradio > span input[type=radio] ~ span:before {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+.c-wradio > span input[type=radio]:checked ~ span:before {
+  background: #000;
+  border-color: #000;
+}
+.c-wradio > span input[type=radio]:checked ~ span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 100px;
+}
+@media screen and (max-width: 767px) {
+  .c-wradio > span input[type=radio]:checked ~ span:after {
+    top: 3.2vw;
+    left: 1.4vw;
+    width: 1.8vw;
+    height: 3vw;
+  }
+}
+
+/******************************
+ * c-wcheckbox
+ *****************************/
+.c-wcheckbox span {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  padding-left: 26px;
+  line-height: 1.4;
+  min-height: 18px;
+}
+@media screen and (max-width: 767px) {
+  .c-wcheckbox span {
+    padding-left: 7vw;
+    min-height: 5vw;
+  }
+}
+.c-wcheckbox span input[type=checkbox] {
+  position: absolute;
+  left: -100px;
+}
+.c-wcheckbox span input[type=checkbox] ~ span:before {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 0;
+  content: "";
+  background: #fff;
+  border: 1px solid #cecfcf;
+  border-radius: 4px;
+  width: 18px;
+  height: 18px;
+}
+@media screen and (max-width: 767px) {
+  .c-wcheckbox span input[type=checkbox] ~ span:before {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+.c-wcheckbox span input[type=checkbox]:checked ~ span:before {
+  background: #000;
+  border-color: #000;
+}
+.c-wcheckbox span input[type=checkbox]:checked ~ span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  width: 5px;
+  height: 10px;
+  transform: rotate(40deg) translate(-50%, -50%);
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+@media screen and (max-width: 767px) {
+  .c-wcheckbox span input[type=checkbox]:checked ~ span:after {
+    top: 3.2vw;
+    left: 1.4vw;
+    width: 1.8vw;
+    height: 3vw;
+  }
+}
+
 /******************************
  * util flex
  ******************************/
@@ -445,38 +586,22 @@ body .alignleft {
   word-wrap: normal;
 }
 
-.sp-only-ib,
-.sp-only {
-  display: none;
-}
-
 .u-hide {
   display: none;
-}
-
-.u-disp-table {
-  display: table;
-}
-
-.u-disp-cell {
-  display: table-cell;
 }
 
 .u-disp-ib {
   display: inline-block;
 }
 
-@media screen and (max-width: 767px) {
-  .pc-only {
+@media screen and (min-width: 768px) {
+  .u-sp-only {
     display: none;
   }
-
-  .sp-only {
-    display: block;
-  }
-
-  .sp-only-ib {
-    display: inline-block;
+}
+@media screen and (max-width: 767px) {
+  .u-pc-only {
+    display: none;
   }
 }
 /******************************
@@ -1238,24 +1363,24 @@ body .alignleft {
   padding-left: 100px;
 }
 
-.reset-pt {
+.u-reset-pt {
   padding-top: 0;
 }
 
-.reset-pr {
+.u-reset-pr {
   padding-right: 0;
 }
 
-.reset-pb {
+.u-reset-pb {
   padding-bottom: 0;
 }
 
-.reset-pl {
+.u-reset-pl {
   padding-left: 0;
 }
 
 @media screen and (max-width: 767px) {
-  .sp-pad {
+  .u-sp-pad {
     padding-right: 4vw;
     padding-left: 4vw;
   }
@@ -1500,35 +1625,35 @@ body .alignleft {
     padding-left: 100vw;
   }
 
-  .reset-sp-ml {
+  .u-reset-sp-ml {
     margin-left: 0;
   }
 
-  .reset-sp-pt {
+  .u-reset-sp-pt {
     padding-top: 0;
   }
 
-  .reset-sp-pr {
+  .u-reset-sp-pr {
     padding-right: 0;
   }
 
-  .reset-sp-pb {
+  .u-reset-sp-pb {
     padding-bottom: 0;
   }
 
-  .reset-sp-pl {
+  .u-reset-sp-pl {
     padding-left: 0;
   }
 }
 /******************************
  * util width
  ******************************/
-.fix-w {
+.u-fix-w {
   margin-right: auto;
   margin-left: auto;
 }
 @media screen and (min-width: 768px) {
-  .fix-w {
+  .u-fix-w {
     width: 1000px;
   }
 }

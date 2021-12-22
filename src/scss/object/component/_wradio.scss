@@ -1,0 +1,72 @@
+@use 'foundation/' as g;
+
+/******************************
+ * c-wradio
+ *****************************/
+
+.c-wradio {
+
+  > span {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    line-height: 1.4;
+
+    @include g.sp_style() {
+      padding-left: 7vw;
+    };
+    
+    label {
+        padding-left: 26px;
+    }
+
+    input[type="radio"] {
+      position: absolute;
+      left: -100px;
+
+      ~ span:before {
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        top: 0;
+        content: "";
+        background: #fff;
+        border: 1px solid #cecfcf;
+        border-radius: 100px;
+        width: 18px;
+        height: 18px;
+
+        @include g.sp_style() {
+          width: 5vw;
+          height: 5vw;
+        };
+      }
+
+      &:checked ~ span {
+        &:before {
+          background: g.$ACCENT;
+          border-color: g.$ACCENT;
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 5px;
+          top: 5px;
+          width: 10px;
+          height: 10px;
+          background: #fff;
+          border-radius: 100px;
+          @include g.sp_style() {
+            top: 3.2vw;
+            left: 1.4vw;
+            width: 1.8vw;
+            height: 3vw;
+          };
+        }
+      }
+    }
+  }
+
+}

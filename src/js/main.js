@@ -1,5 +1,4 @@
 import addARIACurrent from './module/addARIACurrent';
-import pcViewportFixed from './module/pcViewportFixed';
 import {fadeToggle} from './module/fade';
 import slideToggle from './module/slideToggle';
 import pcAddIshover from './module/pcAddIshover';
@@ -9,7 +8,6 @@ import accessibleGnavToggle from './module/accessibleGnavToggle';
 (function () {
   window.addEventListener('DOMContentLoaded', function(e) {
     addARIACurrent();
-    pcViewportFixed();
     slideToggle();
     pcAddIshover();
     scroll2AddClass();
@@ -23,7 +21,7 @@ import accessibleGnavToggle from './module/accessibleGnavToggle';
       })
     });
   });
-  
+
   accessibleGnavToggle();
 })();
 

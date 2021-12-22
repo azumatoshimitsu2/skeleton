@@ -1,0 +1,75 @@
+@use 'foundation/' as g;
+
+/******************************
+ * c-wcheckbox
+ *****************************/
+
+$wcheckboxSize : 18px;
+$wcheckboxSizeSP : 5vw;
+
+.c-wcheckbox {
+
+	span {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    padding-left: $wcheckboxSize + 8px;
+    line-height: 1.4;
+    min-height: $wcheckboxSize;
+
+    @include g.sp_style() {
+      padding-left: $wcheckboxSizeSP + 2vw;
+      min-height: $wcheckboxSizeSP;
+    };
+
+    input[type="checkbox"] {
+      position: absolute;
+      left: -100px;
+
+      ~ span:before {
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        top: 0;
+        content: "";
+        background: #fff;
+        border: 1px solid #cecfcf;
+        border-radius: 4px;
+        width: $wcheckboxSize;
+        height: $wcheckboxSize;
+
+        @include g.sp_style() {
+          width: $wcheckboxSizeSP;
+          height: $wcheckboxSizeSP;
+        };
+      }
+
+      &:checked ~ span {
+        &:before {
+          background: g.$ACCENT;
+          border-color: g.$ACCENT;
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 9px;
+          left: 5px;
+          width: 5px;
+          height: 10px;
+          transform: rotate(40deg) translate(-50%, -50%);
+          border-bottom: 3px solid #fff;
+          border-right: 3px solid #fff;
+          @include g.sp_style() {
+            top: 3.2vw;
+            left: 1.4vw;
+            width: 1.8vw;
+            height: 3vw;
+          };
+        }
+      }
+    }
+	}
+
+}

@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <div id="container" class="container fix-w">
+  <div id="container" class="l-container u-fix-w">
     <header class="l-header">
       <div class="l-header__logo"></div>
       <div class="l-header__box"></div>
@@ -25,7 +25,13 @@
 
     <div class="l-nav js-gnav-wrapper">
       <button class="l-nav__btn sp-only js-gnav js-gnav-toggle">
-        <span class="l-nav__btn-bar"></span><b class="screen-reader-text">メニュー</b>
+        <svg viewBox="0 0 18 16">
+          <title>MENU</title>
+          <line id="is-line-1" class="l-nav__line" y1="1" x2="18" y2="1"/>
+          <line id="is-line-2" class="l-nav__line" y1="8" x2="18" y2="8"/>
+          <line id="is-line-3" class="l-nav__line" y1="8" x2="18" y2="8"/>
+          <line id="is-line-4" class="l-nav__line" y1="15" x2="18" y2="15"/>
+        </svg>
       </button>
 
       <nav class="l-nav__body js-gnav-target">
@@ -43,10 +49,22 @@
         </header>
 
         <div>
+          <div>
+            <button class="c-btn c-btn--close"><span class="screen-reader-text">閉じる</span></button>
+          </div>
           <div class="js-slide-unit" style="border:1px solid #000; margin: 2em auto; width: 80%;">
             <button class="js-slide-switch" style="font-size: 1.8rem; background:#eee; width:100%; padding:.5em;">
               スライドトグルテスト
               <i class="c-icon c-icon--toggle"></i>
+            </button>
+            <div class="js-slide-target u-hide" style="padding:.5em;">
+              スライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲット
+            </div>
+          </div>
+          <div class="js-slide-unit" style="border:1px solid #000; margin: 2em auto; width: 80%;">
+            <button class="js-slide-switch" style="font-size: 1.8rem; background:#eee; width:100%; padding:.5em;">
+              スライドトグルテスト
+              <i class="c-icon c-icon--toggle2"></i>
             </button>
             <div class="js-slide-target u-hide" style="padding:.5em;">
               スライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲット
@@ -62,6 +80,29 @@
             </div>
           </div>
         </div>
+
+        <p class="c-wcheckbox">
+          <span>
+            <label>
+              <input type="checkbox" name="abc" value="">
+              <span>選択肢</span>
+            </label>
+          </span>
+        </p>
+        <p class="c-wradio">
+          <span>
+            <label>
+              <input type="radio" name="aaa" value="">
+              <span>選択肢</span>
+            </label>
+          </span>
+          <span>
+            <label>
+              <input type="radio" name="aaa" value="">
+              <span>選択肢</span>
+            </label>
+          </span>
+        </p>
 
         <h2>wrap() テスト</h2>
         <p id="wrap-target">この要素が div で囲まれる</p>
@@ -100,12 +141,12 @@
           </div>
         </div>
 
-        <p class="pc-only">PCのみ表示</p>
-        <p class="sp-only">SPのみ表示</p>
+        <p class="u-pc-only">PCのみ表示</p>
+        <p class="u-sp-only">SPのみ表示</p>
 
       </main>
     </div>
-    <div class="wrap-totop"><a href="#container" class="c-btn c-btn--totop">ページ上部へ</a></div>
+    <a href="#container" class="c-btn c-btn--totop">ページ上部へ</a>
     <footer class="l-footer">
       <small class="l-footer__copy">&copy; copyright</small>
     </footer>

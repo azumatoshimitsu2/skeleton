@@ -18,9 +18,8 @@
 @use "./object/component/list";
 @use "./object/component/res-box";
 @use "./object/component/table";
-
-//ページ固有のスタイル
-@use "./object/page/home";
+@use "./object/component/wradio";
+@use "./object/component/wcheckbox";
 
 //汎用クラス
 @use "./object/util/_flex";

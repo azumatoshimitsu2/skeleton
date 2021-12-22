@@ -11,20 +11,6 @@ function addARIACurrent () {
   });
 }
 
-var BREAK_POINTS = {
-  "ltSP": 767,
-  "gtTAB": 768,
-  "ltTAB": 992,
-  "gtPC": 992
-};
-
-function pcViewportFixed () {
-  // PC のブレイクポイント以上ではビューポート を固定
-  if (window.innerWidth >= BREAK_POINTS.gtTAB) {
-    document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=1200');
-  }
-}
-
 function fadeOut(el) {
   var d = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 250;
   el.style.display = 'inherit';
@@ -133,7 +119,7 @@ function slideToggle () {
       return;
     } else {
       el.classList.add('is-processing');
-      elBtn.querySelector('.icon').classList.toggle("is");
+      elBtn.querySelector('.c-icon').classList.toggle("is");
     }
 
     if (window.getComputedStyle(el).display === "none") {
@@ -255,6 +241,13 @@ function scroll2AddClass () {
   trigger(window, 'scroll');
 }
 
+var BREAK_POINTS = {
+  "ltSP": 767,
+  "gtTAB": 768,
+  "ltTAB": 992,
+  "gtPC": 992
+};
+
 function accessibleGnavToggle () {
   //ハンバーガーメニュークリックと画面サイズに応じて aria 属性とクラス名の切り替え
   //メニューが開いている状態 aria-expanded: true, aria-hidden: false, .is-active 追加
@@ -266,7 +259,7 @@ function accessibleGnavToggle () {
     elBtns = document.querySelectorAll('.js-gnav-toggle');
     elTarget = document.querySelector('.js-gnav-target');
 
-    if (window.innerWidth > BREAK_POINTS.ltHbgMenu) {
+    if (window.innerWidth > BREAK_POINTS.ltSP) {
       elTarget.classList.add('is-active');
     } else {
       elTarget.classList.remove('is-active');
@@ -307,7 +300,6 @@ function accessibleGnavToggle () {
 (function () {
   window.addEventListener('DOMContentLoaded', function (e) {
     addARIACurrent();
-    pcViewportFixed();
     slideToggle();
     pcAddIshover();
     scroll2AddClass();

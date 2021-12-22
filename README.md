@@ -13,16 +13,17 @@
         └──index.html
         └──assets/
            └──css/
-           └──images/
+           └──img/
            └──js/
-               └──lib/
+               └──vendor/
     └── src/
         └──sass/
             └──style.scss
             └──foundation （基本的となるスタイル）
-               └──_global_var.scss
-               └──_font.scss
+               └──_index.scss
+               └──_function.scss
                └──_mixin.scss
+               └──_global_var.scss
                └──_reset.scss
             └──layout （ヘッダ、フッタ、共通ナビ、カラム構造）
                └──_footer.scss
@@ -30,11 +31,10 @@
                └──_nav.scss
                └──_page.scss（ページ全体のレイアウト）
             └──vendors（プラグインや CMS 用のスタイル）
-               └──_cms.scss（WP の記事内部など CMS で使用されるもの）
-               └──jquery.***..scss
+               └──_**.scss
             └──object（部品のスタイル）
-             └──compo（恣意的な大きさの部品）
-               └──_compo.scss
+             └──component（恣意的な大きさの部品）
+               └──_**.scss
              └──page（ページ固有のスタイル - サイトのトップ以外での使用は非推奨）
                └──_home.scss
              └──util（汎用クラス）
@@ -50,7 +50,7 @@
 ### 命名規則
 - ID名、クラス名、ファイル名で単語をつなぐ場合は -（ハイフン）を使用
 - 親要素の依存する名前は（親要素のクラス名__クラス名）とする（※例1参照）
-- スタイルをオーバーライドする場合は（要素のクラス名--クラス名）とする（※例2参照）
+- スタイルを追加・上書きする場合は（要素のクラス名--クラス名）とする（※例2参照）
   
 例1:
 

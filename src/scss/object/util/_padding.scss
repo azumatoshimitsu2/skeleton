@@ -23,22 +23,22 @@ $arrn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
     padding-left: #{$n}px;
   }
 }
-.reset-pt {
+.u-reset-pt {
   padding-top: 0;
 }
-.reset-pr {
+.u-reset-pr {
   padding-right: 0;
 }
-.reset-pb {
+.u-reset-pb {
   padding-bottom: 0;
 }
-.reset-pl {
+.u-reset-pl {
   padding-left: 0;
 }
 
 @include g.sp_style() {
 
-  .sp-pad {
+  .u-sp-pad {
     padding-right: g.$SP_PAD;
     padding-left: g.$SP_PAD;
   }
@@ -64,19 +64,19 @@ $arrn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
         padding-left: #{$n}vw;
       }
   }
-  .reset-sp-ml {
+  .u-reset-sp-ml {
     margin-left: 0;
   }
-  .reset-sp-pt {
+  .u-reset-sp-pt {
     padding-top: 0;
   }
-  .reset-sp-pr {
+  .u-reset-sp-pr {
     padding-right: 0;
   }
-  .reset-sp-pb {
+  .u-reset-sp-pb {
     padding-bottom: 0;
   }
-  .reset-sp-pl {
+  .u-reset-sp-pl {
     padding-left: 0;
   }
 

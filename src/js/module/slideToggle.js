@@ -61,7 +61,7 @@ export default function () {
 			el.style.removeProperty("transition-timing-function");
 			el.classList.remove('is-processing');
 		}, duration);
-		
+
 	};
 
 	const slideToggle = function(elBtn, el) {
@@ -69,7 +69,7 @@ export default function () {
 			return;
 		} else {
 			el.classList.add('is-processing');
-			elBtn.querySelector('.icon').classList.toggle("is");
+			elBtn.querySelector('.c-icon').classList.toggle("is");
 		}
 		if (window.getComputedStyle(el).display === "none") {
 			return slideDown(el, 400);
