@@ -1,5 +1,5 @@
 const cmd = process.argv[2]
-const sass = require('dart-sass');
+const sass = require('sass');
 const fs = require('fs-extra')
 const path = require('path');
 const chokidar = require('chokidar');
