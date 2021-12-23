@@ -1,4 +1,4 @@
-import resolve from 'rollup-plugin-node-resolve';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs'
 import babel from 'rollup-plugin-babel';
 import { terser } from "rollup-plugin-terser";
@@ -10,11 +10,11 @@ export default {
     format: 'cjs'
   },
   plugins: [
-    resolve({ jsnext: true }), // npmモジュールを`node_modules`から読み込む
-    commonjs(), // CommonJSモジュールをES6に変換
+    nodeResolve(),
+    commonjs(),
     babel({
-      exclude: 'node_modules/**' // only transpile our source code
-    }), // ES5に変換
+      exclude: 'node_modules/**'
+    }),
     terser()
   ]
 };
