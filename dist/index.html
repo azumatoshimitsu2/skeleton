@@ -13,7 +13,7 @@
   <meta property="og:description" content="">
   <title>title</title>
   <link href="./assets/css/style.css" rel="stylesheet" media="all">
-  <script src="./assets/js/bundle.js"></script>
+  <script src="./assets/js/main.js" type="module"></script>
 </head>
 
 <body>
@@ -23,21 +23,12 @@
       <div class="l-header__box"></div>
     </header>
 
-    <div class="l-nav js-gnav-wrapper">
-      <button class="l-nav__btn sp-only js-gnav js-gnav-toggle">
-        <svg viewBox="0 0 18 16">
-          <title>MENU</title>
-          <line id="is-line-1" class="l-nav__line" y1="1" x2="18" y2="1"/>
-          <line id="is-line-2" class="l-nav__line" y1="8" x2="18" y2="8"/>
-          <line id="is-line-3" class="l-nav__line" y1="8" x2="18" y2="8"/>
-          <line id="is-line-4" class="l-nav__line" y1="15" x2="18" y2="15"/>
-        </svg>
-      </button>
-
-      <nav class="l-nav__body js-gnav-target">
+    <div class="l-header__nav l-nav" aria-expanded="false">
+      <button class="l-nav__btn js-gnav-toggle" aria-controls="main-menu" aria-label="メニュー">MENU</button>
+      <nav id="main-menu" class="l-nav__body" aria-hidden="true">
         <ul class="l-nav__list">
-          <li class="l-nav__item"><a href="">ホーム</a></li>
-          <li class="l-nav__item"><a href="">ページ</a></li>
+          <li class="l-nav__item"><a href="" class="l-nav__link">ホーム</a></li>
+          <li class="l-nav__item"><a href="" class="l-nav__link">ページ</a></li>
         </ul>
       </nav>
     </div>
@@ -47,39 +38,6 @@
         <header class="page-title">
           <h1 class="str">サンプル HTML</h1>
         </header>
-
-        <div>
-          <div>
-            <button class="c-btn c-btn--close"><span class="screen-reader-text">閉じる</span></button>
-          </div>
-          <div class="js-slide-unit" style="border:1px solid #000; margin: 2em auto; width: 80%;">
-            <button class="js-slide-switch" style="font-size: 1.8rem; background:#eee; width:100%; padding:.5em;">
-              スライドトグルテスト
-              <i class="c-icon c-icon--toggle"></i>
-            </button>
-            <div class="js-slide-target u-hide" style="padding:.5em;">
-              スライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲット
-            </div>
-          </div>
-          <div class="js-slide-unit" style="border:1px solid #000; margin: 2em auto; width: 80%;">
-            <button class="js-slide-switch" style="font-size: 1.8rem; background:#eee; width:100%; padding:.5em;">
-              スライドトグルテスト
-              <i class="c-icon c-icon--toggle2"></i>
-            </button>
-            <div class="js-slide-target u-hide" style="padding:.5em;">
-              スライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲットスライドターゲット
-            </div>
-          </div>
-
-          <div class="js-fade-unit" style="margin: 2em auto; width: 80%;">
-            <button class="js-fade-switch" style="font-size: 1.8rem; background:#eee; width:100%; padding:.5em;">
-              フェードトグルテスト
-            </button>
-            <div class="js-fade-target u-hide" style="padding:.5em;">
-              フェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲットフェードターゲット
-            </div>
-          </div>
-        </div>
 
         <p class="c-wcheckbox">
           <span>
@@ -103,43 +61,6 @@
             </label>
           </span>
         </p>
-
-        <h2>wrap() テスト</h2>
-        <p id="wrap-target">この要素が div で囲まれる</p>
-        <p id="wrap-target2">この要素が div で囲まれる</p>
-        <style>
-          .myclass {
-            color: green;
-          }
-        </style>
-
-        <script type="module">
-          import wrap from '../src/js/module/wrap.js';
-          wrap('#wrap-target', 'div', {"class" : "myclass", "data-wrap" : "true"});
-          wrap('#wrap-target2', 'section');
-        </script>
-
-        <div style="margin:60vh 0 0 0;">
-          <h2>スクロールでクラス追加テスト</h2>
-
-          <style>
-            .u-tran {
-              color: #eee;
-              transition: .25s ease;
-            }
-            .u-tran.is-fire {
-              color: #f00;
-            }
-          </style>
-
-          <div class="js-scroll-point u-tran" style="margin-bottom: 10vh;">あいうえお</div>
-          <div class="js-scroll-points">
-            <li class="u-tran">かきくけこ</li>
-            <li class="u-tran">さしすせそ</li>
-            <li class="u-tran">たちつてと</li>
-            <li class="u-tran">なにぬねの</li>
-          </div>
-        </div>
 
         <p class="u-pc-only">PCのみ表示</p>
         <p class="u-sp-only">SPのみ表示</p>

@@ -1,4 +1,4 @@
-export default function (element, event, obj) {
+function trigger(element, event, obj) {
 	if(!obj) {
 		obj = {};
 	}
@@ -14,3 +14,5 @@ export default function (element, event, obj) {
 		evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
 	}
 }
+
+export {trigger};

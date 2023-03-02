@@ -39,8 +39,8 @@ $arrn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
 @include g.sp_style() {
 
   .u-sp-pad {
-    padding-right: g.$SP_PAD;
-    padding-left: g.$SP_PAD;
+    padding-right: var(--sp-pad);
+    padding-left: var(--sp-pad);
   }
   $arrspn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
   @each $n in $arrspn {

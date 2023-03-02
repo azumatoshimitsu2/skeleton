@@ -8,7 +8,7 @@
   margin-right: auto;
   margin-left: auto;
   @include g.pc_style() {
-    width: g.$BASE_WIDTH;
+    width: var(--base-width);
   }
 }
 
@@ -31,8 +31,8 @@ $arrw: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
 @include g.sp_style() {
 
   .sp-full-w {
-    margin-right: -1 * g.$SP_PAD;
-    margin-left: -1 * g.$SP_PAD;
+    margin-right: calc(-1 * var(--sp-pad));
+    margin-left: calc(-1 * var(--sp-pad));
   }
   .reset-sp-w {
     width: auto;

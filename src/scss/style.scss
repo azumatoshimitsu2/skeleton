@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 //基本的なスタイル
+@use "./foundation/_global_var";
 @use "./foundation/_reset";
-
 //ヘッダ、フッタ、共通ナビ
 @use "./layout/footer";
 @use "./layout/header";

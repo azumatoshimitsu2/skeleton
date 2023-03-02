@@ -1,13 +1,29 @@
-$BASE_WIDTH: 1000px;
-$BREAK_POINT_TB: 1025px;
-$BREAK_POINT_TB_BEFORE: $BREAK_POINT_TB + 1px;
-$BREAK_POINT: 767px;
-$BREAK_BEFORE: $BREAK_POINT + 1px;
-$SANS_SERIF: "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック", "Hiragino Sans", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo", "メイリオ", sans-serif;
-$SERIF: "Noto Serif JP", "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", serif;
-$SP_PAD: 4vw;
-$BASE_FS: 1.6rem;
-$SP_BASE_FS: 4vw;
-$SP_BOLD: 600;
+// --------------------------------------------------
+// variables
+// --------------------------------------------------
 
-$ACCENT : #000;
+:root {
+	// Font Family
+	--sans-serif: "Noto Sans JP", "ヒラギノ角ゴシック", "Hiragino Sans", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+		sans-serif;
+	--serif: "Noto Serif JP", serif;
+	--en-sans: "", sans-serif;
+	--en-serif: "", serif;
+
+	// 背景色
+	--base: #fff;
+
+	// 文字色
+	--main: #000;
+
+	// 差し色
+	--accent: #d81b60;
+
+  //基本幅
+  --base-width: 1000px
+
+	// スマホの基本フォンtpサイズ
+	--sp-base-fs: 4vw;
+	// スマホの基本の左右の余白
+	--sp-pad: 4vw;
+}

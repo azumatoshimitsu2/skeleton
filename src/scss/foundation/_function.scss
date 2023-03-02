@@ -3,3 +3,7 @@
 	$num : round(calc($pixel/$viewport * 1000));
   @return #{calc($num / 10)}vw;
 }
+
+@function em($pixel, $fontsize: 16) {
+	@return #{calc($pixel/$fontsize)}em;
+}

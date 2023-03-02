@@ -1,6 +1,6 @@
-import { BREAK_POINTS } from '../settings';
+import { BREAK_POINTS } from '../settings.js';
 
-export default function () {
+function pcViewportFixed () {
 
   // PC のブレイクポイント以上ではビューポート を固定
 
@@ -9,3 +9,5 @@ export default function () {
   }
 
 }
+
+export {pcViewportFixed};

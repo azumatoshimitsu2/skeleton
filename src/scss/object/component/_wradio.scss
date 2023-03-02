@@ -15,7 +15,7 @@
     @include g.sp_style() {
       padding-left: 7vw;
     };
-    
+
     label {
         padding-left: 26px;
     }
@@ -44,8 +44,8 @@
 
       &:checked ~ span {
         &:before {
-          background: g.$ACCENT;
-          border-color: g.$ACCENT;
+          background: var(--accent);
+          border-color: var(--accent);
         }
 
         &:after {

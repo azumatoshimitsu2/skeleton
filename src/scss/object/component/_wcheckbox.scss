@@ -46,8 +46,8 @@ $wcheckboxSizeSP : 5vw;
 
       &:checked ~ span {
         &:before {
-          background: g.$ACCENT;
-          border-color: g.$ACCENT;
+          background: var(--accent);
+          border-color: var(--accent);
         }
 
         &:after {

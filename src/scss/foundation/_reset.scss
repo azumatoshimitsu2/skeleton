@@ -1,9 +1,9 @@
-@use 'foundation/' as g;
+@use 'foundation/' as *;
 
 /******************************
  * reset
  ******************************/
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+ @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
 
 html {
   font-size: 10px;
@@ -14,55 +14,43 @@ body {
   font-feature-settings: "palt" 1;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  font-size: g.$BASE_FS;
+  font-size: var(--sans-serif);
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dt, dd, form, fieldset, hr, sup, figure {
-  margin: 0;
-  padding: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ol,
+ul,
+figure {
+	all: unset;
+	display: revert;
 }
 
-h1, h2, h3, h4, h5, h6, b, strong {
-  @include g.sp_style() {
-    font-weight: g.$SP_BOLD;
-  };
-}
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.5;
-}
-
+ol,
 ul {
-  list-style: none;
+	list-style: none;
 }
 
-ol {
-  margin-left: 20px;
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 img {
-  border: 0;
-  vertical-align: top;
-  max-width: 100%;
-  height: auto;
-  image-rendering: -webkit-optimize-contrast;
-}
-
-td img {
-  vertical-align: baseline;
-}
-
-iframe, fieldset {
-  border: 0;
-}
-
-pre {
-  word-wrap: break-word;
-  white-space: pre-wrap;//IE11用
+	vertical-align: middle;
 }
 
 a[href^='tel:'] {
-  @include g.pc_style() {
+  @include pc_style() {
     display: inline-block;
     pointer-events: none;
   };
@@ -124,13 +112,12 @@ small {
 /*font size*/
 
 body, input, select, textarea {
-  font-family: g.$SANS_SERIF;
-  font-size: g.$BASE_FS;
+  font-size: var(--sans-serif);
 }
 
-@include g.sp_style() {
+@include sp_style() {
   body {
-    font-size: g.$SP_BASE_FS;
+    font-size: var(--sp-base-fs);
   }
 
   select, input, textarea {

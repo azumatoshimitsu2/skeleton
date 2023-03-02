@@ -1,7 +1,7 @@
+import {trigger} from './customEvent.js';
+import {myDevice} from './device.js';
 
-import trigger from './customEvent';
-
-export default function () {
+function scroll2AddClass () {
   //自身の位置までウィンドウスクロールされると、クラスを追加
 
 	const wel = document.querySelectorAll('.js-scroll-points');
@@ -27,6 +27,12 @@ export default function () {
 		});
 	}
 
+	setTimeout(function() {
+		setPos();
+		trigger(window, 'scroll');
+	}, 1000);
+
+
 	window.addEventListener('scroll', function(e) {
 		const scTop = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -40,7 +46,7 @@ export default function () {
 				[].forEach.call(innerEl, function (el, i) {
 					setTimeout(function() {
 						el.classList.add('is-fire');
-					}, 200 * i)
+					}, 400 * i)
 				});
 			});
 		} else {
@@ -56,15 +62,18 @@ export default function () {
 					[].forEach.call(innerEl, function (el, i) {
 						setTimeout(function() {
 							el.classList.add('is-fire');
-						}, 180 * i)
+						}, 280 * i)
 					});
 				}
 			});
 		}
 	});
 
-	setPos();
-	window.addEventListener('resize', setPos);
-	trigger(window, 'scroll');
+  if (!myDevice.isTouchDevice) {
+		window.addEventListener('resize', setPos);
+	}
+	window.addEventListener('changeHeight', setPos);
 
 }
+
+export {scroll2AddClass};

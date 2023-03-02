@@ -1,16 +1,15 @@
-import addARIACurrent from './module/addARIACurrent';
-import {fadeToggle} from './module/fade';
-import slideToggle from './module/slideToggle';
-import pcAddIshover from './module/pcAddIshover';
-import scroll2AddClass from './module/scroll2AddClass';
-import accessibleGnavToggle from './module/accessibleGnavToggle';
+import {addARIACurrent} from './module/addARIACurrent.js';
+import {fadeToggle} from './module/fade.js';
+import {smoothDetail} from './module/smoothDetail.js';
+import {scroll2AddClass} from './module/scroll2AddClass.js';
+import {gnavToggle} from './module/gnavToggle.js';
 
 (function () {
   window.addEventListener('DOMContentLoaded', function(e) {
+		gnavToggle();
     addARIACurrent();
-    slideToggle();
-    pcAddIshover();
     scroll2AddClass();
+		smoothDetail();
 
     const unitEl = document.querySelectorAll('.js-fade-unit');
     [].forEach.call(unitEl, function (el) {
@@ -22,6 +21,4 @@ import accessibleGnavToggle from './module/accessibleGnavToggle';
     });
   });
 
-  accessibleGnavToggle();
 })();
-
