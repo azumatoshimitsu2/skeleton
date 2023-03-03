@@ -248,9 +248,9 @@ body .alignleft {
   margin: 0 10px 0 0;
 }
 
-/******************************
- *c-btn
- ******************************/
+/*========================================
+  ボタン
+========================================*/
 .c-btn {
   cursor: pointer;
   position: relative;
@@ -263,35 +263,10 @@ body .alignleft {
 .c-btn:hover {
   text-decoration: none;
 }
-.c-btn--close {
-  background: #000;
-  width: 38px;
-  height: 38px;
-}
-.c-btn--close:before, .c-btn--close:after {
-  content: "";
-  display: block;
-  background: #fff;
-  width: 70%;
-  height: 2px;
-  position: absolute;
-  left: 15%;
-  top: 50%;
-  margin-top: -1px;
-}
-.c-btn--close:before {
-  transform: rotate(135deg);
-}
-.c-btn--close:after {
-  transform: rotate(-135deg);
-}
 
-/******************************
- * c-hdr
- ******************************/
-/******************************
- * c-icon
- ******************************/
+/*========================================
+  アイコン
+========================================*/
 .c-icon {
   position: relative;
   display: inline-block;
@@ -301,241 +276,16 @@ body .alignleft {
   line-height: 1;
   font-style: normal;
 }
-.c-icon--arr {
-  top: 8px;
-  width: 6px;
-  height: 6px;
-  border-top: 2px solid #999;
-  border-right: 2px solid #999;
-  transform: rotate(45deg);
-}
-.c-icon--carr {
-  background: #333;
-  border-radius: 100px;
-  width: 16px;
-  height: 16px;
-}
-.c-icon--carr:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 4px;
-  top: 5px;
-  width: 4px;
-  height: 4px;
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
-  transform: rotate(45deg);
-}
-.c-icon--toggle::after {
-  position: absolute;
-  left: 50%;
-  top: 58%;
-  content: "";
-  display: block;
-  width: 12px;
-  height: 12px;
-  border-top: 3px solid #000;
-  border-right: 3px solid #000;
-  transform: translate(-50%, -100%) rotate(135deg);
-  transition: transform 0.25s ease;
-}
-@media screen and (max-width: 767px) {
-  .c-icon--toggle::after {
-    width: vw(16);
-    height: vw(16);
-    border-width: 2px;
-  }
-}
-.c-icon--toggle.is::after {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-.c-icon--toggle2 {
-  background: #000;
-  width: 38px;
-  height: 38px;
-}
-.c-icon--toggle2:before, .c-icon--toggle2:after {
-  content: "";
-  display: block;
-  background: #fff;
-  width: 70%;
-  height: 2px;
-  position: absolute;
-  left: 15%;
-  top: 50%;
-  margin-top: -1px;
-}
-.c-icon--toggle2:after {
-  transform: rotate(-90deg);
-  transition: 0.2s transform;
-}
-.c-icon--toggle2.is:after {
-  transform: rotate(0);
-}
 
-/******************************
- * c-list
- ******************************/
-.c-list-disc {
-  list-style: disc;
-  margin-left: 20px;
-}
-.c-list-inline li {
-  display: inline-block;
-  margin-right: 10px;
-  vertical-align: top;
-}
-/******************************
- * c-res-box
- ******************************/
-.c-res-box {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-}
-.c-res-box iframe,
-.c-res-box video {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
-/******************************
- * c-table
- ******************************/
-.c-table-wrap {
-  overflow: auto;
-}
-
-/******************************
- * c-wradio
- *****************************/
-.c-wradio > span {
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
-  line-height: 1.4;
-}
-@media screen and (max-width: 767px) {
-  .c-wradio > span {
-    padding-left: 7vw;
-  }
-}
-.c-wradio > span label {
-  padding-left: 26px;
-}
-.c-wradio > span input[type=radio] {
-  position: absolute;
-  left: -100px;
-}
-.c-wradio > span input[type=radio] ~ span:before {
-  position: absolute;
-  display: inline-block;
-  left: 0;
-  top: 0;
-  content: "";
-  background: #fff;
-  border: 1px solid #cecfcf;
-  border-radius: 100px;
-  width: 18px;
-  height: 18px;
-}
-@media screen and (max-width: 767px) {
-  .c-wradio > span input[type=radio] ~ span:before {
-    width: 5vw;
-    height: 5vw;
-  }
-}
-.c-wradio > span input[type=radio]:checked ~ span:before {
-  background: var(--accent);
-  border-color: var(--accent);
-}
-.c-wradio > span input[type=radio]:checked ~ span:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 5px;
-  top: 5px;
-  width: 10px;
-  height: 10px;
-  background: #fff;
-  border-radius: 100px;
-}
-@media screen and (max-width: 767px) {
-  .c-wradio > span input[type=radio]:checked ~ span:after {
-    top: 3.2vw;
-    left: 1.4vw;
-    width: 1.8vw;
-    height: 3vw;
-  }
-}
-
-/******************************
- * c-wcheckbox
- *****************************/
-.c-wcheckbox span {
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
-  padding-left: 26px;
-  line-height: 1.4;
-  min-height: 18px;
-}
-@media screen and (max-width: 767px) {
-  .c-wcheckbox span {
-    padding-left: 7vw;
-    min-height: 5vw;
-  }
-}
-.c-wcheckbox span input[type=checkbox] {
-  position: absolute;
-  left: -100px;
-}
-.c-wcheckbox span input[type=checkbox] ~ span:before {
-  position: absolute;
-  display: inline-block;
-  left: 0;
-  top: 0;
-  content: "";
-  background: #fff;
-  border: 1px solid #cecfcf;
-  border-radius: 4px;
-  width: 18px;
-  height: 18px;
-}
-@media screen and (max-width: 767px) {
-  .c-wcheckbox span input[type=checkbox] ~ span:before {
-    width: 5vw;
-    height: 5vw;
-  }
-}
-.c-wcheckbox span input[type=checkbox]:checked ~ span:before {
-  background: var(--accent);
-  border-color: var(--accent);
-}
-.c-wcheckbox span input[type=checkbox]:checked ~ span:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 9px;
-  left: 5px;
-  width: 5px;
-  height: 10px;
-  transform: rotate(40deg) translate(-50%, -50%);
-  border-bottom: 3px solid #fff;
-  border-right: 3px solid #fff;
-}
-@media screen and (max-width: 767px) {
-  .c-wcheckbox span input[type=checkbox]:checked ~ span:after {
-    top: 3.2vw;
-    left: 1.4vw;
-    width: 1.8vw;
-    height: 3vw;
-  }
-}
-
+/*========================================
+  ボタン
+========================================*/
+/*========================================
+  hdr
+========================================*/
+/*========================================
+  アイコン
+========================================*/
 /******************************
  * util flex
  ******************************/

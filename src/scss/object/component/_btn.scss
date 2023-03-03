@@ -1,8 +1,8 @@
-@use 'foundation/' as g;
+@use 'foundation/' as *;
 
-/******************************
- *c-btn
- ******************************/
+/*========================================
+  ボタン
+========================================*/
 
 .c-btn {
   cursor: pointer;
@@ -15,30 +15,5 @@
 
   &:hover {
     text-decoration: none;
-  }
-
-  &--close {
-    background: #000;
-    width: 38px;
-    height: 38px;
-
-    &:before,
-    &:after {
-      content: "";
-      display: block;
-      background: #fff;
-      width: 70%;
-      height: 2px;
-      position: absolute;
-      left: 15%;
-      top: 50%;
-      margin-top: -1px;
-    }
-    &:before {
-      transform: rotate(135deg);
-    }
-    &:after {
-      transform: rotate(-135deg);
-    }
   }
 }
