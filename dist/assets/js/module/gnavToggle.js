@@ -6,6 +6,7 @@ function gnavToggle() {
   const toggleBtns = document.querySelectorAll('.js-gnav-toggle');
   const targetId = document.querySelector('.js-gnav-toggle').getAttribute('aria-controls');
 	const expandTarget = document.getElementById(targetId);
+	const anchors = expandTarget.querySelectorAll('a');
 
   function init() {
     if(window.innerWidth > BREAK_POINTS.ltSP) {
@@ -52,7 +53,16 @@ function gnavToggle() {
 
 	[].forEach.call(toggleBtns, btn => {
 		btn.addEventListener('click', clickHandle)
-	})
+	});
+
+	[].forEach.call(anchors, anchor => {
+		anchor.addEventListener('click', (e) => {
+			const el = e.currentTarget;
+			if(el.getAttribute('href').match('#')) {
+				hide();
+			}
+		})
+	});
 
   init();
 

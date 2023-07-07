@@ -1,4 +1,4 @@
-@use 'foundation/' as g;
+@use 'foundation/' as *;
 
 /******************************
  * util width
@@ -7,7 +7,7 @@
 .u-fix-w {
   margin-right: auto;
   margin-left: auto;
-  @include g.pc_style() {
+  @include pc_style() {
     width: var(--base-width);
   }
 }
@@ -28,7 +28,7 @@ $arrw: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
   max-width: none;
 }
 
-@include g.sp_style() {
+@include sp_style() {
 
   .sp-full-w {
     margin-right: calc(-1 * var(--sp-pad));

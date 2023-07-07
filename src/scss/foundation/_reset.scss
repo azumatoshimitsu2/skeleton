@@ -7,16 +7,8 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
-
-body {
-  line-height: 1.9;
-  font-feature-settings: "palt" 1;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  font-size: var(--sans-serif);
-}
-
 body,
 h1,
 h2,
@@ -31,22 +23,34 @@ dd,
 ol,
 ul,
 figure {
-	all: unset;
-	display: revert;
+  all: unset;
+  display: revert;
 }
 
-ol,
-ul {
-	list-style: none;
+body {
+  line-height: 1.9;
+  font-feature-settings: "palt" 1;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 1.6rem;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 img {
-	vertical-align: middle;
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
 }
 
 a[href^='tel:'] {
@@ -82,12 +86,7 @@ sup {
 a {
   color: #000;
   text-decoration: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  table-layout: fixed;
+  word-break: break-all;
 }
 
 hr {
@@ -112,7 +111,7 @@ small {
 /*font size*/
 
 body, input, select, textarea {
-  font-size: var(--sans-serif);
+  font-family: var(--sans-serif);
 }
 
 @include sp_style() {
@@ -121,6 +120,6 @@ body, input, select, textarea {
   }
 
   select, input, textarea {
-    font-size: 1.6rem;
+    font-size: max(1.6rem, var(--sp-base-fs));
   }
 }

@@ -1,104 +1,75 @@
-@use 'foundation/' as g;
+@use 'foundation/' as *;
 
 /******************************
  * l-nav
  ******************************/
 
-.l-nav {
+ .l-nav {
   $this: &;
 
-  @include g.pc_style() {
-    &__list {
-      display: table;
-      width: 100%;
-    }
-    &__item {
-      display: table-cell;
-    }
-  }
+  &__btn {
+    background: transparent;
+    padding: 0;
 
-  &__body {
-    @include g.sp_style() {
-      position: fixed;
-      left: 0;
-      top: 0;
-      z-index: 100;
-      overflow: auto;
+    @include pc_style() {
       display: none;
-      background-color: #fff;
-      width: 100%;
-      height: 100vh;
+    };
 
-      &.is-active {
-        display: block;
+    @include sp_style() {
+      width: vw(30);
+    };
+
+    .is-line-1,
+    .is-line-4 {
+      transform-origin: center;
+      transition-property: opacity;
+      transition-duration: .2s;
+    }
+
+    .is-line-2,
+    .is-line-3 {
+      transform-origin: center;
+      transition-property: transform;
+      transition-duration: .2s;
+    }
+
+    &.is-active {
+      transform: translateX(0);
+
+      .is-line-1,
+      .is-line-4 {
+        opacity: 0;
+      }
+      .is-line-2 {
+        transform: rotate(45deg);
+      }
+      .is-line-3 {
+        transform: rotate(-45deg);
       }
     }
   }
 
+  &__line {
+    fill: none;
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+  }
+
+  &__body {
+    @include pc_style() {
+      &[aria-hidden="true"] {
+        display: none;
+      }
+    };
+  }
+
+  &__list {
+  }
+
   &__item {
-    @include g.sp_style() {
-      padding: 2vw;
-      border-bottom: 1px solid #000;
-    }
   }
 
-  &__btn {
-		background: transparent;
-		border: 0;
-
-		svg {
-			vertical-align: top;
-		}
-
-		#is-line-1,
-		#is-line-4 {
-			transform-origin: center;
-			transition-property: opacity;
-			transition-duration: .2s;
-		}
-
-		#is-line-2,
-		#is-line-3 {
-			transform-origin: center;
-			transition-property: transform;
-			transition-duration: .2s;
-		}
-
-		&.is-active {
-			transform: translateX(0);
-
-			#is-line-1,
-			#is-line-4 {
-				opacity: 0;
-			}
-			#is-line-2 {
-				transform: rotate(45deg);
-			}
-			#is-line-3 {
-				transform: rotate(-45deg);
-			}
-		}
-
-		@include g.pc_style() {
-			display: none;
-		};
-
-		@include g.sp_style() {
-			position: absolute;
-			background: transparent;
-			top: g.vw(40);
-			right: g.vw(30);
-			z-index: 110;
-			width: g.vw(30);
-
-		};
-
+  &__link {
   }
-
-	&__line {
-		fill: none;
-		stroke: #000;
-		stroke-miterlimit: 10;
-		stroke-width: 2px;
-	}
 }

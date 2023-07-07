@@ -1,4 +1,4 @@
-@use 'foundation/' as g;
+@use 'foundation/' as *;
 
 /******************************
  * l-header
@@ -8,7 +8,7 @@
   $this: &;
   line-height: 1.4;
 
-  @include g.pc_style() {
+  @include pc_style() {
 
     #{$this}__logo {
     }

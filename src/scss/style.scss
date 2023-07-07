@@ -12,17 +12,15 @@
 @use "./vendors/_cms";
 
 //コンポーネント
-@use "./object/component/btn";
-@use "./object/component/hdr";
-@use "./object/component/icon";
-@use "./object/component/list";
-@use "./object/component/res-box";
-@use "./object/component/table";
-@use "./object/component/wradio";
-@use "./object/component/wcheckbox";
+@use 'object/component/btn';
+@use 'object/component/icon';
+
+//プロジェクト
+@use 'object/project/p-btn';
+@use 'object/project/p-hdr';
+@use 'object/project/p-icon';
 
 //汎用クラス
-@use "./object/util/_flex";
 @use "./object/util/_display";
 @use "./object/util/_margin";
 @use "./object/util/_padding";

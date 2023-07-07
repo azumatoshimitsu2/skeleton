@@ -1,4 +1,4 @@
-@use 'foundation/' as g;
+@use 'foundation/' as *;
 
 /******************************
  * l-footer
@@ -8,6 +8,7 @@
   $this: &;
   line-height: 1.4;
 
-  @include g.sp_style() {
+  @include sp_style() {
   }
+
 }

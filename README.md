@@ -15,6 +15,8 @@
            └──css/
            └──img/
            └──js/
+             └──main.js
+                └──modules/
                └──vendor/
     └── src/
         └──sass/
@@ -33,16 +35,14 @@
             └──vendors（プラグインや CMS 用のスタイル）
                └──_**.scss
             └──object（部品のスタイル）
-             └──component（恣意的な大きさの部品）
+             └──component（部品の共通スタイル）
+               └──_**.scss
+             └──project（恣意的な大きさの部品）
                └──_**.scss
              └──page（ページ固有のスタイル - サイトのトップ以外での使用は非推奨）
                └──_home.scss
              └──util（汎用クラス）
                └──_**.scss
-        └──js/
-             └──main.js
-                └──modules/
-
     └── package.json
     
 ## 基本ルール
