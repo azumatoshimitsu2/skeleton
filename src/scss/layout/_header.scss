@@ -8,7 +8,7 @@
   $this: &;
   line-height: 1.4;
 
-  @include pc_style() {
+  @include gtTAB() {
 
     #{$this}__logo {
     }

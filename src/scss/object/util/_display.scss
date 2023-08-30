@@ -25,14 +25,14 @@
   display: inline-block;
 }
 
-@include pc_style() {
+@include gtTAB() {
 
  .u-sp-only {
    display: none;
  }
 
 };
-@include sp_style() {
+@include ltSP() {
 
   .u-pc-only {
     display: none;

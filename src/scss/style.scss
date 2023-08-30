@@ -4,8 +4,9 @@
 @use "./foundation/_global_var";
 @use "./foundation/_reset";
 //ヘッダ、フッタ、共通ナビ
-@use "./layout/footer";
+@use "./layout/page";
 @use "./layout/header";
+@use "./layout/footer";
 @use "./layout/nav";
 
 //プラグインや CMS 用のスタイル

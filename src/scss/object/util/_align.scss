@@ -33,7 +33,7 @@
   vertical-align: bottom;
 }
 
-@include sp_style() {
+@include ltSP() {
 
   .u-sp-align-c {
     text-align: center;

@@ -39,7 +39,7 @@
   cursor: default;
 }
 
-@include sp_style() {
+@include ltSP() {
 
   .reset-sp-pos {
     position: static;

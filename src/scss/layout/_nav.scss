@@ -1,75 +1,64 @@
 @use 'foundation/' as *;
 
-/******************************
- * l-nav
- ******************************/
+/*========================================
+  ヘッダーのナビゲーション（グローバルナビ）
+========================================*/
 
- .l-nav {
-  $this: &;
-
-  &__btn {
-    background: transparent;
-    padding: 0;
-
-    @include pc_style() {
-      display: none;
-    };
-
-    @include sp_style() {
-      width: vw(30);
-    };
-
-    .is-line-1,
-    .is-line-4 {
-      transform-origin: center;
-      transition-property: opacity;
-      transition-duration: .2s;
-    }
-
-    .is-line-2,
-    .is-line-3 {
-      transform-origin: center;
-      transition-property: transform;
-      transition-duration: .2s;
-    }
-
-    &.is-active {
-      transform: translateX(0);
-
-      .is-line-1,
-      .is-line-4 {
-        opacity: 0;
-      }
-      .is-line-2 {
-        transform: rotate(45deg);
-      }
-      .is-line-3 {
-        transform: rotate(-45deg);
-      }
-    }
-  }
-
-  &__line {
-    fill: none;
-    stroke: #000;
-    stroke-miterlimit: 10;
-    stroke-width: 2px;
-  }
-
-  &__body {
-    @include pc_style() {
-      &[aria-hidden="true"] {
-        display: none;
-      }
-    };
-  }
-
-  &__list {
-  }
-
-  &__item {
-  }
-
-  &__link {
-  }
+.l-nav {
+	$this: &;
+	&__btn {
+		background: transparent;
+		padding: 0;
+		border: 0;
+		@include gtTAB() {
+			display: none;
+		};
+		@include ltSP() {
+			width: vw(30);
+		};
+		&.is-active {
+			transform: translateX(0);
+			.is-line-1,
+			.is-line-4 {
+				opacity: 0;
+			}
+			.is-line-2 {
+				transform: rotate(45deg);
+			}
+			.is-line-3 {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+	&__line {
+		fill: none;
+		stroke: #000;
+		stroke-miterlimit: 10;
+		stroke-width: 2px;
+		&.is-line-1,
+		&.is-line-4 {
+			transform-origin: center;
+			transition-property: opacity;
+			transition-duration: .2s;
+		}
+		&.is-line-2,
+		&.is-line-3 {
+			transform-origin: center;
+			transition-property: transform;
+			transition-duration: .2s;
+		}
+	}
+	&__body {
+		@include ltSP() {
+			&[aria-hidden="true"] {
+				display: none;
+			}
+		};
+	}
+	&__list {
+	}
+	&__item {
+	}
+	&__link {
+	}
 }

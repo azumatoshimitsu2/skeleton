@@ -1,10 +1,10 @@
-@mixin sp_style() {
+@mixin ltSP() {
   @media screen and (max-width: 767px) {
     @content;
   }
 }
 
-@mixin pc_style() {
+@mixin gtTAB() {
   @media screen and (min-width: 768px) {
     @content;
   }

@@ -36,7 +36,7 @@ $arrn: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100;
   padding-left: 0;
 }
 
-@include sp_style() {
+@include ltSP() {
 
   .u-sp-pad {
     padding-right: var(--sp-pad);

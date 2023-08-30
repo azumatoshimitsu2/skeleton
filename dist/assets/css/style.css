@@ -135,12 +135,9 @@ body, input, select, textarea {
     font-size: max(1.6rem, var(--sp-base-fs));
   }
 }
-/******************************
- * l-footer
- ******************************/
-.l-footer {
-  line-height: 1.4;
-}
+/*========================================
+  ページ全体のレイアウト
+========================================*/
 /******************************
  * l-header
  ******************************/
@@ -148,11 +145,18 @@ body, input, select, textarea {
   line-height: 1.4;
 }
 /******************************
- * l-nav
+ * l-footer
  ******************************/
+.l-footer {
+  line-height: 1.4;
+}
+/*========================================
+  ヘッダーのナビゲーション（グローバルナビ）
+========================================*/
 .l-nav__btn {
   background: transparent;
   padding: 0;
+  border: 0;
 }
 @media screen and (min-width: 768px) {
   .l-nav__btn {
@@ -163,18 +167,6 @@ body, input, select, textarea {
   .l-nav__btn {
     width: 8vw;
   }
-}
-.l-nav__btn .is-line-1,
-.l-nav__btn .is-line-4 {
-  transform-origin: center;
-  transition-property: opacity;
-  transition-duration: 0.2s;
-}
-.l-nav__btn .is-line-2,
-.l-nav__btn .is-line-3 {
-  transform-origin: center;
-  transition-property: transform;
-  transition-duration: 0.2s;
 }
 .l-nav__btn.is-active {
   transform: translateX(0);
@@ -195,7 +187,17 @@ body, input, select, textarea {
   stroke-miterlimit: 10;
   stroke-width: 2px;
 }
-@media screen and (min-width: 768px) {
+.l-nav__line.is-line-1, .l-nav__line.is-line-4 {
+  transform-origin: center;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+}
+.l-nav__line.is-line-2, .l-nav__line.is-line-3 {
+  transform-origin: center;
+  transition-property: transform;
+  transition-duration: 0.2s;
+}
+@media screen and (max-width: 767px) {
   .l-nav__body[aria-hidden=true] {
     display: none;
   }
