@@ -10,9 +10,9 @@
 
   @include gtTAB() {
 
-    #{$this}__logo {
+    &__logo {
     }
-    #{$this}__box {
+    &__box {
     }
 
   };

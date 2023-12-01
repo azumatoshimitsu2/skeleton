@@ -1,16 +1,16 @@
 @charset "utf-8";
 
 //基本的なスタイル
-@use "./foundation/_global_var";
-@use "./foundation/_reset";
+@use "foundation/_global_var";
+@use "foundation/_reset";
 //ヘッダ、フッタ、共通ナビ
-@use "./layout/page";
-@use "./layout/header";
-@use "./layout/footer";
-@use "./layout/nav";
+@use "layout/page";
+@use "layout/header";
+@use "layout/footer";
+@use "layout/nav";
 
 //プラグインや CMS 用のスタイル
-@use "./vendors/_cms";
+@use "endors/_cms";
 
 //コンポーネント
 @use 'object/component/btn';
@@ -22,10 +22,10 @@
 @use 'object/project/p-icon';
 
 //汎用クラス
-@use "./object/util/_display";
-@use "./object/util/_margin";
-@use "./object/util/_padding";
-@use "./object/util/_width";
-@use "./object/util/_align";
-@use "./object/util/_fontsize";
-@use "./object/util/_util";
+@use "object/util/_display";
+@use "object/util/_margin";
+@use "object/util/_padding";
+@use "object/util/_width";
+@use "object/util/_align";
+@use "object/util/_fontsize";
+@use "object/util/_util";
